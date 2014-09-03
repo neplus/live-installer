@@ -2,6 +2,7 @@
 
 from installer import InstallerEngine, Setup, PartitionSetup
 from slideshow import Slideshow
+from utils import shell_exec, getoutput
 
 import pygtk; pygtk.require("2.0")
 import gtk
@@ -9,8 +10,6 @@ import gtk.glade
 import glib
 import gettext
 import os
-import commands
-import subprocess
 import sys
 import math
 from PIL import Image
@@ -724,14 +723,14 @@ class InstallerWindow:
 
         #Load countries into memory
         countries = {}
-        for line in commands.getoutput("isoquery --iso 3166 | cut -f1,4-").split('\n'):
-            ccode, cname = line.split(None, 1)
+        for line in shell_exec("isoquery --iso 3166 | cut -f1,4-").stdout:
+            ccode, cname = line.strip().split(None, 1)
             countries[ccode] = cname
 
         #Load languages into memory
         languages = {}
-        for line in commands.getoutput("isoquery --iso 639").split('\n'):
-            _, code3, code2, language = line.split('\t')
+        for line in shell_exec("isoquery --iso 639").stdout:
+            _, code3, code2, language = line.strip().split('\t')
             languages[code2 or code3] = language
 
         # Construct language selection model
@@ -740,7 +739,8 @@ class InstallerWindow:
         flag_path = lambda ccode: self.resource_dir + '/flags/16/' + ccode.lower() + '.png'
         from utils import memoize
         flag = memoize(lambda ccode: gtk.gdk.pixbuf_new_from_file(flag_path(ccode)))
-        for locale in commands.getoutput("awk -F'[@ \.]' '/UTF-8/{ print $1 }' /usr/share/i18n/SUPPORTED | uniq").split('\n'):
+        for locale in shell_exec("awk -F'[@ \.]' '/UTF-8/{ print $1 }' /usr/share/i18n/SUPPORTED | uniq").stdout:
+            locale = locale.strip()
             try:
                 if '_' in locale:
                     lang, ccode = locale.split('_')
@@ -952,7 +952,7 @@ class InstallerWindow:
     def build_hdds(self):
         self.setup.disks = []
         model = gtk.ListStore(str, str)            
-        output = subprocess.Popen("lsblk -nrdo TYPE,NAME,SIZE,RM | grep ^disk", shell=True, stdout=subprocess.PIPE)
+        output = shell_exec("lsblk -nrdo TYPE,NAME,SIZE,RM | grep ^disk")
         for line in output.stdout:
             line = line.rstrip("\r\n")
             sections = line.split(" ")
@@ -961,7 +961,7 @@ class InstallerWindow:
                 dev_size = sections[2]
                 dev_removable = sections[3]
                 dev_path = "/dev/%s" % dev_name
-                dev_model = commands.getoutput("lsblk -nrdo MODEL %s" % dev_path)
+                dev_model = getoutput("lsblk -nrdo MODEL %s" % dev_path)
                 self.setup.disks.append(dev_path)
                 description = "%s (%s)" % (dev_model, dev_size)
                 if dev_removable == "1":
@@ -987,7 +987,7 @@ class InstallerWindow:
         for disk in self.setup.disks:
             grub_model.append([disk])
         # Add partitions
-        output = commands.getoutput("lsblk -nrbo TYPE,NAME | grep ^part").split("\n")
+        output = getoutput("lsblk -nrbo TYPE,NAME | grep ^part").split("\n")
         for line in output:
             line = line.strip()
             sections = line.split(" ")
@@ -1064,7 +1064,7 @@ class InstallerWindow:
                         regions = disk.getFreeSpaceRegions()
                         if len(regions) > 0:
                             region = regions[-1]    
-                            ram_size = int(commands.getoutput("cat /proc/meminfo | grep MemTotal | awk {'print $2'}")) # in KiB
+                            ram_size = int(getoutput("cat /proc/meminfo | grep MemTotal | awk {'print $2'}")) # in KiB
                             ram_size = ram_size * 1.5 # Give 1.5 times the amount of RAM                            
                             if ram_size > 2097152:
                                 ram_size = 2097152 # But no more than 2GB
@@ -1118,16 +1118,16 @@ class InstallerWindow:
                             #grub_model.append([partition.path])
 
                             #Umount temp folder
-                            if ('/tmp/live-installer/tmpmount' in commands.getoutput('mount')):
+                            if ('/tmp/live-installer/tmpmount' in getoutput('mount')):
                                 os.popen('umount /tmp/live-installer/tmpmount')
 
                             #Mount partition if not mounted
-                            if (partition.path not in commands.getoutput('mount')):                                
+                            if (partition.path not in getoutput('mount')):
                                 os.system("mount %s /tmp/live-installer/tmpmount" % partition.path)
 
                             #Identify partition's description and used space
-                            if (partition.path in commands.getoutput('mount')):
-                                df_lines = commands.getoutput("df 2>/dev/null | grep %s" % partition.path).split('\n')
+                            if (partition.path in getoutput('mount')):
+                                df_lines = getoutput("df 2>/dev/null | grep %s" % partition.path).split('\n')
                                 for df_line in df_lines:
                                     df_elements = df_line.split()
                                     if df_elements[0] == partition.path:
@@ -1138,15 +1138,15 @@ class InstallerWindow:
                                             last_added_partition.free_space = int(float(last_added_partition.size) * (float(100) - float(used_space_pct)) / float(100))                                            
                                                                             
                                         if os.path.exists(os.path.join(mount_point, 'etc/lsb-release')):
-                                            last_added_partition.description = commands.getoutput("cat " + os.path.join(mount_point, 'etc/lsb-release') + " | grep DISTRIB_DESCRIPTION").replace('DISTRIB_DESCRIPTION', '').replace('=', '').replace('"', '').strip()
+                                            last_added_partition.description = getoutput("cat " + os.path.join(mount_point, 'etc/lsb-release') + " | grep DISTRIB_DESCRIPTION").replace('DISTRIB_DESCRIPTION', '').replace('=', '').replace('"', '').strip()
                                         if os.path.exists(os.path.join(mount_point, 'etc/issue')):
-                                            last_added_partition.description = commands.getoutput("cat " + os.path.join(mount_point, 'etc/issue')).replace('\\n', '').replace('\l', '').strip()
+                                            last_added_partition.description = getoutput("cat " + os.path.join(mount_point, 'etc/issue')).replace('\\n', '').replace('\l', '').strip()
                                         if os.path.exists(os.path.join(mount_point, 'etc/linuxmint/info')):
-                                            last_added_partition.description = commands.getoutput("cat " + os.path.join(mount_point, 'etc/linuxmint/info') + " | grep GRUB_TITLE").replace('GRUB_TITLE', '').replace('=', '').replace('"', '').strip()
-                                        if commands.getoutput("/sbin/gdisk -l %s | grep EF00 | awk {'print $1;'}" % self.setup.target_disk) == str(partition.number):                                            
+                                            last_added_partition.description = getoutput("cat " + os.path.join(mount_point, 'etc/linuxmint/info') + " | grep GRUB_TITLE").replace('GRUB_TITLE', '').replace('=', '').replace('"', '').strip()
+                                        if getoutput("/sbin/gdisk -l %s | grep EF00 | awk {'print $1;'}" % self.setup.target_disk) == str(partition.number):
                                             last_added_partition.description = "EFI System Partition"
                                         if os.path.exists(os.path.join(mount_point, 'Windows/servicing/Version')):
-                                            version = commands.getoutput("ls %s" % os.path.join(mount_point, 'Windows/servicing/Version'))                                    
+                                            version = getoutput("ls %s" % os.path.join(mount_point, 'Windows/servicing/Version'))
                                             if version.startswith("6.1"):
                                                 last_added_partition.description = "Windows 7"
                                             elif version.startswith("6.0"):
@@ -1182,7 +1182,7 @@ class InstallerWindow:
 
                             
                             #Umount temp folder
-                            if ('/tmp/live-installer/tmpmount' in commands.getoutput('mount')):
+                            if ('/tmp/live-installer/tmpmount' in getoutput('mount')):
                                 os.popen('umount /tmp/live-installer/tmpmount')
                                 
                     if last_added_partition.size > 1.0:
@@ -1295,7 +1295,7 @@ body{background-color:#d6d6d6;} \
         ''' Do some xml kung-fu and load the keyboard stuffs '''
         # Determine the layouts in use
         (keyboard_geom,
-         self.setup.keyboard_layout) = commands.getoutput("setxkbmap -query | awk '/^(model|layout)/{print $2}'").split()
+         self.setup.keyboard_layout) = getoutput("setxkbmap -query | awk '/^(model|layout)/{print $2}'").split()
         # Build the models
         from collections import defaultdict
         def _ListStore_factory():
