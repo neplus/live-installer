@@ -185,12 +185,7 @@ class Timezone:
 
         return (int(x), int(y))        
         
-class InstallerWindow:
-    # Cancelable timeout for keyboard preview generation, which is
-    # quite expensive, so avoid drawing it if only scrolling through
-    # the keyboard layout list
-    kbd_preview_generation = -1
-
+class InstallerWindow(object):
     def __init__(self, fullscreen=False):
         
         #Disable the screensaver to prevent a segfault situation in GTK2
@@ -1412,17 +1407,27 @@ body{background-color:#d6d6d6;} \
         os.system('setxkbmap -model ' + self.setup.keyboard_model)
         self.setup.print_setup()
 
+    # Cancelable timeout for keyboard preview generation, which is
+    # quite expensive, so avoid drawing it if only scrolling through
+    # the keyboard layout list
+    kbd_preview_generation = -1
+    # Likewise for setting the variant model
+    kbd_variant_timeout = -1
+
     def assign_keyboard_layout(self, treeview):
         ''' Called whenever someone updates the keyboard layout '''
+        glib.source_remove(self.kbd_variant_timeout)  # stop setting kbd variant model
         model, active = treeview.get_selection().get_selected_rows()
         if not active: return
         (self.setup.keyboard_layout_description,
          self.setup.keyboard_layout) = model[active[0]]
-        # Set the correct variant list model ...
-        model = self.layout_variants[self.setup.keyboard_layout]
-        self.wTree.get_widget("treeview_variants").set_model(model)
-        # ... and select the first variant (standard)
-        self.wTree.get_widget("treeview_variants").set_cursor(0)
+        # Set the correct variant model
+        def _set_keyboard_variant_model():
+            model = self.layout_variants[self.setup.keyboard_layout]
+            self.wTree.get_widget("treeview_variants").set_model(model)
+            # ... and select the first variant (standard)
+            self.wTree.get_widget("treeview_variants").set_cursor(0)
+        self.kbd_variant_timeout = glib.timeout_add(300, _set_keyboard_variant_model)
 
     def assign_keyboard_variant(self, treeview):
         ''' Called whenever someone updates the keyboard layout or variant '''
@@ -1437,14 +1442,13 @@ body{background-color:#d6d6d6;} \
             os.system('setxkbmap -layout ' + self.setup.keyboard_layout)
         self.setup.print_setup()
         # Set preview image
+        def _generate_keyboard_layout_preview():
+            filename = "/tmp/live-install-keyboard-layout.png"
+            os.system("python /usr/lib/live-installer/frontend/generate_keyboard_layout.py %s %s %s" % (self.setup.keyboard_layout, self.setup.keyboard_variant, filename))
+            self.wTree.get_widget("image_keyboard").set_from_file(filename)
+            return False
         self.wTree.get_widget("image_keyboard").set_from_file(LOADING_ANIMATION)
-        self.kbd_preview_generation = glib.timeout_add(500, self._generate_keyboard_layout_preview)
-
-    def _generate_keyboard_layout_preview(self):
-        filename = "/tmp/live-install-keyboard-layout.png"
-        os.system("python /usr/lib/live-installer/frontend/generate_keyboard_layout.py %s %s %s" % (self.setup.keyboard_layout, self.setup.keyboard_variant, filename))
-        self.wTree.get_widget("image_keyboard").set_from_file(filename)
-        return False
+        self.kbd_preview_generation = glib.timeout_add(500, _generate_keyboard_layout_preview)
 
     def assign_password(self, widget):
         ''' Someone typed into the entry '''
