@@ -21,8 +21,8 @@ Depends: ${misc:Depends}, ${python:Depends}
   , python-geoip
   , geoip-database-contrib
   , python-qt4
-  , python-opencv
   , python-imaging
+  , streamer
   , imagemagick
   , desktop-file-utils
   , shared-mime-info
