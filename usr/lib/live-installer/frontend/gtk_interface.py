@@ -190,17 +190,7 @@ class InstallerWindow:
         os.system("convert /usr/share/pixmaps/faces/t9penguino_trans.png -resize x96 /tmp/live-installer-face.png")
         self.wTree.get_widget("face_image").set_from_file("/tmp/live-installer-face.png")   
         
-        webcam_detected = False
-        try:
-            import cv
-            capture = cv.CaptureFromCAM(-1) 
-            for i in range(10):
-                img = cv.QueryFrame(capture)        
-                if img != None:                    
-                    webcam_detected = True   
-        except Exception, detail:
-            print detail
-
+        webcam_detected = 0 == os.system('streamer -o /tmp/live-installer-face07.jpeg')
         if webcam_detected:
             self.wTree.get_widget("face_take_picture_button").set_tooltip_text(_("Click this button to take a new picture of yourself with the webcam."))
         else:
@@ -432,17 +422,10 @@ class InstallerWindow:
         return  
             
     def face_take_picture_button_clicked(self, widget, event):
-        try:
-            import cv
-            capture = cv.CaptureFromCAM(-1) 
-            for i in range(10):
-                img = cv.QueryFrame(capture)        
-                if img != None:
-                    cv.SaveImage("/tmp/live-installer-webcam.png", img)
-                    os.system("convert /tmp/live-installer-webcam.png -resize x96 /tmp/live-installer-face.png")
-                    self.wTree.get_widget("face_image").set_from_file("/tmp/live-installer-face.png")
-        except Exception, detail:
-            print detail
+        if 0 != os.system('streamer -j85 -t8 -s800x600 -o /tmp/live-installer-face00.jpeg'):
+            return  # No webcam
+        os.system('convert /tmp/live-installer-face07.jpeg -resize x96 /tmp/live-installer-face.png')
+        self.wTree.get_widget('face_image').set_from_file('/tmp/live-installer-face.png')
 
     def fix_text_wrap(self):
         while gtk.events_pending():
