@@ -1,4 +1,18 @@
 
+import subprocess
+
+def shell_exec(command, kwargs={}):
+    print 'Executing:', command
+    return subprocess.Popen(command, shell=True, 
+                            stdout=subprocess.PIPE, **kwargs)
+
+def getoutput(command):
+    return shell_exec(command).stdout.read().strip()
+
+def chroot_exec(command):
+    command = command.replace('"', "'").strip()  # FIXME
+    return shell_exec('chroot /target/ /bin/sh -c "%s"' % command)
+
 def memoize(func):
     """ Caches expensive function calls.
 
