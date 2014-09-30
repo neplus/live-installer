@@ -4,11 +4,9 @@ import os
 import re
 import time
 import shutil
-import gettext
 import sys
 import parted
 
-gettext.install("live-installer", "/usr/share/locale")
 
 CONFIG_FILE = '/etc/live-installer/live-installer.conf'
 

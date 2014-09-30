@@ -11,7 +11,6 @@ import pygtk; pygtk.require("2.0")
 import gtk
 import gtk.glade
 import glib
-import gettext
 import os
 import sys
 import math
@@ -24,7 +23,8 @@ import GeoIP
 import urllib
 import parted
 
-gettext.install("live-installer", "/usr/share/linuxmint/locale")
+import gettext; gettext.install("live-installer")
+
 gtk.gdk.threads_init()
 
 LOADING_ANIMATION = '/usr/share/live-installer/loading.gif'
@@ -225,33 +225,17 @@ class InstallerWindow:
             # dedicated installer mode thingum
             self.window.maximize()
             self.window.fullscreen()        
-        
-        #''' Launch the Slideshow '''
-        #if ("_" in self.setup.language):
-        #    locale_code = self.setup.language.split("_")[0]
-        #else:
-        #     locale_code = self.setup.language
-        
-        #slideshow_path = "/usr/share/live-installer-slideshow/slides/index.html"
-        #if os.path.exists(slideshow_path):            
-        #    browser = webkit.WebView()
-        #    s = browser.get_settings()
-        #    s.set_property('enable-file-access-from-file-uris', True)
-        #    s.set_property('enable-default-context-menu', False)
-        #    browser.open("file://" + slideshow_path  + "#?locale=" + locale_code)
-        #    self.wTree.get_widget("vbox_install").add(browser)
-        #    self.wTree.get_widget("vbox_install").show_all()         
-        # Initiate the slide show
-        self.slideshow_path = "/usr/share/live-installer/slideshow"
-        if os.path.exists(self.slideshow_path):
-            self.slideshow_browser = webkit.WebView()
-            s = self.slideshow_browser.get_settings()
-            s.set_property('enable-file-access-from-file-uris', True)
-            s.set_property('enable-default-context-menu', False)            
-            self.slideshow_browser.open("file://" + os.path.join(self.slideshow_path, 'template.html'))
-            self.wTree.get_widget("vbox_install").add(self.slideshow_browser)
-            self.wTree.get_widget("vbox_install").show_all()                                                            
-        
+
+        # Configure slideshow webview
+        self.slideshow_browser = webkit.WebView()
+        s = self.slideshow_browser.get_settings()
+        s.set_property('enable-file-access-from-file-uris', True)
+        s.set_property('enable-default-context-menu', False)
+        self.slideshow_browser.load_string(_('No slideshow template found.'), 'text/html', 'UTF-8', 'file:///')
+        self.wTree.get_widget("vbox_install").add(self.slideshow_browser)
+        self.wTree.get_widget("vbox_install").show_all()
+
+        # Configure disks webview
         self.partitions_browser = webkit.WebView()
         s = self.partitions_browser.get_settings()
         s.set_property('enable-file-access-from-file-uris', True)
@@ -559,8 +543,9 @@ class InstallerWindow:
         row = model[active]
         self.setup.language = row[-1]
         self.setup.print_setup()
-        gettext.translation('live-installer', "/usr/share/linuxmint/locale",
-                            languages=[self.setup.language, self.setup.language.split('_')[0]],
+        gettext.translation('live-installer',
+                            languages=[self.setup.language,
+                                       self.setup.language.split('_')[0]],
                             fallback=True).install()  # Try e.g. zh_CN, zh, or fallback to hardcoded English
         try:
             self.i18n()
@@ -873,9 +858,7 @@ class InstallerWindow:
         self.critical_error_happened = False
 
         # Now it's time to load the slide show
-        slideThr = Slideshow(self.slideshow_browser, self.setup.language)
-        slideThr.daemon = True  # let the slide-thread die with the parent
-        slideThr.start()
+        Slideshow(self.slideshow_browser, self.setup.language).start()
 
         # Start installing
         do_try_finish_install = True
