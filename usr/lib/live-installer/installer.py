@@ -1,11 +1,13 @@
-from utils import shell_exec, getoutput, chroot_exec
+from utils import shell_exec, shell_exec_popen, getoutput, chroot_exec, get_config_dict
 
 import os
-import re
 import time
-import shutil
 import sys
-import parted
+
+# [XK]
+from utils import hasInternetConnection, runningInVirtualBox, isAmd64
+from plymouth import PlymouthSave
+from localize import Localize
 
 
 CONFIG_FILE = '/etc/live-installer/live-installer.conf'
@@ -15,32 +17,24 @@ class InstallerEngine:
 
     def __init__(self):
         # Set distribution name and version
-        def _get_config_dict(file, key_value=re.compile(r'^\s*(\w+)\s*=\s*["\']?(.*?)["\']?\s*(#.*)?$')):
-            """Returns POSIX config file (key=value, no sections) as dict.
-            Assumptions: no multiline values, no value contains '#'. """
-            d = {}
-            with open(file) as f:
-                for line in f:
-                    try: key, value, _ = key_value.match(line).groups()
-                    except AttributeError: continue
-                    d[key] = value
-            return d
         for f, n, v in (('/etc/os-release', 'PRETTY_NAME', 'VERSION'),
                         ('/etc/lsb-release', 'DISTRIB_DESCRIPTION', 'DISTRIB_RELEASE'),
                         (CONFIG_FILE, 'DISTRIBUTION_NAME', 'DISTRIBUTION_VERSION')):
             try:
-                config = _get_config_dict(f)
+                config = get_config_dict(f)
                 name, version = config[n], config[v]
             except (IOError, KeyError): continue
             else: break
         else: name, version = 'Unknown GNU/Linux', '1.0'
         self.distribution_name, self.distribution_version = name, version
+        config = get_config_dict('/etc/os-release')
+        self.distribution_id =  config.get('ID', 'distro')
         # Set other configuration
-        config = _get_config_dict(CONFIG_FILE)
+        config = get_config_dict(CONFIG_FILE)
         self.live_user = config.get('live_user', 'user')
         self.media = config.get('live_media_source', '/lib/live/mount/medium/live/filesystem.squashfs')
         self.media_type = config.get('live_media_type', 'squashfs')
-        # Flush print when it's called    
+        # Flush print when it's called
         sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)
 
     def set_progress_hook(self, progresshook):
@@ -48,7 +42,7 @@ class InstallerEngine:
         ''' i.e. def my_callback(progress_type, message, current_progress, total) '''
         ''' Where progress_type is any off PROGRESS_START, PROGRESS_UPDATE, PROGRESS_COMPLETE, PROGRESS_ERROR '''
         self.update_progress = progresshook
-        
+
     def set_error_hook(self, errorhook):
         ''' Set a callback to be called on errors '''
         self.error_message = errorhook
@@ -58,26 +52,29 @@ class InstallerEngine:
 
     def get_distribution_version(self):
         return self.distribution_version
-        
-    def step_format_partitions(self, setup):        
-        for partition in setup.partitions:                    
-            if(partition.format_as is not None and partition.format_as != ""):                
+
+    def step_format_partitions(self, setup):
+        for partition in setup.partitions:
+            if(partition.format_as is not None and partition.format_as != ""):
                 # report it. should grab the total count of filesystems to be formatted ..
                 self.update_progress(total=4, current=1, pulse=True, message=_("Formatting %(partition)s as %(format)s ..." % {'partition':partition.partition.path, 'format':partition.format_as}))
-                
+
                 #Format it
                 if partition.format_as == "swap":
                     cmd = "mkswap %s" % partition.partition.path
+                elif partition.format_as[:3] == 'ext':
+                    cmd = "mkfs.%s -F -q %s" % (partition.format_as, partition.partition.path)
+                elif partition.format_as == "jfs":
+                    cmd = "mkfs.%s -q %s" % (partition.format_as, partition.partition.path)
+                elif partition.format_as == "xfs":
+                    cmd = "mkfs.%s -f %s" % (partition.format_as, partition.partition.path)
+                elif partition.format_as == "vfat":
+                    cmd = "mkfs.%s %s -F 32" % (partition.format_as, partition.partition.path)
                 else:
-                    if (partition.format_as == "jfs"):
-                        cmd = "mkfs.%s -q %s" % (partition.format_as, partition.partition.path)
-                    elif (partition.format_as == "xfs"):
-                        cmd = "mkfs.%s -f %s" % (partition.format_as, partition.partition.path)
-                    elif (partition.format_as == "vfat"):
-                        cmd = "mkfs.%s %s -F 32" % (partition.format_as, partition.partition.path)
-                    else:
-                        cmd = "mkfs.%s %s" % (partition.format_as, partition.partition.path) # works with bfs, btrfs, ext2, ext3, ext4, minix, msdos, ntfs, vfat
+                    cmd = "mkfs.%s %s" % (partition.format_as, partition.partition.path) # works with bfs, btrfs, minix, msdos, ntfs
+
                 shell_exec(cmd)
+
                 partition.type = partition.format_as
 
     def step_mount_source(self, setup):
@@ -86,13 +83,13 @@ class InstallerEngine:
         self.update_progress(total=4, current=2, message=_("Mounting %(partition)s on %(mountpoint)s") % {'partition':self.media, 'mountpoint':"/source/"})
         print " ------ Mounting %s on %s" % (self.media, "/source/")
         self.do_mount(self.media, "/source/", self.media_type, options="loop")
-                                        
-    def step_mount_partitions(self, setup):  
+
+    def step_mount_partitions(self, setup):
         self.step_mount_source(setup)
-      
+
         # Mount the target partition
-        for partition in setup.partitions:                    
-            if(partition.mount_as is not None and partition.mount_as != ""):   
+        for partition in setup.partitions:
+            if(partition.mount_as is not None and partition.mount_as != ""):
                   if partition.mount_as == "/":
                         self.update_progress(total=4, current=3, message=_("Mounting %(partition)s on %(mountpoint)s") % {'partition':partition.partition.path, 'mountpoint':"/target/"})
                         print " ------ Mounting partition %s on %s" % (partition.partition.path, "/target/")
@@ -102,19 +99,19 @@ class InstallerEngine:
                             fs = partition.type
                         self.do_mount(partition.partition.path, "/target", fs, None)
                         break
-        
-        # Mount the other partitions        
+
+        # Mount the other partitions
         for partition in setup.partitions:
             if(partition.mount_as is not None and partition.mount_as != "" and partition.mount_as != "/" and partition.mount_as != "swap"):
                 print " ------ Mounting %s on %s" % (partition.partition.path, "/target" + partition.mount_as)
-                os.system("mkdir -p /target" + partition.mount_as)
+                shell_exec("mkdir -p /target" + partition.mount_as)
                 if partition.type == "fat16" or partition.type == "fat32":
                     fs = "vfat"
                 else:
                     fs = partition.type
                 self.do_mount(partition.partition.path, "/target" + partition.mount_as, fs, None)
 
-    def init_install(self, setup):        
+    def init_install(self, setup):
         # mount the media location.
         print " --> Installation started"
         if(not os.path.exists("/target")):
@@ -127,20 +124,25 @@ class InstallerEngine:
         # find the squashfs..
         if(not os.path.exists(self.media)):
             print "Base filesystem does not exist! Critical error (exiting)."
-            self.error_message(message=_("ERROR: Something is wrong with the installation medium! This is usually caused by burning tools which are not compatible with LMDE (YUMI or other multiboot tools). Please burn the ISO image to DVD/USB using a different tool."))
+            self.error_message(message=_("ERROR: Something is wrong with the installation medium! This is usually caused by burning tools which are not compatible with {} (YUMI or other multiboot tools). Please burn the ISO image to DVD/USB using a different tool.".format(self.distribution_name)))
             return
 
-        os.system("umount --force /target/dev/shm")
-        os.system("umount --force /target/dev/pts")
-        os.system("umount --force /target/dev/")
-        os.system("umount --force /target/sys/")
-        os.system("umount --force /target/proc/")
+        shell_exec("umount --force /target/dev/shm")
+        shell_exec("umount --force /target/dev/pts")
+        shell_exec("umount --force /target/dev/")
+        shell_exec("umount --force /target/sys/")
+        shell_exec("umount --force /target/proc/")
 
         if (not setup.skip_mount):
             self.step_format_partitions(setup)
             self.step_mount_partitions(setup)
         else:
             self.step_mount_source(setup)
+
+        # [XK] # Preserve /root if it exists
+        if os.path.isdir("/target/root"):
+            # shutil.copytree gave errors on kde cache files
+            shell_exec("cp -r /target/root /tmp/")
 
         # Transfer the files
         SOURCE = "/source/"
@@ -151,18 +153,26 @@ class InstallerEngine:
         our_total = int(getoutput("df --inodes /{src} | awk '/^.+?\/{src}$/{{ print $3 }}'".format(src=SOURCE.strip('/'))))
         print " --> Copying {} files".format(our_total)
         rsync_filter = ' '.join('--exclude=' + SOURCE + d for d in EXCLUDE_DIRS)
-        rsync = shell_exec("rsync --verbose --archive --no-D --acls "
+        rsync = shell_exec_popen("rsync --ignore-errors --verbose --archive --no-D --acls "
                            "--hard-links --xattrs {rsync_filter} "
-                           "{src}* {dst}".format(src=SOURCE, dst=DEST, rsync_filter=rsync_filter),
-                           shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                           "{src}* {dst}".format(src=SOURCE, dst=DEST, rsync_filter=rsync_filter))
         while rsync.poll() is None:
             line = rsync.stdout.readline()
             if not line: time.sleep(0.1)
             else:
                 our_current = min(our_current + 1, our_total)
-                self.update_progress(total=our_total, current=our_current, message=_("Copying %s" % line))
-                print "Copying " + line
-        print "rsync exited with returncode: " + str(rsync.poll())
+                self.update_progress(total=our_total, current=our_current, message=_("Copying {}".format(line)))
+                #print "Copying " + line
+        rsync_return_code = rsync.poll()
+        if rsync_return_code > 0:
+            print "ERROR: rsync exited with returncode: " + str(rsync_return_code)
+            sys.exit()
+
+        # [XK] Restore /root if it was preserved
+        if os.path.isdir("/tmp/root"):
+            if os.path.isdir("/target/root"):
+                shell_exec("mv /target/root /tmp/root.install")
+            shell_exec("mv /tmp/root /target/")
 
         # Steps:
         our_total = 11
@@ -170,26 +180,28 @@ class InstallerEngine:
         # chroot
         print " --> Chrooting"
         self.update_progress(total=our_total, current=our_current, message=_("Entering the system ..."))
-        os.system("mount --bind /dev/ /target/dev/")
-        os.system("mount --bind /dev/shm /target/dev/shm")
-        os.system("mount --bind /dev/pts /target/dev/pts")
-        os.system("mount --bind /sys/ /target/sys/")
-        os.system("mount --bind /proc/ /target/proc/")
-        os.system("mv /target/etc/resolv.conf /target/etc/resolv.conf.bk")
-        os.system("cp -f /etc/resolv.conf /target/etc/resolv.conf")
+        shell_exec("mount --bind /dev/ /target/dev/")
+        shell_exec("mount --bind /dev/shm /target/dev/shm")
+        shell_exec("mount --bind /dev/pts /target/dev/pts")
+        shell_exec("mount --bind /sys/ /target/sys/")
+        shell_exec("mount --bind /proc/ /target/proc/")
+        shell_exec("mv /target/etc/resolv.conf /target/etc/resolv.conf.bk")
+        shell_exec("cp -f /etc/resolv.conf /target/etc/resolv.conf")
 
         kernelversion = getoutput("uname -r")
-        os.system("cp /lib/live/mount/medium/live/vmlinuz /target/boot/vmlinuz-%s" % kernelversion)
-        os.system("cp /lib/live/mount/medium/live/initrd.img /target/boot/initrd.img-%s" % kernelversion)
+        shell_exec("cp /lib/live/mount/medium/live/vmlinuz /target/boot/vmlinuz-%s" % kernelversion)
+        shell_exec("cp /lib/live/mount/medium/live/initrd.img /target/boot/initrd.img-%s" % kernelversion)
 
         if (setup.gptonefi):
-            os.system("mkdir -p /target/boot/efi/EFI/linuxmint")
-            os.system("cp /lib/live/mount/medium/EFI/BOOT/grubx64.efi /target/boot/efi/EFI/linuxmint")
-            os.system("mkdir -p /target/debs")
-            os.system("cp /lib/live/mount/medium/pool/main/g/grub2/grub-efi* /target/debs/")
-            os.system("cp /lib/live/mount/medium/pool/main/e/efibootmgr/efibootmgr* /target/debs/")
+            # [XK] Make target dir more generic
+            if os.path.exists("/lib/live/mount/medium/EFI/BOOT/grubx64.efi"):
+                shell_exec("mkdir -p /target/boot/efi/EFI/%s" % self.distribution_id)
+                shell_exec("cp /lib/live/mount/medium/EFI/BOOT/grubx64.efi /target/boot/efi/EFI/%s/" % self.distribution_id)
+            shell_exec("mkdir -p /target/debs")
+            shell_exec("cp /lib/live/mount/medium/offline/grub-efi* /target/debs/")
+            shell_exec("cp /lib/live/mount/medium/offline/efibootmgr* /target/debs/")
             chroot_exec("dpkg -i /debs/*")
-            os.system("rm -rf /target/debs")
+            shell_exec("rm -rf /target/debs")
 
         # Detect cdrom device
         # TODO : properly detect cdrom device
@@ -202,10 +214,10 @@ class InstallerEngine:
         # remove live-packages (or w/e)
         print " --> Removing live packages"
         our_current += 1
-        self.update_progress(total=our_total, current=our_current, message=_("Removing live configuration (packages)"))
+        self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Removing live configuration (packages)"))
         with open("/lib/live/mount/medium/live/filesystem.packages-remove", "r") as fd:
             line = fd.read().replace('\n', ' ')
-        chroot_exec("apt-get remove --purge --yes --force-yes %s" % line)
+        chroot_exec("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes %s" % line)
 
         # add new user
         print " --> Adding new user"
@@ -215,12 +227,11 @@ class InstallerEngine:
         for group in 'adm audio bluetooth cdrom dialout dip fax floppy fuse lpadmin netdev plugdev powerdev sambashare scanner sudo tape users vboxusers video'.split():
             chroot_exec("adduser {user} {group}".format(user=setup.username, group=group))
 
-        fp = open("/target/tmp/.passwd", "w")
-        fp.write(setup.username +  ":" + setup.password1 + "\n")
-        fp.write("root:" + setup.password1 + "\n")
-        fp.close()
-        chroot_exec("cat /tmp/.passwd | chpasswd")
-        os.system("rm -f /target/tmp/.passwd")
+        # [XK] Save passwords
+        # Using a temporary file fails for the new user (but correctly sets the root's password)
+        setup.password1 = setup.password1.replace('"', '\\"')
+        chroot_exec("echo \"%s:%s\" | chpasswd" % (setup.username, setup.password1))
+        chroot_exec("echo \"root:%s\" | chpasswd" % setup.password1)
 
         # Set autologin for user if they so elected
         if setup.autologin:
@@ -236,30 +247,27 @@ class InstallerEngine:
             chroot_exec(r"sed -i -r -e 's/^#?(autologin)\s*=.*/\1={user}/' /etc/lxdm/lxdm.conf".format(user=setup.username))
             # SLiM
             chroot_exec(r"sed -i -r -e 's/^#?(default_user)\s.*/\1  {user}/' -e 's/^#?(auto_login)\s.*/\1  yes/' /etc/slim.conf".format(user=setup.username))
+        else:
+            # [XK] LightDM uses autologin in live session
+            chroot_exec(r"sed -i -r 's/^#?(autologin-user)\s*=.*/\1=/' /etc/lightdm/lightdm.conf")
 
         # Add user's face
-        os.system("cp /tmp/live-installer-face.png /target/home/%s/.face" % setup.username)
+        shell_exec("cp /tmp/live-installer-face.png /target/home/%s/.face" % setup.username)
         chroot_exec("chown %s:%s /home/%s/.face" % (setup.username, setup.username, setup.username))
-
-        # Make the new user the default user in KDM
-        if os.path.exists('/target/etc/kde4/kdm/kdmrc'):
-            defUsrCmd = "sed -i 's/^#DefaultUser=.*/DefaultUser=" + setup.username + "/g' " + kdmrcPath
-            print defUsrCmd
-            os.system(defUsrCmd)
 
         # write the /etc/fstab
         print " --> Writing fstab"
         our_current += 1
         self.update_progress(total=our_total, current=our_current, message=_("Writing filesystem mount information to /etc/fstab"))
         if not os.path.exists("/target/etc/fstab"):
-            os.system("echo '#### Static Filesystem Table File' > /target/etc/fstab")
+            shell_exec("echo '#### Static Filesystem Table File' > /target/etc/fstab")
         if not setup.skip_mount:
             with open("/target/etc/fstab", "a") as fstab:
                 for part in setup.partitions:
                     if not part.mount_as: continue
-                    uuid = getoutput('blkid -s UUID -o value ' + part.partition.path) or part.partition.path
+                    uuid = "UUID=%s" % getoutput('blkid -s UUID -o value ' + part.partition.path) or part.partition.path
                     fsck = 0 if part.type in ('ntfs', 'swap') else 1 if part.mount_as == '/' else 2
-                    opts = 'rw,errors=remount-ro' if 'ext' in part.type else 'defaults'
+                    opts = 'rw,errors=remount-ro' if 'ext' in part.type else 'sw' if part.type == 'swap' else 'defaults'
                     fs = 'vfat' if part.type.startswith('fat') else part.type
                     fstab.write('{uuid}\t{part.mount_as}\t{fs}\t{opts}\t0\t{fsck}\n'.format(**locals()))
 
@@ -291,30 +299,72 @@ class InstallerEngine:
         print " --> Setting the locale"
         our_current += 1
         self.update_progress(total=our_total, current=our_current, message=_("Setting locale"))
-        os.system("echo \"%s.UTF-8 UTF-8\" >> /target/etc/locale.gen" % setup.language)
+        shell_exec("echo \"%s.UTF-8 UTF-8\" >> /target/etc/locale.gen" % setup.language)
         chroot_exec("locale-gen")
-        os.system("echo \"\" > /target/etc/default/locale")
+        shell_exec("echo \"\" > /target/etc/default/locale")
         chroot_exec("update-locale LANG=\"%s.UTF-8\"" % setup.language)
         chroot_exec("update-locale LANG=%s.UTF-8" % setup.language)
 
         # set the timezone
         print " --> Setting the timezone"
-        os.system("echo \"%s\" > /target/etc/timezone" % setup.timezone)
-        os.system("cp /target/usr/share/zoneinfo/%s /target/etc/localtime" % setup.timezone)
+        shell_exec("echo \"%s\" > /target/etc/timezone" % setup.timezone)
+        shell_exec("cp /target/usr/share/zoneinfo/%s /target/etc/localtime" % setup.timezone)
 
         # localizing
-        print " --> Localizing packages"
-        self.update_progress(total=our_total, current=our_current, message=_("Localizing packages"))
         if setup.language != "en_US":
-            os.system("mkdir -p /target/debs")
-            language_code = setup.language
-            if "_" in setup.language:
-                language_code = setup.language.split("_")[0]
-            l10ns = getoutput("find /lib/live/mount/medium/pool | grep 'l10n-%s\\|hunspell-%s'" % (language_code, language_code))
-            for l10n in l10ns.split("\n"):
-                os.system("cp %s /target/debs/" % l10n)
-            chroot_exec("dpkg -i /debs/*")
-            os.system("rm -rf /target/debs")
+            if os.path.exists("/lib/live/mount/medium/pool"):
+                print " --> Localizing packages"
+                our_current += 1
+                self.update_progress(total=our_total, current=our_current, message=_("Localizing packages"))
+                shell_exec("mkdir -p /target/debs")
+                language_code = setup.language
+                if "_" in setup.language:
+                    language_code = setup.language.split("_")[0]
+                l10ns = getoutput("find /lib/live/mount/medium/pool | grep 'l10n-%s\\|hunspell-%s'" % (language_code, language_code))
+                for l10n in l10ns.split("\n"):
+                    shell_exec("cp %s /target/debs/" % l10n)
+                chroot_exec("dpkg -i /debs/*")
+                shell_exec("rm -rf /target/debs")
+            if hasInternetConnection:
+                # [XK] Localize when not LMDE
+                loc = Localize(setup.language, our_total, our_current)
+                loc.set_progress_hook(self.update_progress)
+                loc.start()
+                our_current = loc.our_current
+
+        # [XK] Configure Plymouth
+        our_current += 1
+        if os.path.exists('/target/bin/plymouth'):
+            print " --> Configuring Plymouth"
+            self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Configuring Plymouth"))
+            plymouth = PlymouthSave()
+            plymouth.save(setup.plymouth_enable)
+
+        # [XK] Install multimedia
+        our_current += 1
+        if setup.multimedia_enable:
+            if hasInternetConnection:
+                print " --> Install multimedia"
+                self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Install multimedia"))
+                packages = "libdvdcss2"
+                if isAmd64:
+                    packages += " w64codecs"
+                else:
+                    packages += " w32codecs"
+                chroot_exec("apt-get install --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes %s" % packages)
+
+        # [XK] Configure sensors
+        our_current += 1
+        if os.path.exists('/target/usr/sbin/sensors-detect'):
+            print " --> Configuring sensors"
+            self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Configuring sensors"))
+            chroot_exec('/usr/bin/yes YES | /usr/sbin/sensors-detect')
+
+        # [XK] Remove VirtualBox when not installing to VirtualBox
+        if not runningInVirtualBox():
+            print " --> Remove VirtualBox"
+            self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Removing VirtualBox"))
+            chroot_exec("apt-get purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes virtualbox*")
 
         # set the keyboard options..
         print " --> Setting the keyboard"
@@ -373,30 +423,35 @@ class InstallerEngine:
         # recreate initramfs (needed in case of skip_mount also, to include things like mdadm/dm-crypt/etc in case its needed to boot a custom install)
         print " --> Configuring Initramfs"
         our_current += 1
-        chroot_exec("/usr/sbin/update-initramfs -t -u -k all")
-        kernelversion = getoutput("uname -r")
-        chroot_exec("/usr/bin/sha1sum /boot/initrd.img-%s > /var/lib/initramfs-tools/%s" % (kernelversion,kernelversion))
+        # [XK] Running update-initramfs takes a long time: check if it is necessary
+        initrd = "/boot/initrd.img-".format(getoutput("uname -r"))
+        update = os.path.getmtime(initrd) < time.time() - 86400 if os.path.isfile(initrd) else True
+        if update:
+            self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Configuring initramfs"))
+            chroot_exec("/usr/sbin/update-initramfs -t -u -k all")
+            kernelversion = getoutput("uname -r")
+            chroot_exec("/usr/bin/sha1sum /boot/initrd.img-%s > /var/lib/initramfs-tools/%s" % (kernelversion,kernelversion))
 
         # Clean APT
         print " --> Cleaning APT"
         our_current += 1
         self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Cleaning APT"))
-        os.system("chroot /target/ /bin/sh -c \"dpkg --configure -a\"")
+        shell_exec("chroot /target/ /bin/sh -c \"dpkg --configure -a\"")
         chroot_exec("sed -i 's/^deb cdrom/#deb cdrom/' /etc/apt/sources.list")
         chroot_exec("apt-get -y --force-yes autoremove")
 
         # now unmount it
         print " --> Unmounting partitions"
-        os.system("umount --force /target/dev/shm")
-        os.system("umount --force /target/dev/pts")
+        shell_exec("umount --force /target/dev/shm")
+        shell_exec("umount --force /target/dev/pts")
         if setup.gptonefi:
-            os.system("umount --force /target/boot/efi")
-            os.system("umount --force /target/media/cdrom")
-        os.system("umount --force /target/dev/")
-        os.system("umount --force /target/sys/")
-        os.system("umount --force /target/proc/")
-        os.system("rm -f /target/etc/resolv.conf")
-        os.system("mv /target/etc/resolv.conf.bk /target/etc/resolv.conf")
+            shell_exec("umount --force /target/boot/efi")
+            shell_exec("umount --force /target/media/cdrom")
+        shell_exec("umount --force /target/dev/")
+        shell_exec("umount --force /target/sys/")
+        shell_exec("umount --force /target/proc/")
+        shell_exec("rm -f /target/etc/resolv.conf")
+        shell_exec("mv /target/etc/resolv.conf.bk /target/etc/resolv.conf")
         if(not setup.skip_mount):
             for partition in setup.partitions:
                 if(partition.mount_as is not None and partition.mount_as != "" and partition.mount_as != "/" and partition.mount_as != "swap"):
@@ -410,26 +465,22 @@ class InstallerEngine:
     def do_configure_grub(self, our_total, our_current):
         self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Configuring bootloader"))
         print " --> Running grub-mkconfig"
-        chroot_exec("grub-mkconfig -o /boot/grub/grub.cfg")
+        #chroot_exec("grub-mkconfig -o /boot/grub/grub.cfg")
         grub_output = getoutput("chroot /target/ /bin/sh -c \"grub-mkconfig -o /boot/grub/grub.cfg\"")
         grubfh = open("/var/log/live-installer-grub-output.log", "w")
         grubfh.writelines(grub_output)
         grubfh.close()
-        
+
     def do_check_grub(self, our_total, our_current):
         self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Checking bootloader"))
         print " --> Checking Grub configuration"
         time.sleep(5)
-        found_theme = False
         found_entry = False
         if os.path.exists("/target/boot/grub/grub.cfg"):
             grubfh = open("/target/boot/grub/grub.cfg", "r")
             for line in grubfh:
                 line = line.rstrip("\r\n")
-                if("06_mint_theme" in line):
-                    found_theme = True
-                    print " --> Found Grub theme: %s " % line
-                if ("menuentry" in line and "LinuxMint" in line):
+                if ("menuentry" in line):
                     found_entry = True
                     print " --> Found Grub entry: %s " % line
             grubfh.close()
@@ -442,11 +493,13 @@ class InstallerEngine:
         ''' Mount a filesystem '''
         options = '-o ' + options if options else ''
         cmd = "mount {options} -t {type} {device} {dest}".format(**locals())
+        #print 'Executing:', cmd
         shell_exec(cmd)
 
     def do_unmount(self, mountpoint):
         ''' Unmount a filesystem '''
         cmd = "umount %s" % mountpoint
+        #print 'Executing:', cmd
         shell_exec(cmd)
 
 
@@ -454,17 +507,19 @@ class InstallerEngine:
 class Setup(object):
     language = None
     timezone = None
-    keyboard_model = None    
-    keyboard_layout = None    
-    keyboard_variant = None    
+    keyboard_model = None
+    keyboard_layout = None
+    keyboard_variant = None
     partitions = [] #Array of PartitionSetup objects
     username = None
     hostname = None
     autologin = False
     password1 = None
     password2 = None
-    real_name = None    
+    real_name = None
     grub_device = None
+    plymouth_enable = None
+    multimedia_enable = None
     disks = []
     target_disk = None
     gptonefi = False
@@ -476,23 +531,28 @@ class Setup(object):
     #  * Install cryptsetup/dmraid/mdadm/etc in target environment (using chroot) between init_install and finish_install
     #  * Make sure target is mounted using the same block device as is used in /target/etc/fstab (eg if you change the name of a dm-crypt device between now and /target/etc/fstab, update-initramfs will likely fail)
     skip_mount = False
-    
-    #Descriptions (used by the summary screen)    
+
+    #Descriptions (used by the summary screen)
     keyboard_model_description = None
     keyboard_layout_description = None
     keyboard_variant_description = None
-    
+
     def print_setup(self):
         if __debug__:
             print "-------------------------------------------------------------------------"
             print "language: %s" % self.language
             print "timezone: %s" % self.timezone
-            print "keyboard: %s - %s (%s) - %s - %s (%s)" % (self.keyboard_model, self.keyboard_layout, self.keyboard_variant, self.keyboard_model_description, self.keyboard_layout_description, self.keyboard_variant_description)        
+            print "keyboard: %s - %s (%s) - %s - %s (%s)" % (self.keyboard_model, self.keyboard_layout, self.keyboard_variant, self.keyboard_model_description, self.keyboard_layout_description, self.keyboard_variant_description)
             print "user: %s (%s)" % (self.username, self.real_name)
             print "autologin: ", self.autologin
             print "hostname: %s " % self.hostname
-            print "passwords: %s - %s" % (self.password1, self.password2)        
+            print "passwords: %s - %s" % (self.password1, self.password2)
             print "grub_device: %s " % self.grub_device
+
+            # [XK] Print Plymouth and multimedia settings
+            print "plymouth enable: %s " % self.plymouth_enable
+            print "multimedia install: %s " % self.multimedia_enable
+
             print "skip_mount: %s" % self.skip_mount
             if (not self.skip_mount):
                 print "target_disk: %s " % self.target_disk
@@ -500,7 +560,7 @@ class Setup(object):
                     print "GPT partition table: True"
                 else:
                     print "GPT partition table: False"
-                print "disks: %s " % self.disks                       
+                print "disks: %s " % self.disks
                 print "partitions:"
                 for partition in self.partitions:
                     partition.print_partition()

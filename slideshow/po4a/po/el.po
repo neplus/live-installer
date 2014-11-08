@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-slideshow\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-15 01:03+0300\n"
+"POT-Creation-Date: 2014-10-24 13:51+0200\n"
 "PO-Revision-Date: 2014-03-13 18:13+0000\n"
 "Last-Translator: Tlalok <danoyster@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -20,43 +20,47 @@ msgstr ""
 
 #. type: Content of: <h1>
 #: en/10_welcome.html:1
-msgid "Welcome to Linux Mint Debian"
-msgstr "Καλωσορίσατε"
+msgid "Welcome to SolydXK"
+msgstr ""
 
-#. type: Content of: <div><div><ul><li>
-#: en/10_welcome.html:6
-msgid "Thank you for choosing Linux Mint."
-msgstr "Ευχαριστούμε που επιλέξατε το Linux Mint"
+#. type: Content of: <div><div>
+#: en/10_welcome.html:5
+#, fuzzy
+#| msgid "Thank you for choosing SolydXK."
+msgid "Thank you for choosing SolydXK."
+msgstr "Ευχαριστούμε που επιλέξατε το SolydXK"
+
+#. type: Content of: <div><div><br>
+#: en/10_welcome.html:5
+msgid "You've chosen a Linux distribution that is:"
+msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/10_welcome.html:7
-msgid ""
-"We believe in sharing and being open-minded. Our vision of Freedom includes "
-"being able to do what you want with your computer, and the operating system "
-"should never stand in the way."
+msgid "Secure and stable"
 msgstr ""
-"Πιστεύουμε στο να μοιραζόμαστε και να είμαστε ανοιχτοί. Το όραμα που έχουμε "
-"για την Ελευθερία είναι το να μπορεί κανείς να κάνει αυτό που θέλει με τον "
-"υπολογιστή του, και το λειτουργικό του σύστημα να τον βοηθάει σε αυτό "
-"ακριβώς."
 
 #. type: Content of: <div><div><ul><li>
 #: en/10_welcome.html:8
-msgid ""
-"We focus on ease of use, comfort, and elegance to make your experience with "
-"Linux Mint as enjoyable as possible."
+msgid "Fast and responsive"
 msgstr ""
-"Εστιάζουμε στην ευκολία στη χρήση, στην άνεση και την κομψότητα για να "
-"κάνουμε την εμπειρία σας με το Linux Mint όσο το δυνατόν πιο ευχάριστη."
+
+#. type: Content of: <div><div><ul><li>
+#: en/10_welcome.html:9
+msgid "Desktop-ready"
+msgstr ""
 
 #. type: Content of: <div><div><p>
 #: en/10_welcome.html:11
-msgid ""
-"We hope you will have a wonderful time spent with Linux Mint, and that you "
-"will enjoy using it as much as we do developing it!"
+#, fuzzy
+#| msgid "Thank you for choosing SolydXK."
+msgid "Enjoy this new release and thank you for choosing SolydXK."
+msgstr "Ευχαριστούμε που επιλέξατε το SolydXK"
+
+#. type: Content of: <div><div><p>
+#: en/10_welcome.html:12
+msgid "The installation takes 15-30 minutes, depending on your settings."
 msgstr ""
-"Ελπίζουμε να περάσετε υπέροχα με το Linux Mint και να διασκεδάσετε "
-"χρησιμοποιώντας το όσο και εμείς όταν το κατασκευάζαμε!"
 
 #. type: Content of: <h1>
 #: en/20_giants.html:1
@@ -65,44 +69,33 @@ msgstr "Στέκοντας στους ώμους Γιγάντων"
 
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:6
-#, fuzzy
-#| msgid ""
-#| "Linux Mint is a Debian-based GNU/Linux distribution derived from and "
-#| "compatible with Ubuntu."
-msgid "Linux Mint is a Debian-based GNU/Linux distribution."
+msgid ""
+"SolydXK is a Debian-based GNU/Linux distribution derived from and compatible "
+"with Debian."
 msgstr ""
-"Το Linux Mint είναι μια διανομή GNU/Linux βασισμένη στο Debian η οποία "
-"προέρχεται και είναι συμβατή με το Ubuntu."
 
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:7
-#, fuzzy
-#| msgid ""
-#| "Our innovations, the rapid development of Ubuntu and the huge Debian "
-#| "package selection make Linux Mint one of the most attractive desktop "
-#| "operating systems available to home users."
 msgid ""
-"Our innovations and the huge Debian package selection make Linux Mint one of "
-"the most attractive desktop operating systems available to home users."
+"SolydXK uses either the leightweight Xfce desktop for SoldyX or the highly "
+"configurable and stunningly appealing KDE desktop for SolydK."
 msgstr ""
-"Οι καινοτομίες μας, η ταχεία ανάπτυξη του Ubuntu και η τεράστια συλλογή "
-"πακέτων του Debian καθιστούν το Linux Mint ένα από τα πιο ελκυστικά "
-"λειτουργικά συστήματα γραφείου που είναι διαθέσιμα σε οικιακούς χρήστες."
 
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:8
 #, fuzzy
 #| msgid ""
-#| "At home, Linux Mint is the 4th most widely used desktop operating system, "
-#| "behind Microsoft Windows, Apple OS X and Ubuntu."
+#| "Our innovations, the rapid development of Ubuntu and the huge Debian "
+#| "package selection make SolydXK one of the most attractive desktop "
+#| "operating systems available to home users."
 msgid ""
-"At home, GNU/Linux distributions like Linux Mint or Ubuntu are among the "
-"most widely used desktop operating systems, right next to Microsoft Windows "
-"and Apple OS X."
+"Our innovations, the rapid development of Debian and the huge Debian package "
+"selection make SolydXK one of the most attractive desktop operating systems "
+"available to home users."
 msgstr ""
-"Στο σπίτι, το Linux Mint είναι το 4ο πιο ευρέως χρησιμοποιούμενο λειτουργικό "
-"σύστημα γραφείου, μετά τα Windows της Microsoft, το OS X της Apple και το "
-"Ubuntu."
+"Οι καινοτομίες μας, η ταχεία ανάπτυξη του Ubuntu και η τεράστια συλλογή "
+"πακέτων του Debian καθιστούν το SolydXK ένα από τα πιο ελκυστικά "
+"λειτουργικά συστήματα γραφείου που είναι διαθέσιμα σε οικιακούς χρήστες."
 
 #. type: Content of: <h1>
 #: en/30_desktop-ready.html:1
@@ -114,54 +107,72 @@ msgstr "Όπως είναι"
 #, fuzzy
 #| msgid ""
 #| "Firefox, Thunderbird, OpenOffice.org and Xchat come pre-installed in "
-#| "Linux Mint, so you can get started immediately with your daily routine on "
+#| "SolydXK, so you can get started immediately with your daily routine on "
 #| "your desktop and the Internet."
 msgid ""
-"Most standard applications you are used to come pre-installed in Linux Mint, "
-"so you can get started immediately with your daily routine on your desktop "
-"and the Internet."
+"Firefox, Thunderbird, and LibreOffice come pre-installed in SolydXK, so you "
+"can get started immediately with the desktop and the Internet."
 msgstr ""
 "Οι εφαρμογές Firefox, Thunderbird, OpenOffice.org και Xchat έρχονται "
-"προεγκατεστημένες στο Linux Mint, ούτως ώστε να μπορέσετε να ξεκινήσετε "
+"προεγκατεστημένες στο SolydXK, ούτως ώστε να μπορέσετε να ξεκινήσετε "
 "άμεσα να χρησιμοποιείτε το desktop και το Internet."
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:7
-#, fuzzy
-#| msgid ""
-#| "Other popular applications such as Skype, Google Earth, Opera can be "
-#| "installed with a click of the mouse."
 msgid ""
-"Other popular applications such as Skype, Google Earth, Opera, and over "
-"30,000+ more can be installed with a click of the mouse."
+"Unlike other Linux distributions SolydXK is also ready to play mp3s, DVDs "
+"and Flash video as soon as you run it."
 msgstr ""
-"Άλλες δημοφιλείς εφαρμογές όπως οι Skype, Google Earth και Opera μπορούν να "
-"εγκατασταθούν με ένα κλικ του ποντικιού."
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:8
-msgid ""
-"Linux Mint is compatible with most popular file formats: zip, doc, xls, pdf, "
-"rar, mp3, wmv, mpg, mp4, mov ..."
+msgid "A wide variaty of software can be installed with a click of the mouse."
 msgstr ""
-"Το Linux Mint είναι συμβατό με τους πιο δημοφιλείς τύπους αρχείων: zip, doc, "
+
+#. type: Content of: <div><div><ul><li>
+#: en/30_desktop-ready.html:9
+#, fuzzy
+#| msgid ""
+#| "SolydXK is compatible with most popular file formats: zip, doc, xls, "
+#| "pdf, rar, mp3, wmv, mpg, mp4, mov ..."
+msgid ""
+"SolydXK is compatible with most popular file formats such as: docx, xlsx, "
+"doc, xls, pdf, zip, rar, mp3, mpg, and many more."
+msgstr ""
+"Το SolydXK είναι συμβατό με τους πιο δημοφιλείς τύπους αρχείων: zip, doc, "
 "xls, pdf, rar, mp3, wmv, mpg, mp4, mov ..."
 
 #. type: Content of: <h1>
 #: en/40_office.html:1
-msgid "Be productive"
-msgstr "Γίνετε παραγωγικοί"
+msgid "Office tools are ready to use as soon as you install SolydXK"
+msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/40_office.html:6
 msgid ""
-"Use LibreOffice to create professional documents, spreadsheets and "
-"presentations that are fully compatible with Microsoft Office. Share "
-"printers or access them remotely."
+"<em>LibreOffice</em>, a powerful office software suite, comes built into "
+"SolydXK."
 msgstr ""
-"Χρησιμοποιήστε το LibreOffice για να δημιουργήσετε επαγγελματικά έγγραφα, "
-"λογιστικά φύλλα και παρουσιάσεις που είναι πλήρως συμβατές με το Microsoft "
-"Office. Μοιραστείτε εκτυπωτές ή χρησιμοποιήστε τους από απόσταση."
+
+#. type: Content of: <div><div><ul><li>
+#: en/40_office.html:7
+msgid "<em>LibreOffice</em> is very easy to learn and use."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/40_office.html:8
+msgid ""
+"You can use it to create letters, presentations and spreadsheets, as well as "
+"diagrams and databases."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/40_office.html:9
+msgid ""
+"<em>LibreOffice</em> uses the standard OpenDocument format and it works with "
+"documents from other popular office applications including WordPerfect and "
+"Microsoft Office."
+msgstr ""
 
 #. type: Content of: <h1>
 #: en/50_windows.html:1
@@ -170,33 +181,33 @@ msgstr "Μία εναλλακτική λύση στα κυρίως λειτου�
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:6
-msgid "Linux Mint is easy to use, powerful and configurable."
-msgstr "Το Linux Mint είναι έτοιμο για χρήση, δυνατό και παραμετροποιήσιμο."
+#, fuzzy
+#| msgid "SolydXK is easy to use, powerful and configurable."
+msgid "SolydXK is easy to use, powerful and configurable."
+msgstr "Το SolydXK είναι έτοιμο για χρήση, δυνατό και παραμετροποιήσιμο."
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:7
 msgid ""
-"Linux Mint can detect other operating systems and install itself beside "
-"them. You can choose which operating system to launch when you start the "
-"computer."
+"SolydXK is safe and stable. Unlike other operating systems, it is not prone "
+"to computer viruses or spyware, it does not suffer from disk fragmentation, "
+"and it has no registry that requires periodic cleaning."
 msgstr ""
-"Το Linux Mint μπορεί να εντοπίσει άλλα λειτουργικά συστήματα και να "
-"εγκατασταθεί το ίδιο εκτός από εκείνα. Μπορείτε να επιλέξετε ποιο "
-"λειτουργικό σύστημα θα εκκινηθεί όταν ξεκινάτε τον υπολογιστή σας."
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:8
 #, fuzzy
 #| msgid ""
-#| "Install Wine and run Windows software in Linux Mint. Or install "
-#| "Virtualbox, and run Windows itself within Linux Mint."
+#| "SolydXK can detect other operating systems and install itself beside "
+#| "them. You can choose which operating system to launch when you start the "
+#| "computer."
 msgid ""
-"Install Wine and run Windows software in Linux Mint. Or install VirtualBox, "
-"and run Windows itself within Linux Mint."
+"SolydXK can detect other operating systems and install itself beside them. "
+"You can choose which operating system to launch when you start the computer."
 msgstr ""
-"Εγκαταστήστε το Wine και τρέξτε λογισμικό των Windows στο Linux Mint. Ή "
-"εγκαταστήστε το Virtualbox, και τρέξτε τα ίδια τα Windows μέσα στο Linux "
-"Mint."
+"Το SolydXK μπορεί να εντοπίσει άλλα λειτουργικά συστήματα και να "
+"εγκατασταθεί το ίδιο εκτός από εκείνα. Μπορείτε να επιλέξετε ποιο "
+"λειτουργικό σύστημα θα εκκινηθεί όταν ξεκινάτε τον υπολογιστή σας."
 
 #. type: Content of: <h1>
 #: en/60_safe.html:1
@@ -206,85 +217,208 @@ msgstr "Ασφαλείς ενημερώσεις"
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:6
 msgid ""
-"Linux Mint is safe and stable, you don't need an antivirus, an anti-spyware, "
-"a defragmentation tool or a registry cleaner."
+"Some operating systems make updating your system harder than it really needs "
+"to be. SolydXK thinks upgrades should be quick and easy, and then get out of "
+"the way."
 msgstr ""
-"Το Linux Mint είναι ασφαλές και σταθερό, δεν έχετε ανάγκη από antivirus, "
-"anti-spyware, εργαλεία για defragmentation ή από registry cleaners."
 
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:7
+#, fuzzy
+#| msgid ""
+#| "The SolydXK Update Manager sits discreetly in your system tray and "
+#| "lets you know when updates are available. You don't have to apply updates "
+#| "when you don't want to. The Update Manager won't pop up or annoy you in "
+#| "any way."
 msgid ""
-"Receive fixes and security updates all in one place, for the entire system, "
-"including the software you install."
-msgstr ""
-"Λάβετε διορθώσεις και ενημερώσεις ασφαλείας, όλα σε ένα μέρος, για ολόκληρο "
-"το σύστημα, συμπεριλαμβανομένου και του λογισμικού που εγκαθιστάτε."
-
-#. type: Content of: <div><div><ul><li>
-#: en/60_safe.html:8
-msgid ""
-"The Linux Mint Update Manager sits discreetly in your system tray and lets "
-"you know when updates are available. You don't have to apply updates when "
-"you don't want to. The Update Manager won't pop up or annoy you in any way."
+"The Update Manager sits discreetly in your system tray and lets you know "
+"when updates are available. You don't have to apply updates when you don't "
+"want to. The Update Manager won't pop up or annoy you in any way."
 msgstr ""
 "Ο Διαχειριστής Ενημερώσεων αναπαύεται διακριτικά στο system tray και σας "
 "ειδοποιεί όταν υπάρχουν διαθέσιμες ενημερώσεις. Δεν είσαστε υποχρεωμένοι να "
 "κάνετε ενημερώσεις αν δε θέλετε. Ο Διαχειριστής Ενημερώσεων δε θα \"πετάγεται"
 "\" ούτε θα σας ενοχλεί με οποιοδήποτε άλλο τρόπο."
 
-#. type: Content of: <h1>
-#: en/70_chat.html:1
-msgid "Stay connected"
-msgstr "Μείνετε συνδεδεμένοι"
+#. type: Content of: <div><div><ul><li>
+#: en/60_safe.html:8
+msgid ""
+"All updated files are maintained and closely checked by trusted developers "
+"and maintainers."
+msgstr ""
 
 #. type: Content of: <div><div><ul><li>
-#: en/70_chat.html:6
-msgid ""
-"Keep in touch with your friends and contacts, by email, messenger or on your "
-"favorite social networks. Linux Mint provides all you need to interact with "
-"Twitter, Facebook, Google Hangouts, ICQ, IRC, AIM, Yahoo and many other "
-"networks."
+#: en/60_safe.html:9
+msgid "All files are stored in special secure repositories for your use."
 msgstr ""
-"Κρατήστε επαφή με τους φίλους και τους γνωστούς σας, μέσω e-mail, messenger "
-"ή μέσω του αγαπημένου σας κοινωνικού δικτύου. Το Linux Mint σας παρέχει όλα "
-"όσα χρειάζεστε για να επικοινωνείτε μέσω Twitter, Facebook, Google Hangouts, "
-"ICQ, IRC, AIM, Yahoo, καθώς  και σε πολλά άλλα δικτύα."
+
+#. type: Content of: <div><div><ul><li>
+#: en/60_safe.html:10
+msgid "The security repository is synchronized daily."
+msgstr ""
 
 #. type: Content of: <h1>
-#: en/80_community.html:1
+#: en/70_community.html:1
 msgid "A great community"
 msgstr "Μια μεγάλη κοινότητα"
 
 #. type: Content of: <div><div><ul><li>
-#: en/80_community.html:6
+#: en/70_community.html:6
+#, fuzzy
+#| msgid ""
+#| "The SolydXK community is one of the best on the Internet. Our users "
+#| "not only provide most of our funding, but also ideas, artwork, and "
+#| "sometimes even source code."
 msgid ""
-"The Linux Mint community is one of the best on the Internet. Our users not "
-"only provide most of our funding, but also ideas, artwork, and sometimes "
-"even source code."
+"The SolydXK community is one of the best on the Internet. Our users provide "
+"most of our funding, as well as ideas, artwork and sometimes even source "
+"code."
 msgstr ""
-"Η κοινότητα του Linux Mint είναι μια από τις καλύτερες στο Διαδίκτυο. Οι "
+"Η κοινότητα του SolydXK είναι μια από τις καλύτερες στο Διαδίκτυο. Οι "
 "χρήστες μας παρέχουν το μεγαλύτερο μέρος της χρηματοδότησής μας, καθώς "
 "επίσης και ιδέες, καλλιτεχνικό υλικό και μερικές φορές ακόμη και πηγαίο "
 "κώδικα."
 
 #. type: Content of: <div><div><ul><li>
-#: en/80_community.html:7
+#: en/70_community.html:7
+#, fuzzy
+#| msgid ""
+#| "SolydXK users are happy to share their passion, enthusiasm, and "
+#| "eagerness to help. Don't hesitate to ask questions in the forums or get "
+#| "involved with the community."
 msgid ""
-"Linux Mint users are happy to share their passion, enthusiasm, and eagerness "
-"to help. Don't hesitate to ask questions in the forums or get involved with "
+"SolydXK users are happy to share their passion and enthusiasm and are eager "
+"to help. Don't hesitate to ask questions on the forums or to get involved in "
 "the community."
 msgstr ""
-"Οι χρήστες του Linux Mint με χαρά μοιράζονται το πάθος τους και τον "
+"Οι χρήστες του SolydXK με χαρά μοιράζονται το πάθος τους και τον "
 "ενθουσιασμό τους, και είναι πρόθυμοι να βοηθήσουν. Μή διστάσετε να ρωτήσετε "
 "οτιδήποτε στα forums η να συμμετέχετε στην κοινότητα."
 
 #. type: Content of: <div><div><ul><li>
-#: en/80_community.html:8
+#: en/70_community.html:8
+#, fuzzy
+#| msgid ""
+#| "Send us your feedback and tell us about your experience. We'll listen to "
+#| "your ideas and use them to further improve SolydXK."
 msgid ""
 "Send us your feedback and tell us about your experience. We'll listen to "
-"your ideas and use them to further improve Linux Mint."
+"your ideas and use them to further improve SolydXK."
 msgstr ""
 "Στείλτε μας τα σχόλιά σας και περιγράψτε μας την εμπειρία σας. Θα λάβουμε "
 "υπόψη τις ιδέες σας και θα τις χρησιμοποιήσουμε για να βελτιώσουμε περαιτέρω "
-"το Linux Mint."
+"το SolydXK."
+
+#~ msgid "Welcome to SolydXK Debian"
+#~ msgstr "Καλωσορίσατε"
+
+#~ msgid ""
+#~ "We believe in sharing and being open-minded. Our vision of Freedom "
+#~ "includes being able to do what you want with your computer, and the "
+#~ "operating system should never stand in the way."
+#~ msgstr ""
+#~ "Πιστεύουμε στο να μοιραζόμαστε και να είμαστε ανοιχτοί. Το όραμα που "
+#~ "έχουμε για την Ελευθερία είναι το να μπορεί κανείς να κάνει αυτό που "
+#~ "θέλει με τον υπολογιστή του, και το λειτουργικό του σύστημα να τον "
+#~ "βοηθάει σε αυτό ακριβώς."
+
+#~ msgid ""
+#~ "We focus on ease of use, comfort, and elegance to make your experience "
+#~ "with SolydXK as enjoyable as possible."
+#~ msgstr ""
+#~ "Εστιάζουμε στην ευκολία στη χρήση, στην άνεση και την κομψότητα για να "
+#~ "κάνουμε την εμπειρία σας με το SolydXK όσο το δυνατόν πιο ευχάριστη."
+
+#~ msgid ""
+#~ "We hope you will have a wonderful time spent with SolydXK, and that "
+#~ "you will enjoy using it as much as we do developing it!"
+#~ msgstr ""
+#~ "Ελπίζουμε να περάσετε υπέροχα με το SolydXK και να διασκεδάσετε "
+#~ "χρησιμοποιώντας το όσο και εμείς όταν το κατασκευάζαμε!"
+
+#, fuzzy
+#~| msgid ""
+#~| "SolydXK is a Debian-based GNU/Linux distribution derived from and "
+#~| "compatible with Ubuntu."
+#~ msgid "SolydXK is a Debian-based GNU/Linux distribution."
+#~ msgstr ""
+#~ "Το SolydXK είναι μια διανομή GNU/Linux βασισμένη στο Debian η οποία "
+#~ "προέρχεται και είναι συμβατή με το Ubuntu."
+
+#, fuzzy
+#~| msgid ""
+#~| "At home, SolydXK is the 4th most widely used desktop operating "
+#~| "system, behind Microsoft Windows, Apple OS X and Ubuntu."
+#~ msgid ""
+#~ "At home, GNU/Linux distributions like SolydXK or Ubuntu are among the "
+#~ "most widely used desktop operating systems, right next to Microsoft "
+#~ "Windows and Apple OS X."
+#~ msgstr ""
+#~ "Στο σπίτι, το SolydXK είναι το 4ο πιο ευρέως χρησιμοποιούμενο "
+#~ "λειτουργικό σύστημα γραφείου, μετά τα Windows της Microsoft, το OS X της "
+#~ "Apple και το Ubuntu."
+
+#, fuzzy
+#~| msgid ""
+#~| "Other popular applications such as Skype, Google Earth, Opera can be "
+#~| "installed with a click of the mouse."
+#~ msgid ""
+#~ "Other popular applications such as Skype, Google Earth, Opera, and over "
+#~ "30,000+ more can be installed with a click of the mouse."
+#~ msgstr ""
+#~ "Άλλες δημοφιλείς εφαρμογές όπως οι Skype, Google Earth και Opera μπορούν "
+#~ "να εγκατασταθούν με ένα κλικ του ποντικιού."
+
+#~ msgid "Be productive"
+#~ msgstr "Γίνετε παραγωγικοί"
+
+#~ msgid ""
+#~ "Use LibreOffice to create professional documents, spreadsheets and "
+#~ "presentations that are fully compatible with Microsoft Office. Share "
+#~ "printers or access them remotely."
+#~ msgstr ""
+#~ "Χρησιμοποιήστε το LibreOffice για να δημιουργήσετε επαγγελματικά έγγραφα, "
+#~ "λογιστικά φύλλα και παρουσιάσεις που είναι πλήρως συμβατές με το "
+#~ "Microsoft Office. Μοιραστείτε εκτυπωτές ή χρησιμοποιήστε τους από "
+#~ "απόσταση."
+
+#, fuzzy
+#~| msgid ""
+#~| "Install Wine and run Windows software in SolydXK. Or install "
+#~| "Virtualbox, and run Windows itself within SolydXK."
+#~ msgid ""
+#~ "Install Wine and run Windows software in SolydXK. Or install "
+#~ "VirtualBox, and run Windows itself within SolydXK."
+#~ msgstr ""
+#~ "Εγκαταστήστε το Wine και τρέξτε λογισμικό των Windows στο SolydXK. Ή "
+#~ "εγκαταστήστε το Virtualbox, και τρέξτε τα ίδια τα Windows μέσα στο Linux "
+#~ "SolydXK."
+
+#~ msgid ""
+#~ "SolydXK is safe and stable, you don't need an antivirus, an anti-"
+#~ "spyware, a defragmentation tool or a registry cleaner."
+#~ msgstr ""
+#~ "Το SolydXK είναι ασφαλές και σταθερό, δεν έχετε ανάγκη από antivirus, "
+#~ "anti-spyware, εργαλεία για defragmentation ή από registry cleaners."
+
+#~ msgid ""
+#~ "Receive fixes and security updates all in one place, for the entire "
+#~ "system, including the software you install."
+#~ msgstr ""
+#~ "Λάβετε διορθώσεις και ενημερώσεις ασφαλείας, όλα σε ένα μέρος, για "
+#~ "ολόκληρο το σύστημα, συμπεριλαμβανομένου και του λογισμικού που "
+#~ "εγκαθιστάτε."
+
+#~ msgid "Stay connected"
+#~ msgstr "Μείνετε συνδεδεμένοι"
+
+#~ msgid ""
+#~ "Keep in touch with your friends and contacts, by email, messenger or on "
+#~ "your favorite social networks. SolydXK provides all you need to "
+#~ "interact with Twitter, Facebook, Google Hangouts, ICQ, IRC, AIM, Yahoo "
+#~ "and many other networks."
+#~ msgstr ""
+#~ "Κρατήστε επαφή με τους φίλους και τους γνωστούς σας, μέσω e-mail, "
+#~ "messenger ή μέσω του αγαπημένου σας κοινωνικού δικτύου. Το SolydXK σας "
+#~ "παρέχει όλα όσα χρειάζεστε για να επικοινωνείτε μέσω Twitter, Facebook, "
+#~ "Google Hangouts, ICQ, IRC, AIM, Yahoo, καθώς  και σε πολλά άλλα δικτύα."

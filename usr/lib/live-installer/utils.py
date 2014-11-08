@@ -1,13 +1,26 @@
 
 import subprocess
+import urllib2
+import re
 
-def shell_exec(command, kwargs={}):
+# https://docs.python.org/2.7/library/subprocess.html
+
+def shell_exec_popen(command, kwargs={}):
     print 'Executing:', command
-    return subprocess.Popen(command, shell=True, 
+    return subprocess.Popen(command, shell=True,
                             stdout=subprocess.PIPE, **kwargs)
 
+def shell_exec(command):
+    print 'Executing:', command
+    return subprocess.call(command, shell=True)
+
 def getoutput(command):
-    return shell_exec(command).stdout.read().strip()
+    #return shell_exec(command).stdout.read().strip()
+    output = subprocess.check_output(command, shell=True).strip().split('\n')
+    if len(output) == 1:
+        # Single line: return as string
+        output = output[0]
+    return output
 
 def chroot_exec(command):
     command = command.replace('"', "'").strip()  # FIXME
@@ -37,3 +50,39 @@ def memoize(func):
             ret = self[key] = func(*key)
             return ret
     return memodict()
+
+def get_config_dict(file, key_value=re.compile(r'^\s*(\w+)\s*=\s*["\']?(.*?)["\']?\s*(#.*)?$')):
+    """Returns POSIX config file (key=value, no sections) as dict.
+    Assumptions: no multiline values, no value contains '#'. """
+    d = {}
+    with open(file) as f:
+        for line in f:
+            try: key, value, _ = key_value.match(line).groups()
+            except AttributeError: continue
+            d[key] = value
+    return d
+
+# [XK] Check for internet connection
+def hasInternetConnection(testUrl='http://google.com'):
+    try:
+        urllib2.urlopen(testUrl, timeout=1)
+        return True
+    except urllib2.URLError:
+        pass
+    return False
+
+# [XK] Check if running in VB
+def runningInVirtualBox():
+    dmiBIOSVersion = getoutput("dmidecode -t0 | grep 'Version:' | awk -F ': ' '{print $2}'")
+    dmiSystemProduct = getoutput("dmidecode -t1 | grep 'Product Name:' | awk -F ': ' '{print $2}'")
+    dmiBoardProduct = getoutput("dmidecode -t2 | grep 'Product Name:' | awk -F ': ' '{print $2}'")
+    if dmiBIOSVersion != "VirtualBox" and dmiSystemProduct != "VirtualBox" and dmiBoardProduct != "VirtualBox":
+        return False
+    return True
+
+# [XK] Check if is 64-bit system
+def isAmd64():
+    machine = getoutput("uname -m")
+    if machine == "x86_64":
+        return True
+    return False

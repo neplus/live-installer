@@ -3,7 +3,7 @@ html, body
 	margin:0;
 	padding:0;
 	
-	background-color:#FFFFFF;
+	background-color:#E6E6E6;
 	
 	font-family:sans-serif;
 	color:#000000;
@@ -20,16 +20,15 @@ a
 
 #container
 {
+	position:fixed !important;
 	position:absolute;
-	
-	width:800px;
-	height:409px;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
 	
 	border: 1px solid black; 
-	
-	overflow:hidden;
-	
-	background-image:url('background.jpg');
+	background-image:url('background.png');
 	background-repeat:no-repeat;
 	background-position:top left;
 
@@ -100,8 +99,11 @@ appear :)
 	
 	top:50px;
 	left:0px;
+	
+	width:800px;
+	height:409px;
 
-    padding-right:60px;
+	padding-right:60px;
 	
 	font-size:14px;
 	

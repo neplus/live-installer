@@ -1,0 +1,9 @@
+all = fonts-vlgothic fonts-takao im-config fcitx fcitx-mozc fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk mozc-utils-gui
+solydk32 = fonts-vlgothic fonts-takao im-config fcitx fcitx-mozc fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk mozc-utils-gui
+solydk64 = fonts-vlgothic fonts-takao im-config fcitx fcitx-mozc fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk mozc-utils-gui
+solydx32 = fonts-vlgothic fonts-takao im-config fcitx fcitx-mozc fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk mozc-utils-gui
+solydx64 = fonts-vlgothic fonts-takao im-config fcitx fcitx-mozc fcitx-frontend-gtk3 fcitx-ui-classic fcitx-config-gtk mozc-utils-gui
+solydkbe64 = fonts-vlgothic fonts-takao im-config ibus ibus-mozc ibus-gtk3 python-appindicator mozc-utils-gui
+solydxbe64 = fonts-vlgothic fonts-takao im-config ibus ibus-mozc ibus-gtk3 python-appindicator mozc-utils-gui
+solydkbo64 = fonts-vlgothic fonts-takao im-config ibus ibus-mozc ibus-gtk3 python-appindicator mozc-utils-gui
+

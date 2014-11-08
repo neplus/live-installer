@@ -16,7 +16,7 @@ class Dialog(gtk.MessageDialog):
                                    gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT,
                                    style, buttons, text)
         self.set_position(gtk.WIN_POS_CENTER)
-        self.set_icon_from_file("/usr/share/icons/live-installer.png")
+        self.set_icon_from_file("/usr/share/live-installer/logo.png")
         self.set_title(title)
         self.set_markup(text)
         self.desc = text[:30] + ' ...' if len(text) > 30 else text

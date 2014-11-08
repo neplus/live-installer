@@ -179,9 +179,17 @@ def select_timezone(tz):
             im.paste(BACK_ENHANCED_IM, overlay_im)
         night_im = ImageChops.offset(NIGHT_IM, _get_x_offset(), 0).crop(im.getbbox())
         if IS_WINTER: night_im = ImageOps.flip(night_im)
-        im.paste(Image.alpha_composite(night_im, LIGHTS_IM), night_im)
+        # [XK] In Wheezy alpha_composite and tobytes are not implemented, yet
+        try:
+            im.paste(Image.alpha_composite(night_im, LIGHTS_IM), night_im)
+        except:
+            im.paste(Image.blend(night_im, LIGHTS_IM, 0.5), night_im)
         im.paste(DOT_IM, (int(x - DOT_IM.size[1]/2), int(y - DOT_IM.size[0]/2)), DOT_IM)
-        return gtk.gdk.pixbuf_new_from_data(im.tobytes(), gtk.gdk.COLORSPACE_RGB,
+        try:
+            barr = im.tobytes()
+        except:
+            barr = im.tostring()
+        return gtk.gdk.pixbuf_new_from_data(barr, gtk.gdk.COLORSPACE_RGB,
                                             False, 8, im.size[0], im.size[1], im.size[0] * 3)
     try:
         hexcolor = '{:02x}{:02x}{:02x}'.format(*CC_IM.getpixel((tz.x, tz.y)))

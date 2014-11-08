@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-slideshow\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-15 01:03+0300\n"
+"POT-Creation-Date: 2014-10-24 13:51+0200\n"
 "PO-Revision-Date: 2013-10-29 16:56+0000\n"
 "Last-Translator: kelebek333 <Unknown>\n"
-"Language-Team: Linux Mint Türkiye Çeviri Tayfası <hsngrms@ovi.com>\n"
+"Language-Team: SolydXK Türkiye Çeviri Tayfası <hsngrms@ovi.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,42 +16,47 @@ msgstr ""
 
 #. type: Content of: <h1>
 #: en/10_welcome.html:1
-msgid "Welcome to Linux Mint Debian"
-msgstr "Hoş Geldiniz"
+msgid "Welcome to SolydXK"
+msgstr ""
 
-#. type: Content of: <div><div><ul><li>
-#: en/10_welcome.html:6
-msgid "Thank you for choosing Linux Mint."
-msgstr "Linux Mint'i seçtiğiniz için teşekkür ederiz."
+#. type: Content of: <div><div>
+#: en/10_welcome.html:5
+#, fuzzy
+#| msgid "Thank you for choosing SolydXK."
+msgid "Thank you for choosing SolydXK."
+msgstr "SolydXK'i seçtiğiniz için teşekkür ederiz."
+
+#. type: Content of: <div><div><br>
+#: en/10_welcome.html:5
+msgid "You've chosen a Linux distribution that is:"
+msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/10_welcome.html:7
-msgid ""
-"We believe in sharing and being open-minded. Our vision of Freedom includes "
-"being able to do what you want with your computer, and the operating system "
-"should never stand in the way."
+msgid "Secure and stable"
 msgstr ""
-"Açık olmaya ve paylaşıma inanıyoruz. Özgürlük vizyonumuz, bilgisayarınızla "
-"istediğinizi yapabilmeniz ve işletim sisteminizin bunu yaparken size "
-"yardımcı olmasıdır."
 
 #. type: Content of: <div><div><ul><li>
 #: en/10_welcome.html:8
-msgid ""
-"We focus on ease of use, comfort, and elegance to make your experience with "
-"Linux Mint as enjoyable as possible."
+msgid "Fast and responsive"
 msgstr ""
-"Linux Mint masaüstü deneyiminizi olabildiğince eğlenceli kılmak için "
-"kullanım kolaylığı, rahatlık ve zerafet üzerine odaklanıyoruz."
+
+#. type: Content of: <div><div><ul><li>
+#: en/10_welcome.html:9
+msgid "Desktop-ready"
+msgstr ""
 
 #. type: Content of: <div><div><p>
 #: en/10_welcome.html:11
-msgid ""
-"We hope you will have a wonderful time spent with Linux Mint, and that you "
-"will enjoy using it as much as we do developing it!"
+#, fuzzy
+#| msgid "Thank you for choosing SolydXK."
+msgid "Enjoy this new release and thank you for choosing SolydXK."
+msgstr "SolydXK'i seçtiğiniz için teşekkür ederiz."
+
+#. type: Content of: <div><div><p>
+#: en/10_welcome.html:12
+msgid "The installation takes 15-30 minutes, depending on your settings."
 msgstr ""
-"Umarız Linux Mint ile harika vakit geçirir ve onu kullanırken en az bizim "
-"onu geliştirirken aldığımız kadar zevk alırsınız."
 
 #. type: Content of: <h1>
 #: en/20_giants.html:1
@@ -60,43 +65,33 @@ msgstr "Devlerin omuzları üzerinde duruyor"
 
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:6
-#, fuzzy
-#| msgid ""
-#| "Linux Mint is a Debian-based GNU/Linux distribution derived from and "
-#| "compatible with Ubuntu."
-msgid "Linux Mint is a Debian-based GNU/Linux distribution."
+msgid ""
+"SolydXK is a Debian-based GNU/Linux distribution derived from and compatible "
+"with Debian."
 msgstr ""
-"Linux Mint, Ubuntu'dan türeyen ve onunla uyumlu Debian tabanlı bir GNU/Linux "
-"dağıtımıdır."
 
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:7
-#, fuzzy
-#| msgid ""
-#| "Our innovations, the rapid development of Ubuntu and the huge Debian "
-#| "package selection make Linux Mint one of the most attractive desktop "
-#| "operating systems available to home users."
 msgid ""
-"Our innovations and the huge Debian package selection make Linux Mint one of "
-"the most attractive desktop operating systems available to home users."
+"SolydXK uses either the leightweight Xfce desktop for SoldyX or the highly "
+"configurable and stunningly appealing KDE desktop for SolydK."
 msgstr ""
-"Yeniliklerimiz, Ubuntunun hızlı gelişimi ve Debian'ın devasa paket seçimi, "
-"Linux Mint'i ev kullanıcılarının edinebileceği en çekici masaüstü işletim "
-"sistemlerinden biri haline getirir."
 
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:8
 #, fuzzy
 #| msgid ""
-#| "At home, Linux Mint is the 4th most widely used desktop operating system, "
-#| "behind Microsoft Windows, Apple OS X and Ubuntu."
+#| "Our innovations, the rapid development of Ubuntu and the huge Debian "
+#| "package selection make SolydXK one of the most attractive desktop "
+#| "operating systems available to home users."
 msgid ""
-"At home, GNU/Linux distributions like Linux Mint or Ubuntu are among the "
-"most widely used desktop operating systems, right next to Microsoft Windows "
-"and Apple OS X."
+"Our innovations, the rapid development of Debian and the huge Debian package "
+"selection make SolydXK one of the most attractive desktop operating systems "
+"available to home users."
 msgstr ""
-"Linux Mint, Microsoft Windows, Apple OS X ve Ubuntu'dan sonra ev ortamında "
-"4. en yaygın kullanılan masaüstü işletim sistemidir."
+"Yeniliklerimiz, Ubuntunun hızlı gelişimi ve Debian'ın devasa paket seçimi, "
+"SolydXK'i ev kullanıcılarının edinebileceği en çekici masaüstü işletim "
+"sistemlerinden biri haline getirir."
 
 #. type: Content of: <h1>
 #: en/30_desktop-ready.html:1
@@ -108,54 +103,72 @@ msgstr "Her şeyi içinde"
 #, fuzzy
 #| msgid ""
 #| "Firefox, Thunderbird, OpenOffice.org and Xchat come pre-installed in "
-#| "Linux Mint, so you can get started immediately with your daily routine on "
+#| "SolydXK, so you can get started immediately with your daily routine on "
 #| "your desktop and the Internet."
 msgid ""
-"Most standard applications you are used to come pre-installed in Linux Mint, "
-"so you can get started immediately with your daily routine on your desktop "
-"and the Internet."
+"Firefox, Thunderbird, and LibreOffice come pre-installed in SolydXK, so you "
+"can get started immediately with the desktop and the Internet."
 msgstr ""
-"Firefox, Thunderbird, OpenOffice.org ve Xchat yazılımları Linux Mint "
+"Firefox, Thunderbird, OpenOffice.org ve Xchat yazılımları SolydXK "
 "içerisinde kurulu hâlde gelmektedir. Böylelikle hemen internete erişebilir "
 "ve masaüstünüzde çalışmaya başlayabilirsiniz."
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:7
-#, fuzzy
-#| msgid ""
-#| "Other popular applications such as Skype, Google Earth, Opera can be "
-#| "installed with a click of the mouse."
 msgid ""
-"Other popular applications such as Skype, Google Earth, Opera, and over "
-"30,000+ more can be installed with a click of the mouse."
+"Unlike other Linux distributions SolydXK is also ready to play mp3s, DVDs "
+"and Flash video as soon as you run it."
 msgstr ""
-"Skype, Google Earth, Opera gibi diğer popüler uygulamalar ise tek fare "
-"tıklaması ile kurulabilir."
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:8
-msgid ""
-"Linux Mint is compatible with most popular file formats: zip, doc, xls, pdf, "
-"rar, mp3, wmv, mpg, mp4, mov ..."
+msgid "A wide variaty of software can be installed with a click of the mouse."
 msgstr ""
-"Linux Mint zip, doc, xls, pdf, rar, mp3, wmv, mpg, mp4, mov gibi çok bilinen "
+
+#. type: Content of: <div><div><ul><li>
+#: en/30_desktop-ready.html:9
+#, fuzzy
+#| msgid ""
+#| "SolydXK is compatible with most popular file formats: zip, doc, xls, "
+#| "pdf, rar, mp3, wmv, mpg, mp4, mov ..."
+msgid ""
+"SolydXK is compatible with most popular file formats such as: docx, xlsx, "
+"doc, xls, pdf, zip, rar, mp3, mpg, and many more."
+msgstr ""
+"SolydXK zip, doc, xls, pdf, rar, mp3, wmv, mpg, mp4, mov gibi çok bilinen "
 "dosya türleriyle uyumludur."
 
 #. type: Content of: <h1>
 #: en/40_office.html:1
-msgid "Be productive"
-msgstr "Yaratıcı olun"
+msgid "Office tools are ready to use as soon as you install SolydXK"
+msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/40_office.html:6
 msgid ""
-"Use LibreOffice to create professional documents, spreadsheets and "
-"presentations that are fully compatible with Microsoft Office. Share "
-"printers or access them remotely."
+"<em>LibreOffice</em>, a powerful office software suite, comes built into "
+"SolydXK."
 msgstr ""
-"Microsoft Ofis ile tam uyumlu profesyonel belgeler, tablolar ve sunumlar "
-"üretmek için  LibreOffice kullanın. Yazıcıları paylaşabilir ve bunlara "
-"uzaktan erişebilirsiniz."
+
+#. type: Content of: <div><div><ul><li>
+#: en/40_office.html:7
+msgid "<em>LibreOffice</em> is very easy to learn and use."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/40_office.html:8
+msgid ""
+"You can use it to create letters, presentations and spreadsheets, as well as "
+"diagrams and databases."
+msgstr ""
+
+#. type: Content of: <div><div><ul><li>
+#: en/40_office.html:9
+msgid ""
+"<em>LibreOffice</em> uses the standard OpenDocument format and it works with "
+"documents from other popular office applications including WordPerfect and "
+"Microsoft Office."
+msgstr ""
 
 #. type: Content of: <h1>
 #: en/50_windows.html:1
@@ -164,34 +177,35 @@ msgstr "Önde gelen işletim sistemlerine bir alternatif"
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:6
-msgid "Linux Mint is easy to use, powerful and configurable."
+#, fuzzy
+#| msgid "SolydXK is easy to use, powerful and configurable."
+msgid "SolydXK is easy to use, powerful and configurable."
 msgstr ""
-"Linux Mint kullanımı kolay, güçlü ve kolay yapılandırılabilir bir işletim "
+"SolydXK kullanımı kolay, güçlü ve kolay yapılandırılabilir bir işletim "
 "sistemidir."
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:7
 msgid ""
-"Linux Mint can detect other operating systems and install itself beside "
-"them. You can choose which operating system to launch when you start the "
-"computer."
+"SolydXK is safe and stable. Unlike other operating systems, it is not prone "
+"to computer viruses or spyware, it does not suffer from disk fragmentation, "
+"and it has no registry that requires periodic cleaning."
 msgstr ""
-"Linux Mint kurulu olan diğer işletim sistemlerini de tespit edip kendini "
-"onların yanına kurabilir. Bilgisayarı açarken hangi işletim sistemini "
-"başlatacağınızı seçebilirsiniz."
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:8
 #, fuzzy
 #| msgid ""
-#| "Install Wine and run Windows software in Linux Mint. Or install "
-#| "Virtualbox, and run Windows itself within Linux Mint."
+#| "SolydXK can detect other operating systems and install itself beside "
+#| "them. You can choose which operating system to launch when you start the "
+#| "computer."
 msgid ""
-"Install Wine and run Windows software in Linux Mint. Or install VirtualBox, "
-"and run Windows itself within Linux Mint."
+"SolydXK can detect other operating systems and install itself beside them. "
+"You can choose which operating system to launch when you start the computer."
 msgstr ""
-"Wine'ı kurun ve Linux Mint'te Windows yazılımlarını çalıştırın. Virtualbox "
-"ile Windows'un kendisini de Linux Mint içerisinde çalıştırabilirsiniz."
+"SolydXK kurulu olan diğer işletim sistemlerini de tespit edip kendini "
+"onların yanına kurabilir. Bilgisayarı açarken hangi işletim sistemini "
+"başlatacağınızı seçebilirsiniz."
 
 #. type: Content of: <h1>
 #: en/60_safe.html:1
@@ -201,84 +215,205 @@ msgstr "Güvenli güncelleştirmeler"
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:6
 msgid ""
-"Linux Mint is safe and stable, you don't need an antivirus, an anti-spyware, "
-"a defragmentation tool or a registry cleaner."
+"Some operating systems make updating your system harder than it really needs "
+"to be. SolydXK thinks upgrades should be quick and easy, and then get out of "
+"the way."
 msgstr ""
-"Linux Mint güvenli ve kararlıdır. Antivirüs, anti-spyware, disk birleştirme "
-"aracı ve kayıt defteri temizleyicisi gibi yazılımlara ihtiyacınız yoktur."
 
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:7
+#, fuzzy
+#| msgid ""
+#| "The SolydXK Update Manager sits discreetly in your system tray and "
+#| "lets you know when updates are available. You don't have to apply updates "
+#| "when you don't want to. The Update Manager won't pop up or annoy you in "
+#| "any way."
 msgid ""
-"Receive fixes and security updates all in one place, for the entire system, "
-"including the software you install."
+"The Update Manager sits discreetly in your system tray and lets you know "
+"when updates are available. You don't have to apply updates when you don't "
+"want to. The Update Manager won't pop up or annoy you in any way."
 msgstr ""
-"Kurduğunuz programlar da dahil bütün güvenlik güncelleştirmelerini ve hata "
-"düzeltmelerini tek bir yerden alın."
-
-#. type: Content of: <div><div><ul><li>
-#: en/60_safe.html:8
-msgid ""
-"The Linux Mint Update Manager sits discreetly in your system tray and lets "
-"you know when updates are available. You don't have to apply updates when "
-"you don't want to. The Update Manager won't pop up or annoy you in any way."
-msgstr ""
-"Linux Mint Güncelleme Yöneticisi sistem tepsisinde sessizce durur ve yeni "
+"SolydXK Güncelleme Yöneticisi sistem tepsisinde sessizce durur ve yeni "
 "bir güncelleme hazır olduğunda sizi haberdar eder. İstemediğiniz taktirde "
 "güncellemeleri uygulamayabilirsiniz. Böyle bir durumda güncelleme yöneticisi "
 "karşınıza gelmeyecek ve sizi hiçbir şekilde rahatsız etmeyecektir."
 
-#. type: Content of: <h1>
-#: en/70_chat.html:1
-msgid "Stay connected"
-msgstr "Bağlı kalın"
+#. type: Content of: <div><div><ul><li>
+#: en/60_safe.html:8
+msgid ""
+"All updated files are maintained and closely checked by trusted developers "
+"and maintainers."
+msgstr ""
 
 #. type: Content of: <div><div><ul><li>
-#: en/70_chat.html:6
-msgid ""
-"Keep in touch with your friends and contacts, by email, messenger or on your "
-"favorite social networks. Linux Mint provides all you need to interact with "
-"Twitter, Facebook, Google Hangouts, ICQ, IRC, AIM, Yahoo and many other "
-"networks."
+#: en/60_safe.html:9
+msgid "All files are stored in special secure repositories for your use."
 msgstr ""
-"Arkadaşlarınızla ve bağlantılarınızla; e-posta, anlık ileti ya da favori "
-"sosyal ağlarınız aracılığı ile iletişim halinde kalın. Linux Mint; Twitter, "
-"Facebook, Google Hangouts, ICQ, IRC, AIM, Yahoo ve diğer çok sayıdaki "
-"iletişim hizmetine erişebilmeniz için gerekli uygulamaları size sunar."
+
+#. type: Content of: <div><div><ul><li>
+#: en/60_safe.html:10
+msgid "The security repository is synchronized daily."
+msgstr ""
 
 #. type: Content of: <h1>
-#: en/80_community.html:1
+#: en/70_community.html:1
 msgid "A great community"
 msgstr "Büyük Bir Topluluk"
 
 #. type: Content of: <div><div><ul><li>
-#: en/80_community.html:6
+#: en/70_community.html:6
+#, fuzzy
+#| msgid ""
+#| "The SolydXK community is one of the best on the Internet. Our users "
+#| "not only provide most of our funding, but also ideas, artwork, and "
+#| "sometimes even source code."
 msgid ""
-"The Linux Mint community is one of the best on the Internet. Our users not "
-"only provide most of our funding, but also ideas, artwork, and sometimes "
-"even source code."
+"The SolydXK community is one of the best on the Internet. Our users provide "
+"most of our funding, as well as ideas, artwork and sometimes even source "
+"code."
 msgstr ""
-"Linux Mint topluluğu internetteki en iyi topluluklardan birisidir. "
+"SolydXK topluluğu internetteki en iyi topluluklardan birisidir. "
 "Kullanıcılarımız finansmanımızın büyük bir kısmını sağlarlar; ayrıca "
 "fikirler, çizimler ve hatta bazen kaynak kodları da sağlamaktadırlar."
 
 #. type: Content of: <div><div><ul><li>
-#: en/80_community.html:7
+#: en/70_community.html:7
+#, fuzzy
+#| msgid ""
+#| "SolydXK users are happy to share their passion, enthusiasm, and "
+#| "eagerness to help. Don't hesitate to ask questions in the forums or get "
+#| "involved with the community."
 msgid ""
-"Linux Mint users are happy to share their passion, enthusiasm, and eagerness "
-"to help. Don't hesitate to ask questions in the forums or get involved with "
+"SolydXK users are happy to share their passion and enthusiasm and are eager "
+"to help. Don't hesitate to ask questions on the forums or to get involved in "
 "the community."
 msgstr ""
-"Linux Mint kullanıcıları tutku ve heyecanlarını paylaşmaktan her zaman "
+"SolydXK kullanıcıları tutku ve heyecanlarını paylaşmaktan her zaman "
 "mutludurlar ve yardım etmek için can atarlar. Topluluğa katılmak veya "
 "sorularınıza cevap bulmak için forumlarda soru sormaktan çekinmeyin."
 
 #. type: Content of: <div><div><ul><li>
-#: en/80_community.html:8
+#: en/70_community.html:8
+#, fuzzy
+#| msgid ""
+#| "Send us your feedback and tell us about your experience. We'll listen to "
+#| "your ideas and use them to further improve SolydXK."
 msgid ""
 "Send us your feedback and tell us about your experience. We'll listen to "
-"your ideas and use them to further improve Linux Mint."
+"your ideas and use them to further improve SolydXK."
 msgstr ""
 "Bize geri bildirimlerinizi gönderin ve deneyimlerinizi anlatın. "
-"Fikirlerinizi değerlendirip, onları Linux Mint'i daha da geliştirmek için "
+"Fikirlerinizi değerlendirip, onları SolydXK'i daha da geliştirmek için "
 "kullanacağız."
+
+#~ msgid "Welcome to SolydXK Debian"
+#~ msgstr "Hoş Geldiniz"
+
+#~ msgid ""
+#~ "We believe in sharing and being open-minded. Our vision of Freedom "
+#~ "includes being able to do what you want with your computer, and the "
+#~ "operating system should never stand in the way."
+#~ msgstr ""
+#~ "Açık olmaya ve paylaşıma inanıyoruz. Özgürlük vizyonumuz, "
+#~ "bilgisayarınızla istediğinizi yapabilmeniz ve işletim sisteminizin bunu "
+#~ "yaparken size yardımcı olmasıdır."
+
+#~ msgid ""
+#~ "We focus on ease of use, comfort, and elegance to make your experience "
+#~ "with SolydXK as enjoyable as possible."
+#~ msgstr ""
+#~ "SolydXK masaüstü deneyiminizi olabildiğince eğlenceli kılmak için "
+#~ "kullanım kolaylığı, rahatlık ve zerafet üzerine odaklanıyoruz."
+
+#~ msgid ""
+#~ "We hope you will have a wonderful time spent with SolydXK, and that "
+#~ "you will enjoy using it as much as we do developing it!"
+#~ msgstr ""
+#~ "Umarız SolydXK ile harika vakit geçirir ve onu kullanırken en az bizim "
+#~ "onu geliştirirken aldığımız kadar zevk alırsınız."
+
+#, fuzzy
+#~| msgid ""
+#~| "SolydXK is a Debian-based GNU/Linux distribution derived from and "
+#~| "compatible with Ubuntu."
+#~ msgid "SolydXK is a Debian-based GNU/Linux distribution."
+#~ msgstr ""
+#~ "SolydXK, Ubuntu'dan türeyen ve onunla uyumlu Debian tabanlı bir GNU/"
+#~ "Linux dağıtımıdır."
+
+#, fuzzy
+#~| msgid ""
+#~| "At home, SolydXK is the 4th most widely used desktop operating "
+#~| "system, behind Microsoft Windows, Apple OS X and Ubuntu."
+#~ msgid ""
+#~ "At home, GNU/Linux distributions like SolydXK or Ubuntu are among the "
+#~ "most widely used desktop operating systems, right next to Microsoft "
+#~ "Windows and Apple OS X."
+#~ msgstr ""
+#~ "SolydXK, Microsoft Windows, Apple OS X ve Ubuntu'dan sonra ev "
+#~ "ortamında 4. en yaygın kullanılan masaüstü işletim sistemidir."
+
+#, fuzzy
+#~| msgid ""
+#~| "Other popular applications such as Skype, Google Earth, Opera can be "
+#~| "installed with a click of the mouse."
+#~ msgid ""
+#~ "Other popular applications such as Skype, Google Earth, Opera, and over "
+#~ "30,000+ more can be installed with a click of the mouse."
+#~ msgstr ""
+#~ "Skype, Google Earth, Opera gibi diğer popüler uygulamalar ise tek fare "
+#~ "tıklaması ile kurulabilir."
+
+#~ msgid "Be productive"
+#~ msgstr "Yaratıcı olun"
+
+#~ msgid ""
+#~ "Use LibreOffice to create professional documents, spreadsheets and "
+#~ "presentations that are fully compatible with Microsoft Office. Share "
+#~ "printers or access them remotely."
+#~ msgstr ""
+#~ "Microsoft Ofis ile tam uyumlu profesyonel belgeler, tablolar ve sunumlar "
+#~ "üretmek için  LibreOffice kullanın. Yazıcıları paylaşabilir ve bunlara "
+#~ "uzaktan erişebilirsiniz."
+
+#, fuzzy
+#~| msgid ""
+#~| "Install Wine and run Windows software in SolydXK. Or install "
+#~| "Virtualbox, and run Windows itself within SolydXK."
+#~ msgid ""
+#~ "Install Wine and run Windows software in SolydXK. Or install "
+#~ "VirtualBox, and run Windows itself within SolydXK."
+#~ msgstr ""
+#~ "Wine'ı kurun ve SolydXK'te Windows yazılımlarını çalıştırın. "
+#~ "Virtualbox ile Windows'un kendisini de SolydXK içerisinde "
+#~ "çalıştırabilirsiniz."
+
+#~ msgid ""
+#~ "SolydXK is safe and stable, you don't need an antivirus, an anti-"
+#~ "spyware, a defragmentation tool or a registry cleaner."
+#~ msgstr ""
+#~ "SolydXK güvenli ve kararlıdır. Antivirüs, anti-spyware, disk "
+#~ "birleştirme aracı ve kayıt defteri temizleyicisi gibi yazılımlara "
+#~ "ihtiyacınız yoktur."
+
+#~ msgid ""
+#~ "Receive fixes and security updates all in one place, for the entire "
+#~ "system, including the software you install."
+#~ msgstr ""
+#~ "Kurduğunuz programlar da dahil bütün güvenlik güncelleştirmelerini ve "
+#~ "hata düzeltmelerini tek bir yerden alın."
+
+#~ msgid "Stay connected"
+#~ msgstr "Bağlı kalın"
+
+#~ msgid ""
+#~ "Keep in touch with your friends and contacts, by email, messenger or on "
+#~ "your favorite social networks. SolydXK provides all you need to "
+#~ "interact with Twitter, Facebook, Google Hangouts, ICQ, IRC, AIM, Yahoo "
+#~ "and many other networks."
+#~ msgstr ""
+#~ "Arkadaşlarınızla ve bağlantılarınızla; e-posta, anlık ileti ya da favori "
+#~ "sosyal ağlarınız aracılığı ile iletişim halinde kalın. SolydXK; "
+#~ "Twitter, Facebook, Google Hangouts, ICQ, IRC, AIM, Yahoo ve diğer çok "
+#~ "sayıdaki iletişim hizmetine erişebilmeniz için gerekli uygulamaları size "
+#~ "sunar."

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Install
+Name[nl]=Installeren
+GenericName=Live Installer
+GenericName[nl]=Installatieprogramma
+Comment=Install the operating system
+Comment[nl]=Installeer het besturingssysteem
+Exec=live-installer
+Icon=/usr/share/live-installer/logo.png
+Terminal=False
+Type=Application
+Categories=System;

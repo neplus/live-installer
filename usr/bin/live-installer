@@ -1,5 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 optimize='OO'; case "$*" in *--debug*) unset optimize; esac
 # Launch live-installer with all passed arguments (future reserved)
-python2.7 -tt${optimize} /usr/lib/live-installer/main.py "$@"
+
+LAUNCHER=''
+if [ $UID -ne 0 ]; then
+  LAUNCHER='gksudo'
+  if [ -e "/usr/bin/kdesudo" ]; then
+    LAUNCHER="kdesudo"
+  fi
+fi
+
+$LAUNCHER "python2.7 -tt${optimize} /usr/lib/live-installer/main.py \"$@\""

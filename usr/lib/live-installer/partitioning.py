@@ -5,18 +5,12 @@ from __future__ import division
 
 import os
 import re
-import sys
-import subprocess
 from collections import defaultdict
+from utils import getoutput, shell_exec
 
 import gtk
 import parted
 
-def shell_exec(command):
-    return subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
-
-def getoutput(command):
-    return shell_exec(command).stdout.read().strip()
 
 (IDX_PART_PATH,
  IDX_PART_TYPE,
@@ -30,7 +24,7 @@ def getoutput(command):
 
 def is_efi_supported():
     # Are we running under with efi ?
-    os.system("modprobe efivars >/dev/null 2>&1")
+    shell_exec("modprobe efivars >/dev/null 2>&1")
     return os.path.exists("/proc/efi") or os.path.exists("/sys/firmware/efi")
 
 def path_exists(*args):
@@ -100,6 +94,7 @@ def assign_mount_point(partition, mount_point, filesystem):
         for part in disk.iterchildren():
             if partition == part[IDX_PART_OBJECT]:
                 part[IDX_PART_MOUNT_AS] = mount_point
+                filesystem = get_safe_fs(partition, mount_point, filesystem)
                 part[IDX_PART_FORMAT_AS] = filesystem
             elif mount_point == part[IDX_PART_MOUNT_AS]:
                 part[IDX_PART_MOUNT_AS] = ""
@@ -111,6 +106,15 @@ def assign_mount_point(partition, mount_point, filesystem):
         elif part.mount_as == mount_point:
             part.mount_as, part.format_as = '', ''
     installer.setup.print_setup()
+
+def get_safe_fs(partition, mount_point, filesystem):
+    if filesystem == '':
+        for part in installer.setup.partitions:
+            # [XK] TODO: don't check part.type on string
+            if part == partition and part.type == _('Unknown'):
+                filesystem = 'swap' if mount_point == SWAP_MOUNT_POINT else 'ext4'
+                break
+    return filesystem
 
 def partitions_popup_menu(widget, event):
     if event.button != 3: return
@@ -149,7 +153,7 @@ def manually_edit_partitions(widget):
     model, iter = installer.wTree.get_widget("treeview_disks").get_selection().get_selected()
     preferred = model[iter][-1] if iter else ''  # prefer disk currently selected and show it first in gparted
     disks = ' '.join(sorted((disk for disk,desc in model.disks), key=lambda disk: disk != preferred))
-    os.system('umount ' + disks)  # umount disks (if possible) so gparted works out-of-the-box
+    shell_exec('umount -f ' + disks)  # umount disks (if possible) so gparted works out-of-the-box
     os.popen('gparted {} &'.format(disks))
 
 def build_grub_partitions():
@@ -177,16 +181,20 @@ class PartitionSetup(gtk.TreeStore):
         installer.setup.partitions = []
         installer.setup.partition_setup = self
         self.html_disks, self.html_chunks = {}, defaultdict(list)
+        self.full_disk_format_runonce = False
 
         def _get_attached_disks():
             disks = []
-            exclude_devices = '/dev/sr0 /dev/sr1 /dev/cdrom /dev/dvd'.split()
-            lsblk = shell_exec('lsblk -rindo TYPE,NAME,RM,SIZE,MODEL | sort -k3,2')
-            for line in lsblk.stdout:
-                type, device, removable, size, model = line.split(" ", 4)
+            exclude_devices = 'sr0 sr1 cdrom dvd'.split()
+            lsblk = getoutput('lsblk -dinro TYPE,NAME,RM,SIZE,MODEL | sort -k3,2')
+            for line in lsblk:
+                # Don't do a full parse until we know this line describes a disk.
+                type, device = line.split(" ", 1)
                 if type == "disk" and device not in exclude_devices:
+                    type, device, removable, size, model = line.split(" ", 4)
                     device = "/dev/" + device
                     # convert size to manufacturer's size for show, e.g. in GB, not GiB!
+                    print ">>> size = '{}'".format(size)
                     size = str(int(float(size[:-1]) * (1024/1000)**'BkMGTPEZY'.index(size[-1]))) + size[-1]
                     description = '{} ({}B)'.format(model.strip(), size)
                     if int(removable):
@@ -205,8 +213,9 @@ class PartitionSetup(gtk.TreeStore):
                 from frontend.gtk_interface import QuestionDialog
                 dialog = QuestionDialog(_("Installation Tool"),
                                         _("No partition table was found on the hard drive: {disk_description}. Do you want the installer to create a set of partitions for you? Note: This will ERASE ALL DATA present on this disk.").format(**locals()),
+                                        None,
                                         installer.window)
-                if not dialog.show(): continue  # the user said No, skip this disk
+                if not dialog: continue  # the user said No, skip this disk
                 installer.window.window.set_cursor(gtk.gdk.Cursor(gtk.gdk.WATCH))
                 assign_mount_format = self.full_disk_format(disk_device)
                 installer.window.window.set_cursor(None)
@@ -243,7 +252,10 @@ class PartitionSetup(gtk.TreeStore):
             self.html_disks[disk_path] = DISK_TEMPLATE.format(PARTITIONS_HTML=''.join(PARTITION_TEMPLATE.format(p) for p in partitions))
 
     def get_html(self, disk):
-        return self.html_disks[disk]
+        try:
+            return self.html_disks[disk]
+        except:
+            return ''
 
     def full_disk_format(self, device):
         # Create a default partition set up
@@ -251,25 +263,40 @@ class PartitionSetup(gtk.TreeStore):
                                or installer.setup.gptonefi
                             else 'msdos')
         separate_home_partition = device.getLength('GB') > 61
-        mkpart = (
-            # EFI  (condition, mount_as, format_as, size_mb)
-            (installer.setup.gptonefi, EFI_MOUNT_POINT, 'vfat', 300),
-            # swap - equal to RAM for hibernate to work well (but capped at ~8GB)
-            (True, SWAP_MOUNT_POINT, 'swap', min(8800, int(round(1.1/1024 * int(getoutput("awk '/^MemTotal/{ print $2 }' /proc/meminfo")), -2)))),
-            # root
-            (True, '/', 'ext4', 30000 if separate_home_partition else 0),
-            # home
-            (separate_home_partition, '/home', 'ext4', 0),
-        )
+
+        # [XK] Only the first drive gets a swap, root, and/or home partition
+        if self.full_disk_format_runonce:
+            mkpart = (
+                # (condition, mount_as, format_as, size_mb)
+                # root
+                (True, '', 'ext4', 0),
+            )
+        else:
+            mkpart = (
+                # (condition, mount_as, format_as, size_mb)
+                # EFI
+                (installer.setup.gptonefi, EFI_MOUNT_POINT, 'vfat', 300),
+                # swap - equal to RAM for hibernate to work well (but capped at ~8GB)
+                (True, SWAP_MOUNT_POINT, 'swap', min(8800, int(round(1.1/1024 * int(getoutput("awk '/^MemTotal/{ print $2 }' /proc/meminfo")), -2)))),
+                # root
+                (True, '/', 'ext4', 30000 if separate_home_partition else 0),
+                # home
+                (separate_home_partition, '/home', 'ext4', 0),
+            )
         run_parted = lambda cmd: os.system('parted --script --align optimal {} {} ; sync'.format(device.path, cmd))
         run_parted('mklabel ' + disk_label)
-        start_mb = 2
+        start_mb = 1
         for size_mb in map(lambda x: x[-1], filter(lambda x: x[0], mkpart)):
             end = '{}MB'.format(start_mb + size_mb) if size_mb else '100%'
             run_parted('mkpart primary {}MB {}'.format(start_mb, end))
-            start_mb += size_mb + 1
+            start_mb += size_mb
         if installer.setup.gptonefi:
             run_parted('set 1 boot on')
+        elif not self.full_disk_format_runonce:
+            # [XK] Set the boot flag for the root partition
+            run_parted('set 2 boot on')
+        # [XK] Save that the first drive has been configured
+        self.full_disk_format_runonce = True
         return ((i[1], i[2]) for i in mkpart if i[0])
 
 
@@ -323,8 +350,8 @@ class Partition(object):
 
         # identify partition's description and used space
         try:
-            os.system('mount --read-only {} {}'.format(partition.path, TMP_MOUNTPOINT))
-            size, free, self.used_percent, mount_point = getoutput("df {0} | grep '^{0}' | awk '{{print $2,$4,$5,$6}}' | tail -1".format(partition.path)).split(None, 3)
+            shell_exec('mount --read-only {} {}'.format(partition.path, TMP_MOUNTPOINT))
+            size, free, self.used_percent, mount_point = getoutput("df {0} | grep '^{0}' | awk '{{print $2,$4,$5,$6}}' | tail -1".format(partition.path)).split()
         except ValueError:
             print 'WARNING: Partition {} or type {} failed to mount!'.format(partition.path, partition.type)
             self.os_fs_info, self.description, self.free_space, self.used_percent = ': '+self.type, '', '', 0
@@ -334,10 +361,16 @@ class Partition(object):
             self.used_percent = self.used_percent.strip('%') or 0
             description = ''
             if path_exists(mount_point, 'etc/'):
-                description = getoutput("su -c '{{ . {0}/etc/lsb-release && echo $DISTRIB_DESCRIPTION; }} || \
-                                                {{ . {0}/etc/os-release && echo $PRETTY_NAME; }}' nobody".format(mount_point)) or 'Unix'
+                description = getoutput(". {0}/etc/lsb-release && echo $DISTRIB_DESCRIPTION".format(mount_point))
+                if description == '':
+                    description = getoutput(". {0}/etc/os-release && echo $PRETTY_NAME".format(mount_point))
+                if description == '':
+                    description = getoutput('uname -s')
+                if description == '':
+                    description = 'Unix'
             if path_exists(mount_point, 'Windows/servicing/Version'):
                 description = 'Windows ' + {
+                    '6.4':'10',
                     '6.3':'8.1',
                     '6.2':'8',
                     '6.1':'7',
@@ -359,7 +392,7 @@ class Partition(object):
             self.description = description
             self.os_fs_info = ': {0.description} ({0.type}; {0.size}; {0.free_space})'.format(self) if description else ': ' + self.type
         finally:
-            os.system('umount ' + TMP_MOUNTPOINT + ' 2>/dev/null')
+            shell_exec('umount -f ' + TMP_MOUNTPOINT + ' 2>/dev/null')
 
         self.color = {
             # colors approximately from gparted (find matching set in usr/share/disk-partitions.html)
@@ -397,7 +430,7 @@ class PartitionDialog(object):
         self.dTree.get_widget("label_mount_point").set_markup(_("Mount point:"))
         # Build supported filesystems list
         filesystems = sorted(['', 'swap'] +
-                             [fs[5:] for fs in getoutput('cd /sbin; echo mkfs.*').split()],
+                             [fs[11:] for fs in getoutput('echo /sbin/mkfs.*').split()],
                              key=lambda x: 0 if x in ('', 'ext4') else 1 if x == 'swap' else 2)
         model = gtk.ListStore(str)
         for i in filesystems: model.append([i])
