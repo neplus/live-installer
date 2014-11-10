@@ -25,17 +25,10 @@ class PlymouthSave():
         self.boot = '/target/etc/default/grub'
         #self.module = self.getUsedDriver()
         self.setThemePath = '/usr/sbin/plymouth-set-default-theme'
-        self.theme = 'solydk-logo'
-        if os.path.exists('/usr/share/plymouth/themes/solydx-logo'):
-            self.theme = 'solydx-logo'
-        elif os.path.exists('/usr/share/plymouth/themes/solydkbo-logo'):
-            self.theme = 'solydkbo-logo'
-        elif os.path.exists('/usr/share/plymouth/themes/solydkbe-logo'):
-            self.theme = 'solydkbe-logo'
-        elif os.path.exists('/usr/share/plymouth/themes/solydxbe-logo'):
-            self.theme = 'solydxbe-logo'
-        elif os.path.exists('/usr/share/plymouth/themes/solydxsrv-logo'):
-            self.theme = 'solydxsrv-logo'
+        self.theme = ''
+        for themeDir in glob(os.path.join('/usr/share/plymouth/themes', '*-logo')):
+            self.theme = os.path.basename(themeDir)
+            break
         self.resolution = '1024x768'
 
         # Test
@@ -43,6 +36,8 @@ class PlymouthSave():
 
     # Save given theme and resolution
     def save(self, enable=True):
+        if self.theme == '':
+            enable = False
         try:
             if os.path.isfile(self.modulesPath) and os.path.isfile(self.boot):
 
@@ -68,7 +63,7 @@ class PlymouthSave():
                 # Set the theme
                 if enable:
                     chroot_exec('%s %s' % (self.setThemePath, self.theme))
-                #chroot_exec('update-grub')
+                chroot_exec('update-grub')
 
             else:
                 print 'Plymouth unconfigured - cannot find: %s or %s' % (self.modulesPath, self.boot)
@@ -83,7 +78,7 @@ class PlymouthSave():
         logDir = '/var/log/'
         logPath = None
         maxTime = 0
-        for f in glob(os.path.join(os.path.join(logDir, 'Xorg.*.log'))):
+        for f in glob(os.path.join(logDir, 'Xorg.*.log')):
             mtime = os.stat(f).st_mtime
             if mtime > maxTime:
                 maxTime = mtime

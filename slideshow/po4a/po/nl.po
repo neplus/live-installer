@@ -56,7 +56,7 @@ msgstr "Geniet van deze nieuwe release en dank u voor het kiezen van SolydXK."
 #. type: Content of: <div><div><p>
 #: en/10_welcome.html:12
 msgid "The installation takes 15-30 minutes, depending on your settings."
-msgstr "Afhankelijk van uw installingen duurt de installatie 15-30 minuten."
+msgstr "Afhankelijk van uw instellingen duurt de installatie 15-30 minuten."
 
 #. type: Content of: <h1>
 #: en/20_giants.html:1
