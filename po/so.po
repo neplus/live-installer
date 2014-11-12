@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-07 19:04+0100\n"
+"POT-Creation-Date: 2014-11-11 11:59+0100\n"
 "PO-Revision-Date: 2012-06-04 16:32+0000\n"
 "Last-Translator: Ismael Omar <ismaelhssn@gmail.com>\n"
 "Language-Team: Somali <so@li.org>\n"
@@ -64,7 +64,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:346
 msgid "Unknown"
 msgstr ""
 
@@ -84,11 +84,11 @@ msgstr "Ku agaasin /guriga"
 msgid "Assign to /boot/efi"
 msgstr ""
 
-#: ../usr/lib/live-installer/partitioning.py:201
+#: ../usr/lib/live-installer/partitioning.py:204
 msgid "Removable:"
 msgstr ""
 
-#: ../usr/lib/live-installer/partitioning.py:214
+#: ../usr/lib/live-installer/partitioning.py:217
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:838
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:851
@@ -99,7 +99,7 @@ msgstr ""
 msgid "Installation Tool"
 msgstr "Qalabka shubidda"
 
-#: ../usr/lib/live-installer/partitioning.py:215
+#: ../usr/lib/live-installer/partitioning.py:218
 #, fuzzy, python-brace-format
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
@@ -109,34 +109,34 @@ msgstr ""
 "Wax shax qeybin ah lagama helin haadharayfka. Madooneysaa shubaha inuu mid "
 "kuu abuuro? Fiirogaar: Waxaa tirtirmaya dhamaan waxa ku jira dhiskigaan."
 
-#: ../usr/lib/live-installer/partitioning.py:338
+#: ../usr/lib/live-installer/partitioning.py:341
 #, fuzzy
 msgid "Logical partition"
 msgstr "Tafatir qeybta"
 
-#: ../usr/lib/live-installer/partitioning.py:339
+#: ../usr/lib/live-installer/partitioning.py:342
 #, fuzzy
 msgid "Extended partition"
 msgstr "Tafatir qeybta"
 
-#: ../usr/lib/live-installer/partitioning.py:340
+#: ../usr/lib/live-installer/partitioning.py:343
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "Masaaxadda banaan"
 
-#: ../usr/lib/live-installer/partitioning.py:426
+#: ../usr/lib/live-installer/partitioning.py:432
 msgid "Edit partition"
 msgstr "Tafatir qeybta"
 
-#: ../usr/lib/live-installer/partitioning.py:427
+#: ../usr/lib/live-installer/partitioning.py:433
 msgid "Device:"
 msgstr "Alaadda:"
 
-#: ../usr/lib/live-installer/partitioning.py:429
+#: ../usr/lib/live-installer/partitioning.py:435
 msgid "Format as:"
 msgstr "U tirtir sida:"
 
-#: ../usr/lib/live-installer/partitioning.py:430
+#: ../usr/lib/live-installer/partitioning.py:436
 msgid "Mount point:"
 msgstr "barta rakibida:"
 

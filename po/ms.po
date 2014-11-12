@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-07 19:04+0100\n"
+"POT-Creation-Date: 2014-11-11 11:59+0100\n"
 "PO-Revision-Date: 2014-06-07 08:42+0000\n"
 "Last-Translator: Fazwan Fazil <takaizu91@gmail.com>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -65,7 +65,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:346
 msgid "Unknown"
 msgstr ""
 
@@ -85,12 +85,12 @@ msgstr "Umpuk ke /rumah"
 msgid "Assign to /boot/efi"
 msgstr "Umpuk ke /boot/efi"
 
-#: ../usr/lib/live-installer/partitioning.py:201
+#: ../usr/lib/live-installer/partitioning.py:204
 #, fuzzy
 msgid "Removable:"
 msgstr "Peranti tanggal:"
 
-#: ../usr/lib/live-installer/partitioning.py:214
+#: ../usr/lib/live-installer/partitioning.py:217
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:838
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:851
@@ -101,7 +101,7 @@ msgstr "Peranti tanggal:"
 msgid "Installation Tool"
 msgstr "Alat Pemasangan"
 
-#: ../usr/lib/live-installer/partitioning.py:215
+#: ../usr/lib/live-installer/partitioning.py:218
 #, fuzzy, python-brace-format
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
@@ -112,34 +112,34 @@ msgstr ""
 "mencipta set sekatan untuk anda? Perhatian: Ini akan memadam sebarang data "
 "yang ada didalam cakera."
 
-#: ../usr/lib/live-installer/partitioning.py:338
+#: ../usr/lib/live-installer/partitioning.py:341
 #, fuzzy
 msgid "Logical partition"
 msgstr "Sunting sekatan"
 
-#: ../usr/lib/live-installer/partitioning.py:339
+#: ../usr/lib/live-installer/partitioning.py:342
 #, fuzzy
 msgid "Extended partition"
 msgstr "Sunting sekatan"
 
-#: ../usr/lib/live-installer/partitioning.py:340
+#: ../usr/lib/live-installer/partitioning.py:343
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "Membebaskan ruang"
 
-#: ../usr/lib/live-installer/partitioning.py:426
+#: ../usr/lib/live-installer/partitioning.py:432
 msgid "Edit partition"
 msgstr "Sunting sekatan"
 
-#: ../usr/lib/live-installer/partitioning.py:427
+#: ../usr/lib/live-installer/partitioning.py:433
 msgid "Device:"
 msgstr "Peranti:"
 
-#: ../usr/lib/live-installer/partitioning.py:429
+#: ../usr/lib/live-installer/partitioning.py:435
 msgid "Format as:"
 msgstr "Format sebagai:"
 
-#: ../usr/lib/live-installer/partitioning.py:430
+#: ../usr/lib/live-installer/partitioning.py:436
 msgid "Mount point:"
 msgstr "Titik lekap:"
 

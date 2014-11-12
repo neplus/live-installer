@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-07 19:04+0100\n"
+"POT-Creation-Date: 2014-11-11 11:59+0100\n"
 "PO-Revision-Date: 2014-05-30 04:52+0000\n"
 "Last-Translator: BALLOON a.k.a. Fu-sen. <balloon@shigakeiichi.com>\n"
 "Language-Team: Japanese <https://launchpad.net/~linuxmint-translation-team-"
@@ -66,7 +66,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:346
 msgid "Unknown"
 msgstr ""
 
@@ -86,11 +86,11 @@ msgstr "/home に割り当て"
 msgid "Assign to /boot/efi"
 msgstr "/boot/efi へアサイン"
 
-#: ../usr/lib/live-installer/partitioning.py:201
+#: ../usr/lib/live-installer/partitioning.py:204
 msgid "Removable:"
 msgstr ""
 
-#: ../usr/lib/live-installer/partitioning.py:214
+#: ../usr/lib/live-installer/partitioning.py:217
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:838
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:851
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Installation Tool"
 msgstr "インストールツール"
 
-#: ../usr/lib/live-installer/partitioning.py:215
+#: ../usr/lib/live-installer/partitioning.py:218
 #, fuzzy, python-brace-format
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
@@ -111,34 +111,34 @@ msgstr ""
 "ハードドライブにパーティションテーブルがありません。パーティションを作成しま"
 "すか? 注意: この作業はディスク上のすべてのデータを消去します。"
 
-#: ../usr/lib/live-installer/partitioning.py:338
+#: ../usr/lib/live-installer/partitioning.py:341
 #, fuzzy
 msgid "Logical partition"
 msgstr "パーティションを編集"
 
-#: ../usr/lib/live-installer/partitioning.py:339
+#: ../usr/lib/live-installer/partitioning.py:342
 #, fuzzy
 msgid "Extended partition"
 msgstr "パーティションを編集"
 
-#: ../usr/lib/live-installer/partitioning.py:340
+#: ../usr/lib/live-installer/partitioning.py:343
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "空き容量"
 
-#: ../usr/lib/live-installer/partitioning.py:426
+#: ../usr/lib/live-installer/partitioning.py:432
 msgid "Edit partition"
 msgstr "パーティションを編集"
 
-#: ../usr/lib/live-installer/partitioning.py:427
+#: ../usr/lib/live-installer/partitioning.py:433
 msgid "Device:"
 msgstr "デバイス:"
 
-#: ../usr/lib/live-installer/partitioning.py:429
+#: ../usr/lib/live-installer/partitioning.py:435
 msgid "Format as:"
 msgstr "フォーマット:"
 
-#: ../usr/lib/live-installer/partitioning.py:430
+#: ../usr/lib/live-installer/partitioning.py:436
 msgid "Mount point:"
 msgstr "マウントポイント:"
 

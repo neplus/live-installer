@@ -193,13 +193,16 @@ class PartitionSetup(gtk.TreeStore):
                 if type == "disk" and device not in exclude_devices:
                     type, device, removable, size, model = line.split(" ", 4)
                     device = "/dev/" + device
-                    # convert size to manufacturer's size for show, e.g. in GB, not GiB!
-                    print ">>> size = '{}'".format(size)
-                    size = str(int(float(size[:-1]) * (1024/1000)**'BkMGTPEZY'.index(size[-1]))) + size[-1]
-                    description = '{} ({}B)'.format(model.strip(), size)
-                    if int(removable):
-                        description = _('Removable:') + ' ' + description
-                    disks.append((device, description))
+                    # [XK] Exclude live boot device
+                    boot_partition = getoutput("mount | grep -v loop | egrep 'medium|findiso' | awk '{print $1}'")
+                    if device not in boot_partition:
+                        # convert size to manufacturer's size for show, e.g. in GB, not GiB!
+                        print ">>> size = '{}'".format(size)
+                        size = str(int(float(size[:-1]) * (1024/1000)**'BkMGTPEZY'.index(size[-1]))) + size[-1]
+                        description = '{} ({}B)'.format(model.strip(), size)
+                        if int(removable):
+                            description = _('Removable:') + ' ' + description
+                        disks.append((device, description))
             return disks
 
         os.popen('mkdir -p ' + TMP_MOUNTPOINT)
@@ -359,14 +362,17 @@ class Partition(object):
             self.size = to_human_readable(int(size)*1024)  # for mountable partitions, more accurate than the getLength size above
             self.free_space = to_human_readable(int(free)*1024)  # df returns values in 1024B-blocks by default
             self.used_percent = self.used_percent.strip('%') or 0
+            # [XK] Had to rewrite OS description: multiple user errors
             description = ''
             if path_exists(mount_point, 'etc/'):
-                description = getoutput(". {0}/etc/lsb-release && echo $DISTRIB_DESCRIPTION".format(mount_point))
-                if description == '':
-                    description = getoutput(". {0}/etc/os-release && echo $PRETTY_NAME".format(mount_point))
-                if description == '':
-                    description = getoutput('uname -s')
-                if description == '':
+                try:
+                    if path_exists(mount_point, 'etc/lsb-release'):
+                        description = getoutput("grep DISTRIB_DESCRIPTION %s/etc/lsb-release | awk -F'=' '{print $2}' | sed 's#\"##g'" % mount_point)
+                    if description == '' and path_exists(mount_point, 'etc/os-release'):
+                        description = getoutput("grep PRETTY_NAME $s/etc/os-release | awk -F'=' '{print $2}' | sed 's#\"##g'" % mount_point)
+                    if description == '':
+                        description = getoutput('uname -s')
+                except:
                     description = 'Unix'
             if path_exists(mount_point, 'Windows/servicing/Version'):
                 description = 'Windows ' + {

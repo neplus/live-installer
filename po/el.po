@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-07 19:04+0100\n"
+"POT-Creation-Date: 2014-11-11 11:59+0100\n"
 "PO-Revision-Date: 2014-08-12 09:40+0000\n"
 "Last-Translator: Jim Spentzos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -65,7 +65,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:346
 msgid "Unknown"
 msgstr ""
 
@@ -85,12 +85,12 @@ msgstr "Αντιστοίχιση σε /home"
 msgid "Assign to /boot/efi"
 msgstr "Εκχώρηση στο /boot/efi"
 
-#: ../usr/lib/live-installer/partitioning.py:201
+#: ../usr/lib/live-installer/partitioning.py:204
 #, fuzzy
 msgid "Removable:"
 msgstr "Αφαιρούμενη συσκευή:"
 
-#: ../usr/lib/live-installer/partitioning.py:214
+#: ../usr/lib/live-installer/partitioning.py:217
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:838
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:851
@@ -101,7 +101,7 @@ msgstr "Αφαιρούμενη συσκευή:"
 msgid "Installation Tool"
 msgstr "Εργαλείο Εγκατάστασης"
 
-#: ../usr/lib/live-installer/partitioning.py:215
+#: ../usr/lib/live-installer/partitioning.py:218
 #, fuzzy, python-brace-format
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
@@ -112,34 +112,34 @@ msgstr ""
 "να δημιουργήσει καινούριες κατατμήσεις; Σημείωση: Αυτό θα διαγράψει όλα τα "
 "υπάρχοντα δεδομένα του δίσκου."
 
-#: ../usr/lib/live-installer/partitioning.py:338
+#: ../usr/lib/live-installer/partitioning.py:341
 #, fuzzy
 msgid "Logical partition"
 msgstr "Επεξεργασία κατάτμησης"
 
-#: ../usr/lib/live-installer/partitioning.py:339
+#: ../usr/lib/live-installer/partitioning.py:342
 #, fuzzy
 msgid "Extended partition"
 msgstr "Επεξεργασία κατάτμησης"
 
-#: ../usr/lib/live-installer/partitioning.py:340
+#: ../usr/lib/live-installer/partitioning.py:343
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "Ελεύθερος χώρος"
 
-#: ../usr/lib/live-installer/partitioning.py:426
+#: ../usr/lib/live-installer/partitioning.py:432
 msgid "Edit partition"
 msgstr "Επεξεργασία κατάτμησης"
 
-#: ../usr/lib/live-installer/partitioning.py:427
+#: ../usr/lib/live-installer/partitioning.py:433
 msgid "Device:"
 msgstr "Συσκευή:"
 
-#: ../usr/lib/live-installer/partitioning.py:429
+#: ../usr/lib/live-installer/partitioning.py:435
 msgid "Format as:"
 msgstr "Μορφοποίησε ως:"
 
-#: ../usr/lib/live-installer/partitioning.py:430
+#: ../usr/lib/live-installer/partitioning.py:436
 msgid "Mount point:"
 msgstr "Σημείο προσάρτησης:"
 
