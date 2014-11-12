@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-slideshow\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-10-24 13:51+0200\n"
+"POT-Creation-Date: 2014-11-12 10:37+0100\n"
 "PO-Revision-Date: 2014-10-24 14:48+0100\n"
 "Last-Translator: Arjen Balfoort <arjenbalfoort@solydxk.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -74,7 +74,7 @@ msgstr ""
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:7
 msgid ""
-"SolydXK uses either the leightweight Xfce desktop for SoldyX or the highly "
+"SolydXK uses either the lightweight Xfce desktop for SoldyX or the highly "
 "configurable and stunningly appealing KDE desktop for SolydK."
 msgstr ""
 "SolydXK gebruikt de lichtgewicht Xfce-desktop voor SoldyX of de zeer "
@@ -88,8 +88,8 @@ msgid ""
 "available to home users."
 msgstr ""
 "Onze verbeteringen, de snelle ontwikkeltijd en de enorme selectie van "
-"softwarepakketten voor Debian maken van SolydXK één van de meest aantrekkelijke "
-"computerbesturingssystemen voor thuisgebruikers."
+"softwarepakketten voor Debian maken van SolydXK één van de meest "
+"aantrekkelijke computerbesturingssystemen voor thuisgebruikers."
 
 #. type: Content of: <h1>
 #: en/30_desktop-ready.html:1
@@ -118,8 +118,8 @@ msgstr ""
 #: en/30_desktop-ready.html:8
 msgid "A wide variaty of software can be installed with a click of the mouse."
 msgstr ""
-"Een brede verscheidenheid aan software kan worden geïnstalleerd met een klik van "
-"de muis."
+"Een brede verscheidenheid aan software kan worden geïnstalleerd met een klik "
+"van de muis."
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:9
@@ -166,8 +166,8 @@ msgid ""
 "documents from other popular office applications including WordPerfect and "
 "Microsoft Office."
 msgstr ""
-"<em>LibreOffice</ em> maakt gebruik van het standaard OpenDocument-formaat en "
-"werkt met documenten uit andere populaire officetoepassingen, waaronder "
+"<em>LibreOffice</ em> maakt gebruik van het standaard OpenDocument-formaat "
+"en werkt met documenten uit andere populaire officetoepassingen, waaronder "
 "WordPerfect en Microsoft Office."
 
 #. type: Content of: <h1>
@@ -199,8 +199,8 @@ msgid ""
 "You can choose which operating system to launch when you start the computer."
 msgstr ""
 "SolydXK kan andere besturingssystemen detecteren en zichzelf ernaast "
-"installeren. Wanneer u de computer opstart kunt u "
-"kiezen welk besturingssysteem u gebruiken wilt."
+"installeren. Wanneer u de computer opstart kunt u kiezen welk "
+"besturingssysteem u gebruiken wilt."
 
 #. type: Content of: <h1>
 #: en/60_safe.html:1
@@ -215,8 +215,8 @@ msgid ""
 "the way."
 msgstr ""
 "Sommige besturingssystemen maken het updaten van je systeem moeilijker dan "
-"het zou moeten zijn. SolydXK vindt dat upgrades snel en eenvoudig "
-"moeten zijn, waarna je direct weer verder kunt werken."
+"het zou moeten zijn. SolydXK vindt dat upgrades snel en eenvoudig moeten "
+"zijn, waarna je direct weer verder kunt werken."
 
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:7
@@ -226,9 +226,9 @@ msgid ""
 "want to. The Update Manager won't pop up or annoy you in any way."
 msgstr ""
 "De SolydXK Updatemanager is zichtbaar als icoon in uw systeemvak en laat u "
-"zien wanneer er updates beschikbaar zijn. U hoeft updates niet toe te "
-"passen wanneer dat niet uitkomt. De Updatemanager zal u niet lastigvallen "
-"met pop-ups noch op andere manieren."
+"zien wanneer er updates beschikbaar zijn. U hoeft updates niet toe te passen "
+"wanneer dat niet uitkomt. De Updatemanager zal u niet lastigvallen met pop-"
+"ups noch op andere manieren."
 
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:8
