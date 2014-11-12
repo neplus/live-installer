@@ -1,74 +1,71 @@
-# Japanese translation for linuxmint
+# Japanese translation for SolydXK
 # Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the same license as the linuxmint package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# This file is distributed under the same license as the SolydXK package.
+# BALLOON a.k.a. Fu-sen. <fu-sen+solydxk@shigakeiichi.com>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: linuxmint\n"
+"Project-Id-Version: SolydXK\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-11 11:59+0100\n"
-"PO-Revision-Date: 2014-05-30 04:52+0000\n"
-"Last-Translator: BALLOON a.k.a. Fu-sen. <balloon@shigakeiichi.com>\n"
-"Language-Team: Japanese <https://launchpad.net/~linuxmint-translation-team-"
-"japanese>\n"
+"POT-Creation-Date: 2014-11-07 19:04+0100\n"
+"PO-Revision-Date: 2014-11-08 19:12+0900\n"
+"Last-Translator: BALLOON a.k.a. Fu-sen. <fu-sen+solydxk@shigakeiichi.com>\n"
+"Language-Team: SolydXKjp <http://solydxk.jimdo.com/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-09-11 21:48+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: ../usr/lib/live-installer/main.py:31
 msgid "Unexpected error"
-msgstr ""
+msgstr "予想外のエラー"
 
 #: ../usr/lib/live-installer/main.py:32
 msgid ""
 "<b>The installer has failed with the following unexpected error. Please "
 "submit a bug report!</b>"
 msgstr ""
+"<b>インストーラは下記の予想外なエラーで失敗しました。パグレポートを送信して下"
+"さい！</b>"
 
 #: ../usr/lib/live-installer/slideshow.py:26
 msgid "No slideshow template found."
-msgstr ""
+msgstr "スライドショーテンプレートが見つかりません"
 
 #: ../usr/lib/live-installer/localize.py:40
 msgid "Update apt cache"
-msgstr ""
+msgstr "apt キャッシュの更新"
 
 #: ../usr/lib/live-installer/localize.py:54
 msgid "Install additional localized packages"
-msgstr ""
+msgstr "追加ローカライズパッケージのインストール"
 
 #: ../usr/lib/live-installer/localize.py:67
-#, fuzzy
 msgid "Localizing KDE"
-msgstr "ローカライズ"
+msgstr "KDE のローカライズ中"
 
 #: ../usr/lib/live-installer/localize.py:84
-#, fuzzy
 msgid "Localizing LibreOffice"
-msgstr "パッケージのローカライズを行っています"
+msgstr "LibreOffice のローカライズ中"
 
 #: ../usr/lib/live-installer/localize.py:103
-#, fuzzy
 msgid "Localizing AbiWord"
-msgstr "ローカライズ"
+msgstr "AbiWord のローカライズ中"
 
 #: ../usr/lib/live-installer/localize.py:114
-#, fuzzy
 msgid "Localizing Firefox"
-msgstr "パッケージのローカライズを行っています"
+msgstr "Firefox のローカライズ中"
 
 #: ../usr/lib/live-installer/localize.py:132
 msgid "Localizing Thunderbird"
-msgstr ""
+msgstr "Thunderbird のローカライズ中"
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:346
+#: ../usr/lib/live-installer/partitioning.py:343
 msgid "Unknown"
-msgstr ""
+msgstr "未設定"
 
 #: ../usr/lib/live-installer/partitioning.py:131
 msgid "Edit"
@@ -86,11 +83,11 @@ msgstr "/home に割り当て"
 msgid "Assign to /boot/efi"
 msgstr "/boot/efi へアサイン"
 
-#: ../usr/lib/live-installer/partitioning.py:204
+#: ../usr/lib/live-installer/partitioning.py:201
 msgid "Removable:"
-msgstr ""
+msgstr "取り外し可能: "
 
-#: ../usr/lib/live-installer/partitioning.py:217
+#: ../usr/lib/live-installer/partitioning.py:214
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:838
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:851
@@ -101,44 +98,42 @@ msgstr ""
 msgid "Installation Tool"
 msgstr "インストールツール"
 
-#: ../usr/lib/live-installer/partitioning.py:218
-#, fuzzy, python-brace-format
+#: ../usr/lib/live-installer/partitioning.py:215
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
 "want the installer to create a set of partitions for you? Note: This will "
 "ERASE ALL DATA present on this disk."
 msgstr ""
-"ハードドライブにパーティションテーブルがありません。パーティションを作成しま"
-"すか? 注意: この作業はディスク上のすべてのデータを消去します。"
+"ハードドライブ {disk_description} にパーティションテーブルがありません。パー"
+"ティションを作成しますか? 注意: この作業はディスク上の「すべてのデータ」を消"
+"去します。"
 
-#: ../usr/lib/live-installer/partitioning.py:341
-#, fuzzy
+#: ../usr/lib/live-installer/partitioning.py:338
 msgid "Logical partition"
-msgstr "パーティションを編集"
+msgstr "論理パーティション"
 
-#: ../usr/lib/live-installer/partitioning.py:342
-#, fuzzy
+#: ../usr/lib/live-installer/partitioning.py:339
 msgid "Extended partition"
-msgstr "パーティションを編集"
+msgstr "拡張パーティション"
 
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:340
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "空き容量"
 
-#: ../usr/lib/live-installer/partitioning.py:432
+#: ../usr/lib/live-installer/partitioning.py:426
 msgid "Edit partition"
 msgstr "パーティションを編集"
 
-#: ../usr/lib/live-installer/partitioning.py:433
+#: ../usr/lib/live-installer/partitioning.py:427
 msgid "Device:"
 msgstr "デバイス:"
 
-#: ../usr/lib/live-installer/partitioning.py:435
+#: ../usr/lib/live-installer/partitioning.py:429
 msgid "Format as:"
 msgstr "フォーマット:"
 
-#: ../usr/lib/live-installer/partitioning.py:436
+#: ../usr/lib/live-installer/partitioning.py:430
 msgid "Mount point:"
 msgstr "マウントポイント:"
 
@@ -149,7 +144,7 @@ msgstr "言語"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:94
 msgid "Country"
-msgstr ""
+msgstr "国"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:171
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:439
@@ -172,9 +167,8 @@ msgstr "画像"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:315
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:317
-#, fuzzy
 msgid "{} Installer"
-msgstr "%s インストーラ"
+msgstr "{} インストーラ"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:332
 msgid "Timezone"
@@ -193,9 +187,8 @@ msgid "Partitioning"
 msgstr "パーティション構成"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:336
-#, fuzzy
 msgid "Please make sure you wish to manage partitions manually"
-msgstr "手動でパーティション管理を確認します"
+msgstr "手動でパーティションの管理を行ってください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:337
 msgid "Advanced options"
@@ -206,38 +199,32 @@ msgid "Summary"
 msgstr "概要"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:339
-#, fuzzy
 msgid "Installing {}..."
-msgstr "Linux Mint をインストール..."
+msgstr "{} をインストール..."
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:340
-#, fuzzy
 msgid "Installation is paused: please finish the custom installation"
-msgstr "インストールは中断されます： カスタムインストールを終わらせて下さい"
+msgstr "インストールは中断されます: カスタムインストールを終わらせて下さい"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:343
-#, fuzzy
 msgid "Calculating file indexes ..."
 msgstr "ファイルインデックスを計算しています..."
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:348
-#, fuzzy
 msgid "Click this button to take a new picture of yourself with the webcam."
-msgstr "このボタンをクリックして Web カメラからあなたの写真を撮影します"
+msgstr "このボタンをクリックすると Web カメラから新たな画像を撮影します"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:351
-#, fuzzy
 msgid "The installer did not detect any webcams."
-msgstr "Web カメラを検出できませんでした"
+msgstr "インストーラは Web カメラを検出できませんでした"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:354
 msgid "Your full name"
 msgstr "氏名"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:355
-#, fuzzy
 msgid "This will be shown in the About Me application."
-msgstr "ユーザー情報を扱うアプリケーションで使用します"
+msgstr "これは About Me アプリケーションで表示されます"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:356
 msgid "Your username"
@@ -245,39 +232,39 @@ msgstr "ユーザー名"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:357
 msgid "This is the name you will use to log in to your computer."
-msgstr ""
+msgstr "これはコンピュータへログインする時に使用する名前です。"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:358
 msgid "Your password"
 msgstr "パスワード"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:359
-#, fuzzy
 msgid "Please enter your password twice to ensure it is correct."
-msgstr "間違いが無いようにパスワードを 2 回入力してください"
+msgstr "間違いが無いようにパスワードを２回入力してください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:360
 msgid "Hostname"
 msgstr "ホスト名"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:361
-#, fuzzy
 msgid "This hostname will be the computer's name on the network."
-msgstr "ホスト名はネットワークにおけるコンピューターの名前となります"
+msgstr "ホスト名はネットワークにおけるコンピュータ名となります"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:362
 msgid "Automatic login"
-msgstr ""
+msgstr "自動ログイン"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:363
 msgid ""
 "If enabled, the login screen is skipped when the system starts, and you are "
 "signed into your desktop session automatically."
 msgstr ""
+"有効の場合、システム開始でログイン画面を飛ばし、自動的にデスクトップ画面へ移"
+"します。"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:364
 msgid "Log in automatically on system boot"
-msgstr ""
+msgstr "システム起動時に自動ログインする"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:367
 msgid "Your picture"
@@ -300,31 +287,29 @@ msgid "Select a picture"
 msgstr "画像を選択"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:372
-#, fuzzy
 msgid "Click this button to choose a picture from the hard disk."
-msgstr "このボタンをクリックし、アカウントの写真を選択して下さい"
+msgstr ""
+"ボタンをクリックし、ハードディスクにあるアカウントの写真を選択してください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:375
 msgid "Selected timezone:"
 msgstr "タイムゾーンの選択"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:376
-#, fuzzy
 msgid "Select timezone"
 msgstr "タイムゾーンの選択"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:379
 msgid "Refresh"
-msgstr ""
+msgstr "再読込"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:380
 msgid "_Expert mode"
-msgstr ""
+msgstr "エキスパートモード(_E)"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:381
-#, fuzzy
 msgid "_Edit partitions"
-msgstr "パーティションを編集"
+msgstr "パーティションを編集(_E)"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:384
 msgid "Bootloader"
@@ -335,43 +320,44 @@ msgid "Install GRUB"
 msgstr "GRUB をインストール"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:386
-#, fuzzy
 msgid "GRUB is a bootloader used to load the Linux kernel."
-msgstr "GRUB は Linux カーネルを読み込むために利用されるブートローダーです"
+msgstr "GRUB は Linux カーネルを読み込むために使用するブートローダーです"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:392
 msgid "Plymouth"
-msgstr ""
+msgstr "Plymouth"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:393
 msgid "Enable Plymouth"
-msgstr ""
+msgstr "Plymouth を有効にする"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:394
 msgid "Plymouth is a bootsplash for Linux"
-msgstr ""
+msgstr "Plymouth は Linux のスプラッシュ画面（起動・終了画面）です"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:400
 msgid "Multimedia"
-msgstr ""
+msgstr "マルチメディア"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:401
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:955
 msgid "Install additional multimedia software"
-msgstr ""
+msgstr "追加マルチメディアソフトウェアのインストール"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:402
 msgid ""
 "Note: the use of this software might be prohibited by law in your country"
 msgstr ""
+"注意: このソフトウェアの使用は、あなたの国で法律によって禁止されているかもし"
+"れません"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:405
 msgid "Quit"
-msgstr ""
+msgstr "終了"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:406
 msgid "Back"
-msgstr ""
+msgstr "戻る"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:407
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:749
@@ -379,9 +365,8 @@ msgid "Forward"
 msgstr "進む"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:410
-#, fuzzy
 msgid "Use this box to test your keyboard layout."
-msgstr "このボックスを使ってキーボードのレイアウトをお確かめください"
+msgstr "このボックスを使ってキーボードレイアウトを確認してください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:411
 msgid "Model"
@@ -410,20 +395,23 @@ msgid ""
 "During the install, you will be given time to chroot into /target and "
 "install any packages that will be needed to boot your new system."
 msgstr ""
+"インストール中 /target に chroot され、新システムのために様々なパッケージをイ"
+"ンストールします。"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:418
 msgid "During the install, you will be required to write your own /etc/fstab."
-msgstr ""
+msgstr "インストール中 /etc/fstab の書き込みを要求します。"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:419
 msgid ""
 "If you aren't sure what any of this means, please go back and deselect "
 "manual partition management."
 msgstr ""
+"もしこの意味が分からない場合は、戻って手動パーティション管理を外して下さい。"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:422
 msgid "Please do the following and then click Forward to finish installation:"
-msgstr ""
+msgstr "下記を確認し、インストールを終わらせるために次へをクリックして下さい:"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:423
 msgid ""
@@ -431,6 +419,9 @@ msgid ""
 "new system, matching those currently mounted at /target (without using the /"
 "target prefix in the mount paths themselves)."
 msgstr ""
+"新システムでマウントするファイルシステム用の /tar/etc/fstab を生成してくださ"
+"い。現在 /target でマウントされています。（マウントのパスとしている /target "
+"接頭辞は外してください）"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:424
 msgid ""
@@ -438,6 +429,8 @@ msgid ""
 "dmraid, etc) by calling \"sudo chroot /target\" followed by the relevant apt-"
 "get/aptitude installations."
 msgstr ""
+" \"sudo chroot /target\" によって最初の起動で必要とするパッケージを apt-get/"
+"aptitude を用いてインストールします (mdadm、cryptsetup、dmraid など)"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:425
 msgid ""
@@ -445,6 +438,9 @@ msgid ""
 "as dm-crypt), you may need to have drives currently mounted using the same "
 "block device name as they appear in /target/etc/fstab."
 msgstr ""
+"状況によって updare-initramfs が正常に動くように (dm-crypt など) ドライブが /"
+"target/etc/fstab が現れるのと同じブロックデバイス名を使用して開始しておく必要"
+"があるかもしれません"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:426
 msgid ""
@@ -452,6 +448,8 @@ msgid ""
 "system will have at first boot, and matches what is currently mounted at /"
 "target."
 msgstr ""
+"ダブルクリックで /target/etc/fstab に接続します。新システムで最初の起動するも"
+"のです。/target をカレントとしてマウントします。"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:430
 msgid "Device"
@@ -470,9 +468,8 @@ msgid "Mount point"
 msgstr "マウントポイント"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:434
-#, fuzzy
 msgid "Format as"
-msgstr "フォーマット:"
+msgstr "フォーマット"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:435
 msgid "Size"
@@ -480,11 +477,11 @@ msgstr "サイズ"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:462
 msgid "Quit?"
-msgstr ""
+msgstr "終了？"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:462
 msgid "Are you sure you want to quit the installer?"
-msgstr ""
+msgstr "インストーラを終了してよろしいですか？"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:610
 msgid ""
@@ -492,76 +489,67 @@ msgid ""
 "connection\n"
 "Configuration will still be set to your selected language."
 msgstr ""
+"追加ロケールパッケージをダウンロード・インストールできません: インターネット"
+"に接続していません\n"
+"設定は選択した言語に設定されます。"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:612
 msgid "No internet connection"
-msgstr ""
+msgstr "インターネットに接続できません"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:792
-#, fuzzy
 msgid "Please provide your full name."
-msgstr "氏名を入力してください"
+msgstr "フルネームを入力してください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:795
-#, fuzzy
 msgid "Please provide a username."
 msgstr "ユーザー名を入力してください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:798
-#, fuzzy
 msgid "Please provide a password for your user account."
 msgstr "ユーザーアカウントのパスワードを入力してください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:801
-#, fuzzy
 msgid "Your passwords do not match."
 msgstr "パスワードが一致しません"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:804
-#, fuzzy
 msgid "Please provide a hostname."
 msgstr "ホスト名を入力してください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:809
-#, fuzzy
 msgid "Your username must be lower case."
 msgstr "ユーザー名は小文字にしてください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:813
-#, fuzzy
 msgid "Your username may not contain whitespace characters."
 msgstr "ユーザー名にスペースを入れないでください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:818
-#, fuzzy
 msgid "The hostname must be lower case."
 msgstr "ホスト名は小文字にしてください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:822
-#, fuzzy
 msgid "The hostname may not contain whitespace characters."
 msgstr "ホスト名にスペースを入れないでください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:825
 msgid "Error"
-msgstr ""
+msgstr "エラー"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:838
-#, fuzzy
 msgid ""
 "Please indicate a filesystem to format the root (/) partition with before "
 "proceeding."
 msgstr ""
-"次に進む前にルート (/) パーティションをフォーマットするファイルシステムを指定"
-"してください"
+"進める前にルート (/) パーティションをフォーマットするファイルシステムを指定し"
+"てください。"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
-#, fuzzy
 msgid "<b>Please select a root (/) partition.</b>"
 msgstr "<b>ルートパーティションを選択して下さい</b>"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
-#, fuzzy
 msgid ""
 "A root partition is needed to install {} on.\n"
 "\n"
@@ -569,10 +557,10 @@ msgid ""
 " - Recommended size: 30GB\n"
 " - Recommended filesystem format: ext4\n"
 msgstr ""
-"Linux Mint をインストールするため、下記のルートパーティションが必要です\n"
+"{} をインストールするため、下記のルートパーティションが必要です\n"
 "\n"
 " - マウントポイント: /\n"
-" - 必要サイズ: 10GB 以上\n"
+" - 必要サイズ: 30GB 以上\n"
 " - 必要なフォーマット: ext4\n"
 " "
 
@@ -591,7 +579,6 @@ msgid "The EFI partition must be formatted as vfat."
 msgstr "EFI パーティションは VFAT でフォーマットして下さい。"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:867
-#, fuzzy
 msgid "<b>Please select an EFI partition.</b>"
 msgstr "<b>EFI パーティションを選択して下さい</b>"
 
@@ -608,10 +595,17 @@ msgid ""
 "partition of the disk as the EFI system partition.\n"
 " "
 msgstr ""
+"EFI システムパーティションは下記が必要です:\n"
+"\n"
+" - マウントポイント: /boot/efi\n"
+" - パーティションフラグ: Boot\n"
+" - サイズ: 100MB 以上\n"
+" - フォーマット形式: vfat または fat32\n"
+"\n"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:888
 msgid "Apply"
-msgstr ""
+msgstr "適用"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:927
 msgid "Localization"
@@ -643,15 +637,15 @@ msgstr "ユーザー名: "
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:936
 msgid "Automatic login: "
-msgstr ""
+msgstr "自動ログイン:"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:936
 msgid "enabled"
-msgstr ""
+msgstr "有効"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:936
 msgid "disabled"
-msgstr ""
+msgstr "無効"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:937
 msgid "System settings"
@@ -666,9 +660,8 @@ msgid "Filesystem operations"
 msgstr "ファイルシステムオペレーション"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:940
-#, fuzzy
 msgid "Install bootloader on {}"
-msgstr "%s にブートローダーをインストール"
+msgstr "{} にブートローダーをインストール"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:940
 msgid "Do not install bootloader"
@@ -676,31 +669,27 @@ msgstr "ブートローダーをインストールしない"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:943
 msgid "Use already-mounted /target."
-msgstr ""
+msgstr "すでに /target をマウント使用しています"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:947
-#, fuzzy
 msgid "Format {} as {}"
-msgstr "フォーマット:"
+msgstr "フォーマット {} as {}"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:950
-#, fuzzy
 msgid "Mount {} as {}"
-msgstr "フォーマット:"
+msgstr "マウント {} as {}"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:954
-#, fuzzy
 msgid "Install Plymouth"
-msgstr "インストール"
+msgstr "Plymouth インストール"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:954
-#, fuzzy
 msgid "Do not install Plymouth"
-msgstr "ブートローダーをインストールしない"
+msgstr "Plymouth をインストールしない"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:955
 msgid "Do not install additional multimedia software"
-msgstr ""
+msgstr "追加マルチメディアソフトウェアをインストールしない"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:986
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:990
@@ -710,7 +699,6 @@ msgid "Installation error"
 msgstr "インストールエラー"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:999
-#, fuzzy
 msgid "Installation paused"
 msgstr "インストールの一時停止"
 
@@ -719,6 +707,8 @@ msgid ""
 "Installation is now paused. Please read the instructions on the page "
 "carefully before clicking Forward to finish the installation."
 msgstr ""
+"インストールは一時停止中です。インストールを終えるために次へをクリックする前"
+"に、慎重にページの指示を読んでください。"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 #: ../usr/lib/live-installer/installer.py:462
@@ -734,9 +724,9 @@ msgstr ""
 "すか？"
 
 #: ../usr/lib/live-installer/installer.py:60
-#, fuzzy, python-format
+#, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
-msgstr "%(partition)s を %(format)s にフォーマット中..."
+msgstr "%(partition)s を %(format)s へフォーマット中..."
 
 #: ../usr/lib/live-installer/installer.py:83
 #: ../usr/lib/live-installer/installer.py:94
@@ -749,6 +739,8 @@ msgid ""
 "ERROR: You must first manually mount your target filesystem(s) at /target to "
 "do a custom install!"
 msgstr ""
+"エラー: まずカスタムインストールを行うため、目的のファイルシステム /target を"
+"手動でマウントしなければいけません！"
 
 #: ../usr/lib/live-installer/installer.py:127
 msgid ""
@@ -757,30 +749,29 @@ msgid ""
 "multiboot tools). Please burn the ISO image to DVD/USB using a different "
 "tool."
 msgstr ""
+"エラー: 何かインストール媒体がよくありません！ これは通常 {} と互換性のない書"
+"き込まれたツールに起因します。(YUMI または他のマルチブートツール）異なるツー"
+"ルを用いて ISO イメージを DVD・USB へ書き込みしてください。"
 
 #: ../usr/lib/live-installer/installer.py:164
-#, fuzzy
 msgid "Copying {}"
-msgstr "%s をコピーしています"
+msgstr "{} をコピー中"
 
 #: ../usr/lib/live-installer/installer.py:182
-#, fuzzy
 msgid "Entering the system ..."
-msgstr "新しいシステムに入っています..."
+msgstr "新システムへ入っています..."
 
 #: ../usr/lib/live-installer/installer.py:217
 msgid "Removing live configuration (packages)"
 msgstr "ライブ設定 (パッケージ) を削除しています"
 
 #: ../usr/lib/live-installer/installer.py:225
-#, fuzzy
 msgid "Adding new user to the system"
-msgstr "システムにユーザを追加しています"
+msgstr "システムに新規ユーザを追加中"
 
 #: ../usr/lib/live-installer/installer.py:261
-#, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
-msgstr "ファイルシステムのマウント情報を書き込んでいます"
+msgstr "/etc/stab にファイルシステムのマウント情報を書込中"
 
 #: ../usr/lib/live-installer/installer.py:282
 msgid "Setting hostname"
@@ -795,22 +786,20 @@ msgid "Localizing packages"
 msgstr "パッケージのローカライズを行っています"
 
 #: ../usr/lib/live-installer/installer.py:339
-#, fuzzy
 msgid "Configuring Plymouth"
-msgstr "ブートローダーを設定しています"
+msgstr "Plymouth の設定中"
 
 #: ../usr/lib/live-installer/installer.py:348
 msgid "Install multimedia"
-msgstr ""
+msgstr "マルチメディアのインストール"
 
 #: ../usr/lib/live-installer/installer.py:360
-#, fuzzy
 msgid "Configuring sensors"
-msgstr "ブートローダーを設定しています"
+msgstr "sensors の設定中"
 
 #: ../usr/lib/live-installer/installer.py:366
 msgid "Removing VirtualBox"
-msgstr ""
+msgstr "VirtualBox を削除"
 
 #: ../usr/lib/live-installer/installer.py:372
 msgid "Setting keyboard options"
@@ -829,9 +818,8 @@ msgstr ""
 "ます。"
 
 #: ../usr/lib/live-installer/installer.py:430
-#, fuzzy
 msgid "Configuring initramfs"
-msgstr "ブートローダーを設定しています"
+msgstr "initramfs の設定中"
 
 #: ../usr/lib/live-installer/installer.py:438
 msgid "Cleaning APT"
@@ -846,19 +834,16 @@ msgid "Checking bootloader"
 msgstr "ブートローダーを確認しています"
 
 #: ../usr/share/applications/live-installer.desktop.in.h:1
-#, fuzzy
 msgid "Install"
-msgstr "%s インストーラ"
+msgstr "インストール"
 
 #: ../usr/share/applications/live-installer.desktop.in.h:2
-#, fuzzy
 msgid "Live Installer"
-msgstr "%s インストーラ"
+msgstr "ライブインストーラ"
 
 #: ../usr/share/applications/live-installer.desktop.in.h:3
-#, fuzzy
 msgid "Install the operating system"
-msgstr "オペレーティングシステム"
+msgstr "オペレーティングシステムのインストール"
 
 #, fuzzy
 #~ msgid "Install SolydXK"
