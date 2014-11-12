@@ -1,9 +1,12 @@
 [Desktop Entry]
 Name=Install
+Name[ja]=インストール
 Name[nl]=Installeren
 GenericName=Live Installer
+GenericName[ja]=ライブインストーラ
 GenericName[nl]=Installatieprogramma
 Comment=Install the operating system
+Comment[ja]=オペレーティングシステムのインストール
 Comment[nl]=Installeer het besturingssysteem
 Exec=live-installer
 Icon=/usr/share/live-installer/logo.png

@@ -25,7 +25,6 @@ msgstr "SolydXK へようこそ"
 
 #. type: Content of: <div><div>
 #: en/10_welcome.html:5
-#| msgid "Thank you for choosing SolydXK."
 msgid "Thank you for choosing SolydXK."
 msgstr "SolydXKを選んでいただき、ありがとうございます。"
 
@@ -51,7 +50,6 @@ msgstr "デスクトップ準備"
 
 #. type: Content of: <div><div><p>
 #: en/10_welcome.html:11
-#| msgid "Thank you for choosing SolydXK."
 msgid "Enjoy this new release and thank you for choosing SolydXK."
 msgstr ""
 "新たなリリースをお楽しみ下さい。SolydXK を選んでいただきありがとうございま"
@@ -86,10 +84,6 @@ msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:8
-#| msgid ""
-#| "Our innovations, the rapid development of Ubuntu and the huge Debian "
-#| "package selection make SolydXK one of the most attractive desktop "
-#| "operating systems available to home users."
 msgid ""
 "Our innovations, the rapid development of Debian and the huge Debian package "
 "selection make SolydXK one of the most attractive desktop operating systems "
@@ -106,10 +100,6 @@ msgstr "すぐに使えます"
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:6
-#| msgid ""
-#| "Firefox, Thunderbird, OpenOffice.org and Xchat come pre-installed in "
-#| "SolydXK, so you can get started immediately with your daily routine on "
-#| "your desktop and the Internet."
 msgid ""
 "Firefox, Thunderbird, and LibreOffice come pre-installed in SolydXK, so you "
 "can get started immediately with the desktop and the Internet."
@@ -135,9 +125,6 @@ msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:9
-#| msgid ""
-#| "SolydXK is compatible with most popular file formats: zip, doc, xls, pdf, "
-#| "rar, mp3, wmv, mpg, mp4, mov ...etc"
 msgid ""
 "SolydXK is compatible with most popular file formats such as: docx, xlsx, "
 "doc, xls, pdf, zip, rar, mp3, mpg, and many more."
@@ -190,7 +177,6 @@ msgstr "主流のオペレーティングシステムを置き換えるもの"
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:6
-#| msgid "SolydXK is easy to use, powerful and configurable."
 msgid "SolydXK is easy to use, powerful and configurable."
 msgstr "SolydXK は操作が簡単で、性能もよく、ユーザの要求に容易に順応できます。"
 
@@ -207,10 +193,6 @@ msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:8
-#| msgid ""
-#| "SolydXK can detect other operating systems and install itself beside "
-#| "them. You can choose which operating system to launch when you start the "
-#| "computer."
 msgid ""
 "SolydXK can detect other operating systems and install itself beside them. "
 "You can choose which operating system to launch when you start the computer."
@@ -237,11 +219,6 @@ msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:7
-#| msgid ""
-#| "The SolydXK Update Manager sits discreetly in your system tray and lets "
-#| "you know when updates are available. You don't have to apply updates when "
-#| "you don't want to. The Update Manager won't pop up or annoy you in any "
-#| "way."
 msgid ""
 "The Update Manager sits discreetly in your system tray and lets you know "
 "when updates are available. You don't have to apply updates when you don't "
@@ -278,10 +255,6 @@ msgstr "素晴らしいコミュニティ"
 
 #. type: Content of: <div><div><ul><li>
 #: en/70_community.html:6
-#| msgid ""
-#| "The SolydXK community is one of the best on the Internet. Our users not "
-#| "only provide most of our funding, but also ideas, artwork, and sometimes "
-#| "even source code."
 msgid ""
 "The SolydXK community is one of the best on the Internet. Our users provide "
 "most of our funding, as well as ideas, artwork and sometimes even source "
@@ -294,10 +267,6 @@ msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/70_community.html:7
-#| msgid ""
-#| "SolydXK users are happy to share their passion, enthusiasm, and eagerness "
-#| "to help. Don't hesitate to ask questions in the forums or get involved "
-#| "with the community."
 msgid ""
 "SolydXK users are happy to share their passion and enthusiasm and are eager "
 "to help. Don't hesitate to ask questions on the forums or to get involved in "
@@ -309,9 +278,6 @@ msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/70_community.html:8
-#| msgid ""
-#| "Send us your feedback and tell us about your experience. We'll listen to "
-#| "your ideas and use them to further improve SolydXK."
 msgid ""
 "Send us your feedback and tell us about your experience. We'll listen to "
 "your ideas and use them to further improve SolydXK."
