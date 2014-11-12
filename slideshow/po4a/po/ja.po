@@ -1,73 +1,71 @@
 # Japanese translation for live-installer-slideshow
 # Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
 # This file is distributed under the same license as the live-installer-slideshow package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# BALLOON a.k.a. Fu-sen. <fu-sen+solysxk@shigakeiichi.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-slideshow\n"
-"Report-Msgid-Bugs-To: https://launchpad.net/~linuxmint-translation-team-"
-"japanese\n"
+"Report-Msgid-Bugs-To: http://solydxk.jimdo.com/\n"
 "POT-Creation-Date: 2014-10-24 13:51+0200\n"
-"PO-Revision-Date: 2013-11-17 07:39+0000\n"
-"Last-Translator: OKANO Takayoshi <Unknown>\n"
-"Language-Team: Japanese <https://launchpad.net/~linuxmint-translation-team-"
-"japanese>\n"
+"PO-Revision-Date: 2014-11-08 19:45+0900\n"
+"Last-Translator: BALLOON a.k.a. Fu-sen. <fu-sen+solydxk@shigakeiichi.com>\n"
+"Language-Team: SolydXKjp <http://solydxk.jimdo.com/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-05-03 20:44+0000\n"
-"X-Generator: Launchpad (build 16985)\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. type: Content of: <h1>
 #: en/10_welcome.html:1
 msgid "Welcome to SolydXK"
-msgstr ""
+msgstr "SolydXK へようこそ"
 
 #. type: Content of: <div><div>
 #: en/10_welcome.html:5
-#, fuzzy
 #| msgid "Thank you for choosing SolydXK."
 msgid "Thank you for choosing SolydXK."
-msgstr "SolydXKを選んでいただき誠にありがとうございます。"
+msgstr "SolydXKを選んでいただき、ありがとうございます。"
 
 #. type: Content of: <div><div><br>
 #: en/10_welcome.html:5
 msgid "You've chosen a Linux distribution that is:"
-msgstr ""
+msgstr "選んだ Linux ディストリビューションは:"
 
 #. type: Content of: <div><div><ul><li>
 #: en/10_welcome.html:7
 msgid "Secure and stable"
-msgstr ""
+msgstr "安全・安心"
 
 #. type: Content of: <div><div><ul><li>
 #: en/10_welcome.html:8
 msgid "Fast and responsive"
-msgstr ""
+msgstr "速い・敏感"
 
 #. type: Content of: <div><div><ul><li>
 #: en/10_welcome.html:9
 msgid "Desktop-ready"
-msgstr ""
+msgstr "デスクトップ準備"
 
 #. type: Content of: <div><div><p>
 #: en/10_welcome.html:11
-#, fuzzy
 #| msgid "Thank you for choosing SolydXK."
 msgid "Enjoy this new release and thank you for choosing SolydXK."
-msgstr "SolydXKを選んでいただき誠にありがとうございます。"
+msgstr ""
+"新たなリリースをお楽しみ下さい。SolydXK を選んでいただきありがとうございま"
+"す。"
 
 #. type: Content of: <div><div><p>
 #: en/10_welcome.html:12
 msgid "The installation takes 15-30 minutes, depending on your settings."
-msgstr ""
+msgstr "インストールには15〜30分要します。設定によって変わります。"
 
 #. type: Content of: <h1>
 #: en/20_giants.html:1
 msgid "Standing on the shoulders of Giants"
-msgstr "Standing on the shoulders of Giants"
+msgstr "巨人の肩の上に立つ"
 
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:6
@@ -75,6 +73,7 @@ msgid ""
 "SolydXK is a Debian-based GNU/Linux distribution derived from and compatible "
 "with Debian."
 msgstr ""
+"SolydXK は Debian GNU/Linux をベースとして、Debian との互換性を持ちます。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:7
@@ -82,10 +81,11 @@ msgid ""
 "SolydXK uses either the leightweight Xfce desktop for SoldyX or the highly "
 "configurable and stunningly appealing KDE desktop for SolydK."
 msgstr ""
+"SolydXKには、軽量 Xfce デスクトップを用いた SoldyX と様々なカスタマイズでき素"
+"晴らしく魅力的な KDE デスクトップ SolydK があります。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/20_giants.html:8
-#, fuzzy
 #| msgid ""
 #| "Our innovations, the rapid development of Ubuntu and the huge Debian "
 #| "package selection make SolydXK one of the most attractive desktop "
@@ -95,8 +95,8 @@ msgid ""
 "selection make SolydXK one of the most attractive desktop operating systems "
 "available to home users."
 msgstr ""
-"我々の様々な革新、Ubuntuの急速な発展、Debianの巨大なパッケージセレクションに"
-"より、SolydXKはホームユーザーにとって最も魅力的なデスクトップオペレーティ"
+"我々の様々な革新、Debian の急速な発展、Debian の巨大なパッケージセレクション"
+"により、SolydXK はホームユーザーにとって最も魅力的なデスクトップオペレーティ"
 "ングシステムとなっています。"
 
 #. type: Content of: <h1>
@@ -106,7 +106,6 @@ msgstr "すぐに使えます"
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:6
-#, fuzzy
 #| msgid ""
 #| "Firefox, Thunderbird, OpenOffice.org and Xchat come pre-installed in "
 #| "SolydXK, so you can get started immediately with your daily routine on "
@@ -115,9 +114,9 @@ msgid ""
 "Firefox, Thunderbird, and LibreOffice come pre-installed in SolydXK, so you "
 "can get started immediately with the desktop and the Internet."
 msgstr ""
-"SolydXK には Firefox や Thunderbird、OpenOffice.org、Xchat といったアプリ"
-"ケーションがあらかじめインストールされているため、デスクトップ環境やインター"
-"ネットをすぐに使って頂けます。"
+"SolydXK には Firefox、Thunderbird、LibreOffice などアプリケーションが予めイン"
+"ストールされているため、デスクトップ環境やインターネットをすぐに使用できま"
+"す。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:7
@@ -125,29 +124,31 @@ msgid ""
 "Unlike other Linux distributions SolydXK is also ready to play mp3s, DVDs "
 "and Flash video as soon as you run it."
 msgstr ""
+"他の Linux ディストリビューションと異なり、SolydXKは mp3・DVD・Flash ビデオを"
+"再生する準備が整っています。あなたはこれを実行するだけです。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:8
 msgid "A wide variaty of software can be installed with a click of the mouse."
 msgstr ""
+"幅広いソフトウェアをマウスからクリックしてインストールする事ができます。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:9
-#, fuzzy
 #| msgid ""
-#| "SolydXK is compatible with most popular file formats: zip, doc, xls, "
-#| "pdf, rar, mp3, wmv, mpg, mp4, mov ...etc"
+#| "SolydXK is compatible with most popular file formats: zip, doc, xls, pdf, "
+#| "rar, mp3, wmv, mpg, mp4, mov ...etc"
 msgid ""
 "SolydXK is compatible with most popular file formats such as: docx, xlsx, "
 "doc, xls, pdf, zip, rar, mp3, mpg, and many more."
 msgstr ""
-"SolydXK では、zip、doc、xls、pdf、rar、mp3、wmv、png、mp4、mov...など、多"
-"くの一般的なファイルフォーマットを扱うことが出来ます。"
+"SolydXK では、docx・xlsx・doc・xls・pdf・zip・rar・mp3・mpg など、多くの一般"
+"的なファイルフォーマットを扱うことができます。"
 
 #. type: Content of: <h1>
 #: en/40_office.html:1
 msgid "Office tools are ready to use as soon as you install SolydXK"
-msgstr ""
+msgstr "SolydXKをインストールするとOfficeツールをすぐに使用する事ができます"
 
 #. type: Content of: <div><div><ul><li>
 #: en/40_office.html:6
@@ -155,11 +156,13 @@ msgid ""
 "<em>LibreOffice</em>, a powerful office software suite, comes built into "
 "SolydXK."
 msgstr ""
+"<em>LibreOffice</em> はパワフルな Office ソフトウェアスイートです。SolydXK に"
+"は含まれています。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/40_office.html:7
 msgid "<em>LibreOffice</em> is very easy to learn and use."
-msgstr ""
+msgstr "<em>LibreOffice</em> 簡単に覚えて使用できます。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/40_office.html:8
@@ -167,6 +170,8 @@ msgid ""
 "You can use it to create letters, presentations and spreadsheets, as well as "
 "diagrams and databases."
 msgstr ""
+"あなたは、文章、プレゼンテーション、スプレッドシート、さらには図形、データ"
+"ベースを作成するために使用する事ができます。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/40_office.html:9
@@ -175,6 +180,8 @@ msgid ""
 "documents from other popular office applications including WordPerfect and "
 "Microsoft Office."
 msgstr ""
+"<em>LibreOffice</em>は標準 OpenDocument 形式と他の有名なオフィスアプリケー"
+"ション WordPerfect や Microsoft Office の文章も作業できます。"
 
 #. type: Content of: <h1>
 #: en/50_windows.html:1
@@ -183,11 +190,9 @@ msgstr "主流のオペレーティングシステムを置き換えるもの"
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:6
-#, fuzzy
 #| msgid "SolydXK is easy to use, powerful and configurable."
 msgid "SolydXK is easy to use, powerful and configurable."
-msgstr ""
-"SolydXKは操作が簡単で、性能もよく、ユーザの要求に容易に順応できます。"
+msgstr "SolydXK は操作が簡単で、性能もよく、ユーザの要求に容易に順応できます。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:7
@@ -196,10 +201,12 @@ msgid ""
 "to computer viruses or spyware, it does not suffer from disk fragmentation, "
 "and it has no registry that requires periodic cleaning."
 msgstr ""
+"SolydXKは安全で安定しています。他のオペレーティングシステムとは異なり、コン"
+"ピュータウイルスやスパイウェアの傾向がありません。またディスクの断片化で苦し"
+"む事がありません。定期的なメンテナンスを必要とするレジストリがありません。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/50_windows.html:8
-#, fuzzy
 #| msgid ""
 #| "SolydXK can detect other operating systems and install itself beside "
 #| "them. You can choose which operating system to launch when you start the "
@@ -208,9 +215,9 @@ msgid ""
 "SolydXK can detect other operating systems and install itself beside them. "
 "You can choose which operating system to launch when you start the computer."
 msgstr ""
-"SolydXKはご利用のコンピュータの他のOSを認識し、それらを消去することなくイ"
-"ンストールすることもできます。コンピュータを立ち上げる際に、利用したいOSを選"
-"択できます。"
+"SolydXK はご利用のコンピュータの他の OS を認識し、それらを消去することなくイ"
+"ンストールすることができます。コンピュータを立ち上げる際に、利用したい OS を"
+"選択できます。"
 
 #. type: Content of: <h1>
 #: en/60_safe.html:1
@@ -224,24 +231,26 @@ msgid ""
 "to be. SolydXK thinks upgrades should be quick and easy, and then get out of "
 "the way."
 msgstr ""
+"若干のオペレーティングシステムは、あなたのシステムをアップデートすることを本"
+"当に必要であるか困難にします。 SolydXKはアップグレードが速く簡単済ませなけれ"
+"ばいけないようにしなければならないと思っています。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:7
-#, fuzzy
 #| msgid ""
-#| "The SolydXK Update Manager sits discreetly in your system tray and "
-#| "lets you know when updates are available. You don't have to apply updates "
-#| "when you don't want to. The Update Manager won't pop up or annoy you in "
-#| "any way."
+#| "The SolydXK Update Manager sits discreetly in your system tray and lets "
+#| "you know when updates are available. You don't have to apply updates when "
+#| "you don't want to. The Update Manager won't pop up or annoy you in any "
+#| "way."
 msgid ""
 "The Update Manager sits discreetly in your system tray and lets you know "
 "when updates are available. You don't have to apply updates when you don't "
 "want to. The Update Manager won't pop up or annoy you in any way."
 msgstr ""
-"SolydXKのアップデートマネージャはシステムトレイに常駐し、アップデートが入"
-"手可能な時にお知らせします。いつアップデートするかは自由であり、したくない時"
-"にする必要はありません。アップデートマネージャはポップアップなどは行わず邪魔"
-"になるようなことは一切ありません。"
+"SolydXK のアップデートマネージャはシステムトレイに常駐し、アップデートが入手"
+"可能な時にお知らせします。いつアップデートするかは自由であり、したくない時に"
+"する必要はありません。アップデートマネージャはポップアップなどは行わず邪魔に"
+"なるようなことは一切ありません。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:8
@@ -249,16 +258,18 @@ msgid ""
 "All updated files are maintained and closely checked by trusted developers "
 "and maintainers."
 msgstr ""
+"すべてのアップデートされたファイルは維持され、信用された開発者・メンテナーに"
+"よって密接にチェックされます。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:9
 msgid "All files are stored in special secure repositories for your use."
-msgstr ""
+msgstr "すべてのファイルは、使用する特別の安全な貯蔵所に収められます。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/60_safe.html:10
 msgid "The security repository is synchronized daily."
-msgstr ""
+msgstr "セキュリティリボジトリは、毎日同期を行います。"
 
 #. type: Content of: <h1>
 #: en/70_community.html:1
@@ -267,11 +278,10 @@ msgstr "素晴らしいコミュニティ"
 
 #. type: Content of: <div><div><ul><li>
 #: en/70_community.html:6
-#, fuzzy
 #| msgid ""
-#| "The SolydXK community is one of the best on the Internet. Our users "
-#| "not only provide most of our funding, but also ideas, artwork, and "
-#| "sometimes even source code."
+#| "The SolydXK community is one of the best on the Internet. Our users not "
+#| "only provide most of our funding, but also ideas, artwork, and sometimes "
+#| "even source code."
 msgid ""
 "The SolydXK community is one of the best on the Internet. Our users provide "
 "most of our funding, as well as ideas, artwork and sometimes even source "
@@ -284,23 +294,21 @@ msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/70_community.html:7
-#, fuzzy
 #| msgid ""
-#| "SolydXK users are happy to share their passion, enthusiasm, and "
-#| "eagerness to help. Don't hesitate to ask questions in the forums or get "
-#| "involved with the community."
+#| "SolydXK users are happy to share their passion, enthusiasm, and eagerness "
+#| "to help. Don't hesitate to ask questions in the forums or get involved "
+#| "with the community."
 msgid ""
 "SolydXK users are happy to share their passion and enthusiasm and are eager "
 "to help. Don't hesitate to ask questions on the forums or to get involved in "
 "the community."
 msgstr ""
-"SolydXK ユーザーは情熱と興奮を分かち合うことに幸せを感じていますし、助けの"
-"手を差し出すことを熱望しています。フォーラムで質問することや、コミュニティー"
-"に参加することを躊躇わないでください。"
+"SolydXK ユーザーは彼らの情熱と熱意を共有し助けたがっている事に満足していま"
+"す。 フォーラムで質問を行うか、コミュニティに関係する事をためらう必要はありま"
+"せん。"
 
 #. type: Content of: <div><div><ul><li>
 #: en/70_community.html:8
-#, fuzzy
 #| msgid ""
 #| "Send us your feedback and tell us about your experience. We'll listen to "
 #| "your ideas and use them to further improve SolydXK."
@@ -308,8 +316,8 @@ msgid ""
 "Send us your feedback and tell us about your experience. We'll listen to "
 "your ideas and use them to further improve SolydXK."
 msgstr ""
-"使って頂いた感想や新しいアイデアを是非お聞かせ下さい。必ず耳を傾け、Linux "
-"SolydXK をさらに素晴らしいものにしていきます。"
+"使って頂いた感想や新しいアイデアを是非お聞かせ下さい。我々はこれを受けて "
+"SolydXK をさらに改善していきます。"
 
 #~ msgid "Welcome to SolydXK Debian"
 #~ msgstr "ようこそ"
@@ -327,15 +335,15 @@ msgstr ""
 #~ "We focus on ease of use, comfort, and elegance to make your experience "
 #~ "with SolydXK as enjoyable as possible."
 #~ msgstr ""
-#~ "SolydXKのデスクトップはできるだけ楽しく使えるように、簡単且つエレガント"
-#~ "な操作に重点を置いています。"
+#~ "SolydXKのデスクトップはできるだけ楽しく使えるように、簡単且つエレガントな"
+#~ "操作に重点を置いています。"
 
 #~ msgid ""
-#~ "We hope you will have a wonderful time spent with SolydXK, and that "
-#~ "you will enjoy using it as much as we do developing it!"
+#~ "We hope you will have a wonderful time spent with SolydXK, and that you "
+#~ "will enjoy using it as much as we do developing it!"
 #~ msgstr ""
-#~ "SolydXKで素晴らしい一時を過ごしてください。そして開発を楽しんだ我々とと"
-#~ "もに、SolydXKをエンジョイしてください！"
+#~ "SolydXKで素晴らしい一時を過ごしてください。そして開発を楽しんだ我々ととも"
+#~ "に、SolydXKをエンジョイしてください！"
 
 #, fuzzy
 #~| msgid ""
@@ -343,20 +351,20 @@ msgstr ""
 #~| "compatible with Ubuntu."
 #~ msgid "SolydXK is a Debian-based GNU/Linux distribution."
 #~ msgstr ""
-#~ "SolydXKはUbuntuから派生した、Ubuntuと互換性のあるDebianベースのGNU/"
-#~ "Linuxディストリビュージョンです。"
+#~ "SolydXKはUbuntuから派生した、Ubuntuと互換性のあるDebianベースのGNU/Linux"
+#~ "ディストリビュージョンです。"
 
 #, fuzzy
 #~| msgid ""
-#~| "At home, SolydXK is the 4th most widely used desktop operating "
-#~| "system, behind Microsoft Windows, Apple OS X and Ubuntu."
+#~| "At home, SolydXK is the 4th most widely used desktop operating system, "
+#~| "behind Microsoft Windows, Apple OS X and Ubuntu."
 #~ msgid ""
 #~ "At home, GNU/Linux distributions like SolydXK or Ubuntu are among the "
 #~ "most widely used desktop operating systems, right next to Microsoft "
 #~ "Windows and Apple OS X."
 #~ msgstr ""
-#~ "ホームユースに限ると、SolydXKはMicrosoft Windows、Apple OS X、Ubuntuに"
-#~ "続いて４番目に広く使用されているデスクトップオペレーティングシステムです。"
+#~ "ホームユースに限ると、SolydXKはMicrosoft Windows、Apple OS X、Ubuntuに続い"
+#~ "て４番目に広く使用されているデスクトップオペレーティングシステムです。"
 
 #, fuzzy
 #~| msgid ""
@@ -383,23 +391,23 @@ msgstr ""
 
 #, fuzzy
 #~| msgid ""
-#~| "Install Wine and run Windows software in SolydXK. Or install "
-#~| "Virtualbox, and run Windows itself within SolydXK."
+#~| "Install Wine and run Windows software in SolydXK. Or install Virtualbox, "
+#~| "and run Windows itself within SolydXK."
 #~ msgid ""
-#~ "Install Wine and run Windows software in SolydXK. Or install "
-#~ "VirtualBox, and run Windows itself within SolydXK."
+#~ "Install Wine and run Windows software in SolydXK. Or install VirtualBox, "
+#~ "and run Windows itself within SolydXK."
 #~ msgstr ""
-#~ "Wine をインストールすると SolydXK 上で Windows のソフトウェアを実行する"
-#~ "ことができます。Virtualbox をインストールして SolydXK 内で Windows 自体"
-#~ "を動かすことも可能です。"
+#~ "Wine をインストールすると SolydXK 上で Windows のソフトウェアを実行するこ"
+#~ "とができます。Virtualbox をインストールして SolydXK 内で Windows 自体を動"
+#~ "かすことも可能です。"
 
 #~ msgid ""
-#~ "SolydXK is safe and stable, you don't need an antivirus, an anti-"
-#~ "spyware, a defragmentation tool or a registry cleaner."
+#~ "SolydXK is safe and stable, you don't need an antivirus, an anti-spyware, "
+#~ "a defragmentation tool or a registry cleaner."
 #~ msgstr ""
-#~ "SolydXK は安全かつ安定しているため、アンチウイルスやアンチスパイウェ"
-#~ "ア、デフラグツール、レジストリクリーナーといったツールを導入する必要はあり"
-#~ "ません。"
+#~ "SolydXK は安全かつ安定しているため、アンチウイルスやアンチスパイウェア、デ"
+#~ "フラグツール、レジストリクリーナーといったツールを導入する必要はありませ"
+#~ "ん。"
 
 #~ msgid ""
 #~ "Receive fixes and security updates all in one place, for the entire "
@@ -414,9 +422,9 @@ msgstr ""
 
 #~ msgid ""
 #~ "Keep in touch with your friends and contacts, by email, messenger or on "
-#~ "your favorite social networks. SolydXK provides all you need to "
-#~ "interact with Twitter, Facebook, Google Hangouts, ICQ, IRC, AIM, Yahoo "
-#~ "and many other networks."
+#~ "your favorite social networks. SolydXK provides all you need to interact "
+#~ "with Twitter, Facebook, Google Hangouts, ICQ, IRC, AIM, Yahoo and many "
+#~ "other networks."
 #~ msgstr ""
 #~ "E メールやメッセンジャー、お気に入りのソーシャルネットワークを使って、お友"
 #~ "達やご家族、同僚の方といつでも連絡を取ることができます。Twitter、"
