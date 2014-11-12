@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SolydXK\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-07 19:04+0100\n"
+"POT-Creation-Date: 2014-11-12 11:02+0100\n"
 "PO-Revision-Date: 2014-11-11 23:45+0100\n"
 "Last-Translator: Snap\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -63,7 +63,7 @@ msgid "Localizing Thunderbird"
 msgstr "Configurando el idioma de Thunderbird"
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:346
 msgid "Unknown"
 msgstr "Desconocido"
 
@@ -83,12 +83,11 @@ msgstr "Asignar a /home"
 msgid "Assign to /boot/efi"
 msgstr "Asignar a /boot/efi"
 
-#: ../usr/lib/live-installer/partitioning.py:201
-#, fuzzy
+#: ../usr/lib/live-installer/partitioning.py:204
 msgid "Removable:"
 msgstr "Dispositivo extraíble:"
 
-#: ../usr/lib/live-installer/partitioning.py:214
+#: ../usr/lib/live-installer/partitioning.py:217
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:838
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:851
@@ -99,7 +98,7 @@ msgstr "Dispositivo extraíble:"
 msgid "Installation Tool"
 msgstr "Herramienta de instalación"
 
-#: ../usr/lib/live-installer/partitioning.py:215
+#: ../usr/lib/live-installer/partitioning.py:218
 #, python-brace-format
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
@@ -110,32 +109,32 @@ msgstr ""
 "{disk_description}. ¿Quiere que el instalador cree un mapa de particiones? "
 "Nota: Esto BORRARÁ TODOS LOS DATOS que haya en el disco."
 
-#: ../usr/lib/live-installer/partitioning.py:338
+#: ../usr/lib/live-installer/partitioning.py:341
 msgid "Logical partition"
 msgstr "Partición lógica"
 
-#: ../usr/lib/live-installer/partitioning.py:339
+#: ../usr/lib/live-installer/partitioning.py:342
 msgid "Extended partition"
 msgstr "Partición extendida"
 
-#: ../usr/lib/live-installer/partitioning.py:340
+#: ../usr/lib/live-installer/partitioning.py:343
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "Espacio libre"
 
-#: ../usr/lib/live-installer/partitioning.py:426
+#: ../usr/lib/live-installer/partitioning.py:432
 msgid "Edit partition"
 msgstr "Editar partición"
 
-#: ../usr/lib/live-installer/partitioning.py:427
+#: ../usr/lib/live-installer/partitioning.py:433
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: ../usr/lib/live-installer/partitioning.py:429
+#: ../usr/lib/live-installer/partitioning.py:435
 msgid "Format as:"
 msgstr "Formatear como:"
 
-#: ../usr/lib/live-installer/partitioning.py:430
+#: ../usr/lib/live-installer/partitioning.py:436
 msgid "Mount point:"
 msgstr "Punto de montaje:"
 
@@ -189,7 +188,6 @@ msgid "Partitioning"
 msgstr "Creando particiones"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:336
-#, fuzzy
 msgid "Please make sure you wish to manage partitions manually"
 msgstr ""
 "Por favor, asegúrese de que quiere gestionar las particiones manualmente"
@@ -421,7 +419,6 @@ msgstr ""
 "y desactive la gestión manual de particiones."
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:422
-#, fuzzy
 msgid "Please do the following and then click Forward to finish installation:"
 msgstr ""
 "Por favor, haga lo siguiente y después pulse Siguiente para terminar la "
