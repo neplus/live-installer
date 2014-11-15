@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SolydXK\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-12 09:00+0100\n"
-"PO-Revision-Date: 2014-11-08 19:12+0900\n"
+"PO-Revision-Date: 2014-11-15 14:30+0900\n"
 "Last-Translator: BALLOON a.k.a. Fu-sen. <fu-sen+solydxk@shigakeiichi.com>\n"
 "Language-Team: SolydXKjp <http://solydxk.jimdo.com/>\n"
 "Language: ja\n"
@@ -107,7 +107,7 @@ msgid ""
 msgstr ""
 "ハードドライブ {disk_description} にパーティションテーブルがありません。パー"
 "ティションを作成しますか? 注意: この作業はディスク上の「すべてのデータ」を消"
-"去します。"
+"去します"
 
 #: ../usr/lib/live-installer/partitioning.py:341
 msgid "Logical partition"
@@ -233,7 +233,7 @@ msgstr "ユーザー名"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:357
 msgid "This is the name you will use to log in to your computer."
-msgstr "これはコンピュータへログインする時に使用する名前です。"
+msgstr "これはコンピュータへログインする時に使用する名前です"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:358
 msgid "Your password"
@@ -261,7 +261,7 @@ msgid ""
 "signed into your desktop session automatically."
 msgstr ""
 "有効の場合、システム開始でログイン画面を飛ばし、自動的にデスクトップ画面へ移"
-"します。"
+"します"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:364
 msgid "Log in automatically on system boot"
@@ -277,7 +277,7 @@ msgid ""
 "and a few other places."
 msgstr ""
 "この写真はあなたのアカウントで使われます。ログイン画面やその他の場所で利用さ"
-"れます。"
+"れます"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:369
 msgid "Take a photo"
@@ -379,7 +379,7 @@ msgid ""
 "ADVANCED USERS ONLY."
 msgstr ""
 "手動によるパーティション管理を選択しました。この機能は「詳しいユーザー向け」"
-"です。"
+"です"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:415
 msgid "Before continuing, please mount your target filesystem(s) at /target."
@@ -397,18 +397,18 @@ msgid ""
 "install any packages that will be needed to boot your new system."
 msgstr ""
 "インストール中 /target に chroot され、新システムのために様々なパッケージをイ"
-"ンストールします。"
+"ンストールします"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:418
 msgid "During the install, you will be required to write your own /etc/fstab."
-msgstr "インストール中 /etc/fstab の書き込みを要求します。"
+msgstr "インストール中 /etc/fstab の書き込みを要求します"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:419
 msgid ""
 "If you aren't sure what any of this means, please go back and deselect "
 "manual partition management."
 msgstr ""
-"もしこの意味が分からない場合は、戻って手動パーティション管理を外して下さい。"
+"もしこの意味が分からない場合は、戻って手動パーティション管理を外して下さい"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:422
 msgid "Please do the following and then click Forward to finish installation:"
@@ -450,7 +450,7 @@ msgid ""
 "target."
 msgstr ""
 "ダブルクリックで /target/etc/fstab に接続します。新システムで最初の起動するも"
-"のです。/target をカレントとしてマウントします。"
+"のです。/target をカレントとしてマウントします"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:430
 msgid "Device"
@@ -492,7 +492,7 @@ msgid ""
 msgstr ""
 "追加ロケールパッケージをダウンロード・インストールできません: インターネット"
 "に接続していません\n"
-"設定は選択した言語に設定されます。"
+"設定は選択した言語に設定されます"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:612
 msgid "No internet connection"
@@ -544,7 +544,7 @@ msgid ""
 "proceeding."
 msgstr ""
 "進める前にルート (/) パーティションをフォーマットするファイルシステムを指定し"
-"てください。"
+"てください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
 msgid "<b>Please select a root (/) partition.</b>"
@@ -567,16 +567,16 @@ msgstr ""
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:851
 msgid "The EFI partition is not bootable. Please edit the partition flags."
 msgstr ""
-"EFI パーティションから起動できません。パーティションフラグを編集して下さい。"
+"EFI パーティションから起動できません。パーティションフラグを編集して下さい"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:854
 msgid "The EFI partition is too small. It must be at least 100MB."
-msgstr "EFI パーティションが小さすぎます。100MB 以上必要です。"
+msgstr "EFI パーティションが小さすぎます。100MB 以上必要です"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:859
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:863
 msgid "The EFI partition must be formatted as vfat."
-msgstr "EFI パーティションは VFAT でフォーマットして下さい。"
+msgstr "EFI パーティションは VFAT でフォーマットして下さい"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:867
 msgid "<b>Please select an EFI partition.</b>"
@@ -708,7 +708,7 @@ msgid ""
 "carefully before clicking Forward to finish the installation."
 msgstr ""
 "インストールは一時停止中です。インストールを終えるために次へをクリックする前"
-"に、慎重にページの指示を読んでください。"
+"に、慎重にページの指示を読んでください"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 #: ../usr/lib/live-installer/installer.py:462
@@ -751,7 +751,7 @@ msgid ""
 msgstr ""
 "エラー: 何かインストール媒体がよくありません！ これは通常 {} と互換性のない書"
 "き込まれたツールに起因します。(YUMI または他のマルチブートツール）異なるツー"
-"ルを用いて ISO イメージを DVD・USB へ書き込みしてください。"
+"ルを用いて ISO イメージを DVD・USB へ書き込みしてください"
 
 #: ../usr/lib/live-installer/installer.py:164
 msgid "Copying {}"
@@ -815,7 +815,7 @@ msgid ""
 "configure it manually."
 msgstr ""
 "警告: grub ブートローダーが正しく設定されていません! 手動で設定する必要があり"
-"ます。"
+"ます"
 
 #: ../usr/lib/live-installer/installer.py:430
 msgid "Configuring initramfs"
