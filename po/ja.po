@@ -7,13 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SolydXK\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< HEAD
 "POT-Creation-Date: 2014-11-21 15:47+0100\n"
 "PO-Revision-Date: 2014-11-08 19:12+0900\n"
-=======
 "POT-Creation-Date: 2014-11-12 09:00+0100\n"
 "PO-Revision-Date: 2014-11-15 14:30+0900\n"
->>>>>>> 17565a364267580c0e3424d83b19b698c9adac71
 "Last-Translator: BALLOON a.k.a. Fu-sen. <fu-sen+solydxk@shigakeiichi.com>\n"
 "Language-Team: SolydXKjp <http://solydxk.jimdo.com/>\n"
 "Language: ja\n"
