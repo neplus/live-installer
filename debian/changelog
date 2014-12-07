@@ -1,8 +1,9 @@
-live-installer (2014.11.11) debian; urgency=low
+live-installer (2014.11.21) debian; urgency=low
 
   * Exclude live boot device from partition list
+  * Fix EFI not installing
 
- -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Tue, 11 Nov 2014 11:00:00 +0100
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Fri, 21 Nov 2014 16:00:00 +0100
 
 live-installer (2014.11.07) debian; urgency=low
 

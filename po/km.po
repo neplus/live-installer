@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-12 09:00+0100\n"
+"POT-Creation-Date: 2014-11-21 15:47+0100\n"
 "PO-Revision-Date: 2012-06-12 16:45+0000\n"
 "Last-Translator: KOSAL (David Salvo) <slinkeepy@gmail.com>\n"
 "Language-Team: Khmer <km@li.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-09-11 21:49+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
-
-#: ../usr/lib/live-installer/main.py:31
-msgid "Unexpected error"
-msgstr ""
-
-#: ../usr/lib/live-installer/main.py:32
-msgid ""
-"<b>The installer has failed with the following unexpected error. Please "
-"submit a bug report!</b>"
-msgstr ""
 
 #: ../usr/lib/live-installer/slideshow.py:26
 msgid "No slideshow template found."
@@ -64,7 +54,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:346
+#: ../usr/lib/live-installer/partitioning.py:347
 msgid "Unknown"
 msgstr ""
 
@@ -109,36 +99,151 @@ msgstr ""
 "គ្មាន​តារាង​ភាគថាស​លើ​ថាស​រឹង​នោះ​ទេ។ តើ​អ្នក​ចង់​ឲ្យ​កម្មវិធី​ដំឡើង​នេះ​បង្កើត​សំណុំ​ភាគថាស​ឲ្យ​អ្នក?\r\n"
 "ចំណាំ៖ អំពើ​នេះ​នឹង​លប់​ទិន្នន័យ​អ្វី​នៅ​លើ​ថាស។"
 
-#: ../usr/lib/live-installer/partitioning.py:341
+#: ../usr/lib/live-installer/partitioning.py:342
 #, fuzzy
 msgid "Logical partition"
 msgstr "កែ​សម្រួល​ភាគ​ថាស"
 
-#: ../usr/lib/live-installer/partitioning.py:342
+#: ../usr/lib/live-installer/partitioning.py:343
 #, fuzzy
 msgid "Extended partition"
 msgstr "កែ​សម្រួល​ភាគ​ថាស"
 
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:344
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "ទំហំ​ទំនេរ"
 
-#: ../usr/lib/live-installer/partitioning.py:432
+#: ../usr/lib/live-installer/partitioning.py:434
 msgid "Edit partition"
 msgstr "កែ​សម្រួល​ភាគ​ថាស"
 
-#: ../usr/lib/live-installer/partitioning.py:433
+#: ../usr/lib/live-installer/partitioning.py:435
 msgid "Device:"
 msgstr "ឧបករណ៍​ ៖"
 
-#: ../usr/lib/live-installer/partitioning.py:435
+#: ../usr/lib/live-installer/partitioning.py:437
 msgid "Format as:"
 msgstr "ធ្វើ​ទ្រង់​ទ្រាយ​ជា​ ៖"
 
-#: ../usr/lib/live-installer/partitioning.py:436
+#: ../usr/lib/live-installer/partitioning.py:438
 msgid "Mount point:"
 msgstr "ចំណុច​ម៉ោន ៖"
+
+#: ../usr/lib/live-installer/installer.py:60
+#, fuzzy, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "កំពុង​ធ្វើ​ទ្រង់ទ្រាយ %(partition)s ជា %(format)s..."
+
+#: ../usr/lib/live-installer/installer.py:83
+#: ../usr/lib/live-installer/installer.py:94
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "កំពុង​ម៉ោន %(partition)s លើ %(mountpoint)s..."
+
+#: ../usr/lib/live-installer/installer.py:119
+msgid ""
+"ERROR: You must first manually mount your target filesystem(s) at /target to "
+"do a custom install!"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:127
+msgid ""
+"ERROR: Something is wrong with the installation medium! This is usually "
+"caused by burning tools which are not compatible with {} (YUMI or other "
+"multiboot tools). Please burn the ISO image to DVD/USB using a different "
+"tool."
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:164
+#, fuzzy
+msgid "Copying {}"
+msgstr "កំពុង​ចម្លង %s"
+
+#: ../usr/lib/live-installer/installer.py:182
+#, fuzzy
+msgid "Entering the system ..."
+msgstr "កំពុង​ចូល​ប្រពន្ធ័​ថ្មី..."
+
+#: ../usr/lib/live-installer/installer.py:219
+msgid "Removing live configuration (packages)"
+msgstr "កំពុង​យកការ​កំណត់​រចនាសម្ព័ន្ធបន្តផ្ទាល់​ចេញ (កញ្ចប់)"
+
+#: ../usr/lib/live-installer/installer.py:227
+#, fuzzy
+msgid "Adding new user to the system"
+msgstr "កំពុង​បន្ថែម​អ្នក​ប្រើ​ទៅ​កាន់​ប្រពន្ធ័"
+
+#: ../usr/lib/live-installer/installer.py:263
+#, fuzzy
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr "កំពុង​សរសេរ​​ព័ត៌មាន​ម៉ោន​ប្រព័ន្ធឯកសារ"
+
+#: ../usr/lib/live-installer/installer.py:284
+msgid "Setting hostname"
+msgstr "កំពុង​កំណត់​ឈ្មោះ​ម៉ាស៊ីន"
+
+#: ../usr/lib/live-installer/installer.py:303
+msgid "Setting locale"
+msgstr "កំពុង​កំណត់​មូលដ្ឋាន"
+
+#: ../usr/lib/live-installer/installer.py:320
+msgid "Localizing packages"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:341
+#, fuzzy
+msgid "Configuring Plymouth"
+msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ចាប់ផ្ដើម"
+
+#: ../usr/lib/live-installer/installer.py:350
+msgid "Install multimedia"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:362
+#, fuzzy
+msgid "Configuring sensors"
+msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ចាប់ផ្ដើម"
+
+#: ../usr/lib/live-installer/installer.py:368
+msgid "Removing VirtualBox"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:374
+msgid "Setting keyboard options"
+msgstr "កំពុង​កំណត់​ជម្រើស​ក្ដារចុច"
+
+#: ../usr/lib/live-installer/installer.py:413
+msgid "Installing bootloader"
+msgstr "កំពុង​ដំឡើង​កម្មវិធី​ចាប់ផ្ដើម"
+
+#: ../usr/lib/live-installer/installer.py:422
+msgid ""
+"WARNING: The grub bootloader was not configured properly! You need to "
+"configure it manually."
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:432
+#, fuzzy
+msgid "Configuring initramfs"
+msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ចាប់ផ្ដើម"
+
+#: ../usr/lib/live-installer/installer.py:440
+msgid "Cleaning APT"
+msgstr "កំពុង​សំអាតAPT"
+
+#: ../usr/lib/live-installer/installer.py:464
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
+msgid "Installation finished"
+msgstr "បាន​បញ្ចប់​ការ​ដំឡើង"
+
+#: ../usr/lib/live-installer/installer.py:468
+msgid "Configuring bootloader"
+msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ចាប់ផ្ដើម"
+
+#: ../usr/lib/live-installer/installer.py:477
+msgid "Checking bootloader"
+msgstr "កំពុង​ពិនិត្យមើល​កម្មវិធី​ចាប់ផ្ដើម"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:91
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:331
@@ -695,125 +800,20 @@ msgid ""
 msgstr ""
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
-#: ../usr/lib/live-installer/installer.py:462
-msgid "Installation finished"
-msgstr "បាន​បញ្ចប់​ការ​ដំឡើង"
-
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid ""
 "Installation is now complete. Do you want to restart your computer to use "
 "the new system?"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:60
-#, fuzzy, python-format
-msgid "Formatting %(partition)s as %(format)s ..."
-msgstr "កំពុង​ធ្វើ​ទ្រង់ទ្រាយ %(partition)s ជា %(format)s..."
+#: ../usr/lib/live-installer/main.py:31
+msgid "Unexpected error"
+msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
-#, python-format
-msgid "Mounting %(partition)s on %(mountpoint)s"
-msgstr "កំពុង​ម៉ោន %(partition)s លើ %(mountpoint)s..."
-
-#: ../usr/lib/live-installer/installer.py:119
+#: ../usr/lib/live-installer/main.py:32
 msgid ""
-"ERROR: You must first manually mount your target filesystem(s) at /target to "
-"do a custom install!"
+"<b>The installer has failed with the following unexpected error. Please "
+"submit a bug report!</b>"
 msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:127
-msgid ""
-"ERROR: Something is wrong with the installation medium! This is usually "
-"caused by burning tools which are not compatible with {} (YUMI or other "
-"multiboot tools). Please burn the ISO image to DVD/USB using a different "
-"tool."
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:164
-#, fuzzy
-msgid "Copying {}"
-msgstr "កំពុង​ចម្លង %s"
-
-#: ../usr/lib/live-installer/installer.py:182
-#, fuzzy
-msgid "Entering the system ..."
-msgstr "កំពុង​ចូល​ប្រពន្ធ័​ថ្មី..."
-
-#: ../usr/lib/live-installer/installer.py:217
-msgid "Removing live configuration (packages)"
-msgstr "កំពុង​យកការ​កំណត់​រចនាសម្ព័ន្ធបន្តផ្ទាល់​ចេញ (កញ្ចប់)"
-
-#: ../usr/lib/live-installer/installer.py:225
-#, fuzzy
-msgid "Adding new user to the system"
-msgstr "កំពុង​បន្ថែម​អ្នក​ប្រើ​ទៅ​កាន់​ប្រពន្ធ័"
-
-#: ../usr/lib/live-installer/installer.py:261
-#, fuzzy
-msgid "Writing filesystem mount information to /etc/fstab"
-msgstr "កំពុង​សរសេរ​​ព័ត៌មាន​ម៉ោន​ប្រព័ន្ធឯកសារ"
-
-#: ../usr/lib/live-installer/installer.py:282
-msgid "Setting hostname"
-msgstr "កំពុង​កំណត់​ឈ្មោះ​ម៉ាស៊ីន"
-
-#: ../usr/lib/live-installer/installer.py:301
-msgid "Setting locale"
-msgstr "កំពុង​កំណត់​មូលដ្ឋាន"
-
-#: ../usr/lib/live-installer/installer.py:318
-msgid "Localizing packages"
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:339
-#, fuzzy
-msgid "Configuring Plymouth"
-msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ចាប់ផ្ដើម"
-
-#: ../usr/lib/live-installer/installer.py:348
-msgid "Install multimedia"
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:360
-#, fuzzy
-msgid "Configuring sensors"
-msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ចាប់ផ្ដើម"
-
-#: ../usr/lib/live-installer/installer.py:366
-msgid "Removing VirtualBox"
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:372
-msgid "Setting keyboard options"
-msgstr "កំពុង​កំណត់​ជម្រើស​ក្ដារចុច"
-
-#: ../usr/lib/live-installer/installer.py:411
-msgid "Installing bootloader"
-msgstr "កំពុង​ដំឡើង​កម្មវិធី​ចាប់ផ្ដើម"
-
-#: ../usr/lib/live-installer/installer.py:420
-msgid ""
-"WARNING: The grub bootloader was not configured properly! You need to "
-"configure it manually."
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:430
-#, fuzzy
-msgid "Configuring initramfs"
-msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ចាប់ផ្ដើម"
-
-#: ../usr/lib/live-installer/installer.py:438
-msgid "Cleaning APT"
-msgstr "កំពុង​សំអាតAPT"
-
-#: ../usr/lib/live-installer/installer.py:466
-msgid "Configuring bootloader"
-msgstr "កំពុង​កំណត់​រចនាសម្ព័ន្ធ​កម្មវិធី​ចាប់ផ្ដើម"
-
-#: ../usr/lib/live-installer/installer.py:475
-msgid "Checking bootloader"
-msgstr "កំពុង​ពិនិត្យមើល​កម្មវិធី​ចាប់ផ្ដើម"
 
 #: ../usr/share/applications/live-installer.desktop.in.h:1
 #, fuzzy

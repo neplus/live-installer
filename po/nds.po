@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-12 09:00+0100\n"
+"POT-Creation-Date: 2014-11-21 15:47+0100\n"
 "PO-Revision-Date: 2013-06-15 11:53+0000\n"
 "Last-Translator: Spencer Young <Unknown>\n"
 "Language-Team: Low German <nds@li.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-09-11 21:49+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
-
-#: ../usr/lib/live-installer/main.py:31
-msgid "Unexpected error"
-msgstr ""
-
-#: ../usr/lib/live-installer/main.py:32
-msgid ""
-"<b>The installer has failed with the following unexpected error. Please "
-"submit a bug report!</b>"
-msgstr ""
 
 #: ../usr/lib/live-installer/slideshow.py:26
 msgid "No slideshow template found."
@@ -64,7 +54,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:346
+#: ../usr/lib/live-installer/partitioning.py:347
 msgid "Unknown"
 msgstr ""
 
@@ -111,36 +101,153 @@ msgstr ""
 "erstellt? Hinweis: Dies wird alle vorhandenen Daten auf der Festplatte "
 "löschen!"
 
-#: ../usr/lib/live-installer/partitioning.py:341
+#: ../usr/lib/live-installer/partitioning.py:342
 #, fuzzy
 msgid "Logical partition"
 msgstr "Partition bearbeiten"
 
-#: ../usr/lib/live-installer/partitioning.py:342
+#: ../usr/lib/live-installer/partitioning.py:343
 #, fuzzy
 msgid "Extended partition"
 msgstr "Partition bearbeiten"
 
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:344
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "Freier Speicherplatz"
 
-#: ../usr/lib/live-installer/partitioning.py:432
+#: ../usr/lib/live-installer/partitioning.py:434
 msgid "Edit partition"
 msgstr "Partition bearbeiten"
 
-#: ../usr/lib/live-installer/partitioning.py:433
+#: ../usr/lib/live-installer/partitioning.py:435
 msgid "Device:"
 msgstr "Gerät:"
 
-#: ../usr/lib/live-installer/partitioning.py:435
+#: ../usr/lib/live-installer/partitioning.py:437
 msgid "Format as:"
 msgstr "Formatiere als:"
 
-#: ../usr/lib/live-installer/partitioning.py:436
+#: ../usr/lib/live-installer/partitioning.py:438
 msgid "Mount point:"
 msgstr "Einhängepunkt:"
+
+#: ../usr/lib/live-installer/installer.py:60
+#, fuzzy, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "Formatiere %(partition)s als %(format)s..."
+
+#: ../usr/lib/live-installer/installer.py:83
+#: ../usr/lib/live-installer/installer.py:94
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "Hänge %(partition)s in %(mountpoint)s ein"
+
+#: ../usr/lib/live-installer/installer.py:119
+msgid ""
+"ERROR: You must first manually mount your target filesystem(s) at /target to "
+"do a custom install!"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:127
+msgid ""
+"ERROR: Something is wrong with the installation medium! This is usually "
+"caused by burning tools which are not compatible with {} (YUMI or other "
+"multiboot tools). Please burn the ISO image to DVD/USB using a different "
+"tool."
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:164
+#, fuzzy
+msgid "Copying {}"
+msgstr "Kopiere  %s"
+
+#: ../usr/lib/live-installer/installer.py:182
+#, fuzzy
+msgid "Entering the system ..."
+msgstr "Starte neues System..."
+
+#: ../usr/lib/live-installer/installer.py:219
+msgid "Removing live configuration (packages)"
+msgstr "Lösche Live Konfiguration (Installationspakete)"
+
+#: ../usr/lib/live-installer/installer.py:227
+#, fuzzy
+msgid "Adding new user to the system"
+msgstr "Füge Benutzer dem System hinzu"
+
+#: ../usr/lib/live-installer/installer.py:263
+#, fuzzy
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr "Schreibe Mount Optionen des Dateisystems"
+
+#: ../usr/lib/live-installer/installer.py:284
+msgid "Setting hostname"
+msgstr "Setze den Hostnamen"
+
+#: ../usr/lib/live-installer/installer.py:303
+msgid "Setting locale"
+msgstr "Setze lokale Einstellungen (locale)"
+
+#: ../usr/lib/live-installer/installer.py:320
+msgid "Localizing packages"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:341
+#, fuzzy
+msgid "Configuring Plymouth"
+msgstr "Richte Bootloader ein"
+
+#: ../usr/lib/live-installer/installer.py:350
+msgid "Install multimedia"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:362
+#, fuzzy
+msgid "Configuring sensors"
+msgstr "Richte Bootloader ein"
+
+#: ../usr/lib/live-installer/installer.py:368
+msgid "Removing VirtualBox"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:374
+msgid "Setting keyboard options"
+msgstr "Stelle die Tastatur ein"
+
+#: ../usr/lib/live-installer/installer.py:413
+msgid "Installing bootloader"
+msgstr "Installiere Bootloader"
+
+#: ../usr/lib/live-installer/installer.py:422
+msgid ""
+"WARNING: The grub bootloader was not configured properly! You need to "
+"configure it manually."
+msgstr ""
+"WARNUNG! Der Grub Bootloader wurde nicht ordnungsgemäß eingerichtet! Sie "
+"müssen den Bootloader manuell einrichten."
+
+#: ../usr/lib/live-installer/installer.py:432
+#, fuzzy
+msgid "Configuring initramfs"
+msgstr "Richte Bootloader ein"
+
+#: ../usr/lib/live-installer/installer.py:440
+msgid "Cleaning APT"
+msgstr "Bereinige APT"
+
+#: ../usr/lib/live-installer/installer.py:464
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
+msgid "Installation finished"
+msgstr "Installation fertig"
+
+#: ../usr/lib/live-installer/installer.py:468
+msgid "Configuring bootloader"
+msgstr "Richte Bootloader ein"
+
+#: ../usr/lib/live-installer/installer.py:477
+msgid "Checking bootloader"
+msgstr "Prüfe Bootloader"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:91
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:331
@@ -704,127 +811,20 @@ msgid ""
 msgstr ""
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
-#: ../usr/lib/live-installer/installer.py:462
-msgid "Installation finished"
-msgstr "Installation fertig"
-
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid ""
 "Installation is now complete. Do you want to restart your computer to use "
 "the new system?"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:60
-#, fuzzy, python-format
-msgid "Formatting %(partition)s as %(format)s ..."
-msgstr "Formatiere %(partition)s als %(format)s..."
+#: ../usr/lib/live-installer/main.py:31
+msgid "Unexpected error"
+msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
-#, python-format
-msgid "Mounting %(partition)s on %(mountpoint)s"
-msgstr "Hänge %(partition)s in %(mountpoint)s ein"
-
-#: ../usr/lib/live-installer/installer.py:119
+#: ../usr/lib/live-installer/main.py:32
 msgid ""
-"ERROR: You must first manually mount your target filesystem(s) at /target to "
-"do a custom install!"
+"<b>The installer has failed with the following unexpected error. Please "
+"submit a bug report!</b>"
 msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:127
-msgid ""
-"ERROR: Something is wrong with the installation medium! This is usually "
-"caused by burning tools which are not compatible with {} (YUMI or other "
-"multiboot tools). Please burn the ISO image to DVD/USB using a different "
-"tool."
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:164
-#, fuzzy
-msgid "Copying {}"
-msgstr "Kopiere  %s"
-
-#: ../usr/lib/live-installer/installer.py:182
-#, fuzzy
-msgid "Entering the system ..."
-msgstr "Starte neues System..."
-
-#: ../usr/lib/live-installer/installer.py:217
-msgid "Removing live configuration (packages)"
-msgstr "Lösche Live Konfiguration (Installationspakete)"
-
-#: ../usr/lib/live-installer/installer.py:225
-#, fuzzy
-msgid "Adding new user to the system"
-msgstr "Füge Benutzer dem System hinzu"
-
-#: ../usr/lib/live-installer/installer.py:261
-#, fuzzy
-msgid "Writing filesystem mount information to /etc/fstab"
-msgstr "Schreibe Mount Optionen des Dateisystems"
-
-#: ../usr/lib/live-installer/installer.py:282
-msgid "Setting hostname"
-msgstr "Setze den Hostnamen"
-
-#: ../usr/lib/live-installer/installer.py:301
-msgid "Setting locale"
-msgstr "Setze lokale Einstellungen (locale)"
-
-#: ../usr/lib/live-installer/installer.py:318
-msgid "Localizing packages"
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:339
-#, fuzzy
-msgid "Configuring Plymouth"
-msgstr "Richte Bootloader ein"
-
-#: ../usr/lib/live-installer/installer.py:348
-msgid "Install multimedia"
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:360
-#, fuzzy
-msgid "Configuring sensors"
-msgstr "Richte Bootloader ein"
-
-#: ../usr/lib/live-installer/installer.py:366
-msgid "Removing VirtualBox"
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:372
-msgid "Setting keyboard options"
-msgstr "Stelle die Tastatur ein"
-
-#: ../usr/lib/live-installer/installer.py:411
-msgid "Installing bootloader"
-msgstr "Installiere Bootloader"
-
-#: ../usr/lib/live-installer/installer.py:420
-msgid ""
-"WARNING: The grub bootloader was not configured properly! You need to "
-"configure it manually."
-msgstr ""
-"WARNUNG! Der Grub Bootloader wurde nicht ordnungsgemäß eingerichtet! Sie "
-"müssen den Bootloader manuell einrichten."
-
-#: ../usr/lib/live-installer/installer.py:430
-#, fuzzy
-msgid "Configuring initramfs"
-msgstr "Richte Bootloader ein"
-
-#: ../usr/lib/live-installer/installer.py:438
-msgid "Cleaning APT"
-msgstr "Bereinige APT"
-
-#: ../usr/lib/live-installer/installer.py:466
-msgid "Configuring bootloader"
-msgstr "Richte Bootloader ein"
-
-#: ../usr/lib/live-installer/installer.py:475
-msgid "Checking bootloader"
-msgstr "Prüfe Bootloader"
 
 #: ../usr/share/applications/live-installer.desktop.in.h:1
 #, fuzzy

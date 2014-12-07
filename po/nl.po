@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-12 09:00+0100\n"
+"POT-Creation-Date: 2014-11-21 15:47+0100\n"
 "PO-Revision-Date: 2014-10-30 13:06+0100\n"
 "Last-Translator: Arjen Balfoort <arjenbalfoort@solydxk.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -17,18 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-09-11 21:48+0000\n"
 "X-Generator: Poedit 1.6.10\n"
-
-#: ../usr/lib/live-installer/main.py:31
-msgid "Unexpected error"
-msgstr "Onverwachte fout"
-
-#: ../usr/lib/live-installer/main.py:32
-msgid ""
-"<b>The installer has failed with the following unexpected error. Please "
-"submit a bug report!</b>"
-msgstr ""
-"<b>De installatie is mislukt met de volgende onverwachte fout. Gelieve een "
-"bug verslag in te dienen!</b>"
 
 #: ../usr/lib/live-installer/slideshow.py:26
 msgid "No slideshow template found."
@@ -63,7 +51,7 @@ msgid "Localizing Thunderbird"
 msgstr "Thunderbird wordt geregionaliseerd"
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:346
+#: ../usr/lib/live-installer/partitioning.py:347
 msgid "Unknown"
 msgstr "Onbekend"
 
@@ -109,34 +97,151 @@ msgstr ""
 "Wilt u dat het installatieprogramma de benodigde partities voor u aanmaakt? "
 "Let op: deze actie zal alle bestaande gegevens op uw schijf wissen."
 
-#: ../usr/lib/live-installer/partitioning.py:341
+#: ../usr/lib/live-installer/partitioning.py:342
 msgid "Logical partition"
 msgstr "Logische partitie"
 
-#: ../usr/lib/live-installer/partitioning.py:342
+#: ../usr/lib/live-installer/partitioning.py:343
 msgid "Extended partition"
 msgstr "Uitgebreide partitie"
 
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:344
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "Vrije ruimte"
 
-#: ../usr/lib/live-installer/partitioning.py:432
+#: ../usr/lib/live-installer/partitioning.py:434
 msgid "Edit partition"
 msgstr "Partitie bewerken"
 
-#: ../usr/lib/live-installer/partitioning.py:433
+#: ../usr/lib/live-installer/partitioning.py:435
 msgid "Device:"
 msgstr "Apparaat:"
 
-#: ../usr/lib/live-installer/partitioning.py:435
+#: ../usr/lib/live-installer/partitioning.py:437
 msgid "Format as:"
 msgstr "Formatteren als:"
 
-#: ../usr/lib/live-installer/partitioning.py:436
+#: ../usr/lib/live-installer/partitioning.py:438
 msgid "Mount point:"
 msgstr "Koppelpunt:"
+
+#: ../usr/lib/live-installer/installer.py:60
+#, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "Bezig met formatteren van %(partition)s als %(format)s..."
+
+#: ../usr/lib/live-installer/installer.py:83
+#: ../usr/lib/live-installer/installer.py:94
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "Bezig met aankoppelen van %(partition)s aan %(mountpoint)s"
+
+#: ../usr/lib/live-installer/installer.py:119
+msgid ""
+"ERROR: You must first manually mount your target filesystem(s) at /target to "
+"do a custom install!"
+msgstr ""
+"FOUT: u dient eerst uw doel-bestandssyste(e)m(en) handmatig aan te koppelen "
+"op /target, om een aangepaste installatie uit te voeren."
+
+#: ../usr/lib/live-installer/installer.py:127
+msgid ""
+"ERROR: Something is wrong with the installation medium! This is usually "
+"caused by burning tools which are not compatible with {} (YUMI or other "
+"multiboot tools). Please burn the ISO image to DVD/USB using a different "
+"tool."
+msgstr ""
+"FOUT: Er is iets mis met het installatie medium! Dit wordt meestal "
+"veroorzaakt door brand software die niet compatibel is met {} (YUMI of "
+"andere multiboot-tools). Gelieve de ISO naar DVD/USB te branden met een "
+"andere tool."
+
+#: ../usr/lib/live-installer/installer.py:164
+msgid "Copying {}"
+msgstr "Bezig met kopiëren van {}"
+
+#: ../usr/lib/live-installer/installer.py:182
+msgid "Entering the system ..."
+msgstr "Nieuwe systeem aan het binnengaan..."
+
+#: ../usr/lib/live-installer/installer.py:219
+msgid "Removing live configuration (packages)"
+msgstr "Live-configuratie (pakketten) aan het verwijderen"
+
+#: ../usr/lib/live-installer/installer.py:227
+msgid "Adding new user to the system"
+msgstr "Gebruiker wordt toegevoegd aan systeem"
+
+#: ../usr/lib/live-installer/installer.py:263
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr ""
+"Aankoppelingsinformatie bestandssysteem wordt weggeschreven naar /etc/fstab"
+
+#: ../usr/lib/live-installer/installer.py:284
+msgid "Setting hostname"
+msgstr "Computernaam instellen"
+
+#: ../usr/lib/live-installer/installer.py:303
+msgid "Setting locale"
+msgstr "Taal en land instellen"
+
+#: ../usr/lib/live-installer/installer.py:320
+msgid "Localizing packages"
+msgstr "Pakketten regionaliseren"
+
+#: ../usr/lib/live-installer/installer.py:341
+msgid "Configuring Plymouth"
+msgstr "Plymouth configureren"
+
+#: ../usr/lib/live-installer/installer.py:350
+msgid "Install multimedia"
+msgstr "Installeer multimedia"
+
+#: ../usr/lib/live-installer/installer.py:362
+msgid "Configuring sensors"
+msgstr "Sensors configureren"
+
+#: ../usr/lib/live-installer/installer.py:368
+msgid "Removing VirtualBox"
+msgstr "VirtualBox verwijderen"
+
+#: ../usr/lib/live-installer/installer.py:374
+msgid "Setting keyboard options"
+msgstr "Toetsenbordopties instellen"
+
+#: ../usr/lib/live-installer/installer.py:413
+msgid "Installing bootloader"
+msgstr "Opstartlader installeren"
+
+#: ../usr/lib/live-installer/installer.py:422
+msgid ""
+"WARNING: The grub bootloader was not configured properly! You need to "
+"configure it manually."
+msgstr ""
+"WAARSCHUWING: opstartlader Grub werd niet juist ingesteld! U dient deze "
+"handmatig in te stellen."
+
+#: ../usr/lib/live-installer/installer.py:432
+msgid "Configuring initramfs"
+msgstr "Initramfs configureren"
+
+#: ../usr/lib/live-installer/installer.py:440
+msgid "Cleaning APT"
+msgstr "APT schoonmaken"
+
+#: ../usr/lib/live-installer/installer.py:464
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
+msgid "Installation finished"
+msgstr "Installatie voltooid"
+
+#: ../usr/lib/live-installer/installer.py:468
+msgid "Configuring bootloader"
+msgstr "Opstartlader instellen"
+
+#: ../usr/lib/live-installer/installer.py:477
+msgid "Checking bootloader"
+msgstr "Opstartlader controleren"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:91
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:331
@@ -723,11 +828,6 @@ msgstr ""
 "instructies op de pagina en klik op Volgende om de installatie te voltooien."
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
-#: ../usr/lib/live-installer/installer.py:462
-msgid "Installation finished"
-msgstr "Installatie voltooid"
-
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid ""
 "Installation is now complete. Do you want to restart your computer to use "
 "the new system?"
@@ -735,117 +835,17 @@ msgstr ""
 "De installatie is nu voltooid. Wilt u uw computer herstarten om het nieuwe "
 "besturingssysteem te gebruiken?"
 
-#: ../usr/lib/live-installer/installer.py:60
-#, python-format
-msgid "Formatting %(partition)s as %(format)s ..."
-msgstr "Bezig met formatteren van %(partition)s als %(format)s..."
+#: ../usr/lib/live-installer/main.py:31
+msgid "Unexpected error"
+msgstr "Onverwachte fout"
 
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
-#, python-format
-msgid "Mounting %(partition)s on %(mountpoint)s"
-msgstr "Bezig met aankoppelen van %(partition)s aan %(mountpoint)s"
-
-#: ../usr/lib/live-installer/installer.py:119
+#: ../usr/lib/live-installer/main.py:32
 msgid ""
-"ERROR: You must first manually mount your target filesystem(s) at /target to "
-"do a custom install!"
+"<b>The installer has failed with the following unexpected error. Please "
+"submit a bug report!</b>"
 msgstr ""
-"FOUT: u dient eerst uw doel-bestandssyste(e)m(en) handmatig aan te koppelen "
-"op /target, om een aangepaste installatie uit te voeren."
-
-#: ../usr/lib/live-installer/installer.py:127
-msgid ""
-"ERROR: Something is wrong with the installation medium! This is usually "
-"caused by burning tools which are not compatible with {} (YUMI or other "
-"multiboot tools). Please burn the ISO image to DVD/USB using a different "
-"tool."
-msgstr ""
-"FOUT: Er is iets mis met het installatie medium! Dit wordt meestal "
-"veroorzaakt door brand software die niet compatibel is met {} (YUMI of "
-"andere multiboot-tools). Gelieve de ISO naar DVD/USB te branden met een "
-"andere tool."
-
-#: ../usr/lib/live-installer/installer.py:164
-msgid "Copying {}"
-msgstr "Bezig met kopiëren van {}"
-
-#: ../usr/lib/live-installer/installer.py:182
-msgid "Entering the system ..."
-msgstr "Nieuwe systeem aan het binnengaan..."
-
-#: ../usr/lib/live-installer/installer.py:217
-msgid "Removing live configuration (packages)"
-msgstr "Live-configuratie (pakketten) aan het verwijderen"
-
-#: ../usr/lib/live-installer/installer.py:225
-msgid "Adding new user to the system"
-msgstr "Gebruiker wordt toegevoegd aan systeem"
-
-#: ../usr/lib/live-installer/installer.py:261
-msgid "Writing filesystem mount information to /etc/fstab"
-msgstr ""
-"Aankoppelingsinformatie bestandssysteem wordt weggeschreven naar /etc/fstab"
-
-#: ../usr/lib/live-installer/installer.py:282
-msgid "Setting hostname"
-msgstr "Computernaam instellen"
-
-#: ../usr/lib/live-installer/installer.py:301
-msgid "Setting locale"
-msgstr "Taal en land instellen"
-
-#: ../usr/lib/live-installer/installer.py:318
-msgid "Localizing packages"
-msgstr "Pakketten regionaliseren"
-
-#: ../usr/lib/live-installer/installer.py:339
-msgid "Configuring Plymouth"
-msgstr "Plymouth configureren"
-
-#: ../usr/lib/live-installer/installer.py:348
-msgid "Install multimedia"
-msgstr "Installeer multimedia"
-
-#: ../usr/lib/live-installer/installer.py:360
-msgid "Configuring sensors"
-msgstr "Sensors configureren"
-
-#: ../usr/lib/live-installer/installer.py:366
-msgid "Removing VirtualBox"
-msgstr "VirtualBox verwijderen"
-
-#: ../usr/lib/live-installer/installer.py:372
-msgid "Setting keyboard options"
-msgstr "Toetsenbordopties instellen"
-
-#: ../usr/lib/live-installer/installer.py:411
-msgid "Installing bootloader"
-msgstr "Opstartlader installeren"
-
-#: ../usr/lib/live-installer/installer.py:420
-msgid ""
-"WARNING: The grub bootloader was not configured properly! You need to "
-"configure it manually."
-msgstr ""
-"WAARSCHUWING: opstartlader Grub werd niet juist ingesteld! U dient deze "
-"handmatig in te stellen."
-
-#: ../usr/lib/live-installer/installer.py:430
-msgid "Configuring initramfs"
-msgstr "Initramfs configureren"
-
-#: ../usr/lib/live-installer/installer.py:438
-msgid "Cleaning APT"
-msgstr "APT schoonmaken"
-
-#: ../usr/lib/live-installer/installer.py:466
-msgid "Configuring bootloader"
-msgstr "Opstartlader instellen"
-
-#: ../usr/lib/live-installer/installer.py:475
-msgid "Checking bootloader"
-msgstr "Opstartlader controleren"
+"<b>De installatie is mislukt met de volgende onverwachte fout. Gelieve een "
+"bug verslag in te dienen!</b>"
 
 #: ../usr/share/applications/live-installer.desktop.in.h:1
 msgid "Install"

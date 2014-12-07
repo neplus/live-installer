@@ -320,6 +320,7 @@ class Partition(object):
         self.partition = partition
         self.length = partition.getLength()
         self.size_percent = max(1, round(100*self.length/partition.disk.device.getLength(), 1))
+        self.size_mb = int(partition.getLength('B')/1024/1024)
         self.size = to_human_readable(partition.getLength('B'))
 
         # if not normal partition with /dev/sdXN path, set its name to '' and discard it from model
@@ -359,6 +360,7 @@ class Partition(object):
             print 'WARNING: Partition {} or type {} failed to mount!'.format(partition.path, partition.type)
             self.os_fs_info, self.description, self.free_space, self.used_percent = ': '+self.type, '', '', 0
         else:
+            self.size_mb = int(int(size)/1024)
             self.size = to_human_readable(int(size)*1024)  # for mountable partitions, more accurate than the getLength size above
             self.free_space = to_human_readable(int(free)*1024)  # df returns values in 1024B-blocks by default
             self.used_percent = self.used_percent.strip('%') or 0

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-12 09:00+0100\n"
+"POT-Creation-Date: 2014-11-21 15:47+0100\n"
 "PO-Revision-Date: 2014-09-03 21:39+0000\n"
 "Last-Translator: Asier Iturralde Sarasola <Unknown>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-09-11 21:49+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
-
-#: ../usr/lib/live-installer/main.py:31
-msgid "Unexpected error"
-msgstr ""
-
-#: ../usr/lib/live-installer/main.py:32
-msgid ""
-"<b>The installer has failed with the following unexpected error. Please "
-"submit a bug report!</b>"
-msgstr ""
 
 #: ../usr/lib/live-installer/slideshow.py:26
 msgid "No slideshow template found."
@@ -64,7 +54,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:346
+#: ../usr/lib/live-installer/partitioning.py:347
 msgid "Unknown"
 msgstr ""
 
@@ -111,36 +101,155 @@ msgstr ""
 "sorta bat sortzea nahi duzu? Oharra: Honek diskoko datu guztiak ezabatuko "
 "ditu."
 
-#: ../usr/lib/live-installer/partitioning.py:341
+#: ../usr/lib/live-installer/partitioning.py:342
 #, fuzzy
 msgid "Logical partition"
 msgstr "Editatu partizioa"
 
-#: ../usr/lib/live-installer/partitioning.py:342
+#: ../usr/lib/live-installer/partitioning.py:343
 #, fuzzy
 msgid "Extended partition"
 msgstr "Editatu partizioa"
 
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:344
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "Leku librea"
 
-#: ../usr/lib/live-installer/partitioning.py:432
+#: ../usr/lib/live-installer/partitioning.py:434
 msgid "Edit partition"
 msgstr "Editatu partizioa"
 
-#: ../usr/lib/live-installer/partitioning.py:433
+#: ../usr/lib/live-installer/partitioning.py:435
 msgid "Device:"
 msgstr "Gailua:"
 
-#: ../usr/lib/live-installer/partitioning.py:435
+#: ../usr/lib/live-installer/partitioning.py:437
 msgid "Format as:"
 msgstr "Formateatu honela:"
 
-#: ../usr/lib/live-installer/partitioning.py:436
+#: ../usr/lib/live-installer/partitioning.py:438
 msgid "Mount point:"
 msgstr "Muntatze-puntua:"
+
+#: ../usr/lib/live-installer/installer.py:60
+#, fuzzy, python-format
+msgid "Formatting %(partition)s as %(format)s ..."
+msgstr "%(partition)s formateatu %(format)s bezala..."
+
+#: ../usr/lib/live-installer/installer.py:83
+#: ../usr/lib/live-installer/installer.py:94
+#, python-format
+msgid "Mounting %(partition)s on %(mountpoint)s"
+msgstr "%(partition)s muntatzen %(mountpoint)s -(e)n"
+
+#: ../usr/lib/live-installer/installer.py:119
+msgid ""
+"ERROR: You must first manually mount your target filesystem(s) at /target to "
+"do a custom install!"
+msgstr ""
+"ERROREA: Zure helburuko fitxategi-sistema(k) eskuz muntatu behar dituzu /"
+"target-en instalazio pertsonalizatua egiteko!"
+
+#: ../usr/lib/live-installer/installer.py:127
+msgid ""
+"ERROR: Something is wrong with the installation medium! This is usually "
+"caused by burning tools which are not compatible with {} (YUMI or other "
+"multiboot tools). Please burn the ISO image to DVD/USB using a different "
+"tool."
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:164
+#, fuzzy
+msgid "Copying {}"
+msgstr "%s kopiatzen"
+
+#: ../usr/lib/live-installer/installer.py:182
+#, fuzzy
+msgid "Entering the system ..."
+msgstr "Sistema berrian sartzen.."
+
+#: ../usr/lib/live-installer/installer.py:219
+msgid "Removing live configuration (packages)"
+msgstr "Konfigurazio bizia kentzen (paketeak)"
+
+#: ../usr/lib/live-installer/installer.py:227
+#, fuzzy
+msgid "Adding new user to the system"
+msgstr "Erabiltzailea sistemara gehitzen"
+
+#: ../usr/lib/live-installer/installer.py:263
+#, fuzzy
+msgid "Writing filesystem mount information to /etc/fstab"
+msgstr "Fitxategi-sistemaren muntatze-informazioa idazten"
+
+#: ../usr/lib/live-installer/installer.py:284
+msgid "Setting hostname"
+msgstr "Ekipoaren izena prestatzen"
+
+#: ../usr/lib/live-installer/installer.py:303
+msgid "Setting locale"
+msgstr "Konfigurazio lokala ezartzen"
+
+#: ../usr/lib/live-installer/installer.py:320
+msgid "Localizing packages"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:341
+#, fuzzy
+msgid "Configuring Plymouth"
+msgstr "Abioko kargatzailea konfiguratzen"
+
+#: ../usr/lib/live-installer/installer.py:350
+msgid "Install multimedia"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:362
+#, fuzzy
+msgid "Configuring sensors"
+msgstr "Abioko kargatzailea konfiguratzen"
+
+#: ../usr/lib/live-installer/installer.py:368
+msgid "Removing VirtualBox"
+msgstr ""
+
+#: ../usr/lib/live-installer/installer.py:374
+msgid "Setting keyboard options"
+msgstr "Teklatuaren hautapenak ezartzen"
+
+#: ../usr/lib/live-installer/installer.py:413
+msgid "Installing bootloader"
+msgstr "Abioko kargatzailea instalatzen"
+
+#: ../usr/lib/live-installer/installer.py:422
+msgid ""
+"WARNING: The grub bootloader was not configured properly! You need to "
+"configure it manually."
+msgstr ""
+"OHARRA: GRUB abioko kargatzailea ez da konfiguratu behar bezala! Eskuz "
+"konfiguratu behar duzu."
+
+#: ../usr/lib/live-installer/installer.py:432
+#, fuzzy
+msgid "Configuring initramfs"
+msgstr "Abioko kargatzailea konfiguratzen"
+
+#: ../usr/lib/live-installer/installer.py:440
+msgid "Cleaning APT"
+msgstr "APT garbitzen"
+
+#: ../usr/lib/live-installer/installer.py:464
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
+msgid "Installation finished"
+msgstr "Instalazioa bukatuta"
+
+#: ../usr/lib/live-installer/installer.py:468
+msgid "Configuring bootloader"
+msgstr "Abioko kargatzailea konfiguratzen"
+
+#: ../usr/lib/live-installer/installer.py:477
+msgid "Checking bootloader"
+msgstr "Abioko kargatzailea egiaztatzen"
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:91
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:331
@@ -737,11 +846,6 @@ msgstr ""
 "jarraibideak eta klikatu Aurrera instalazioa amaitzeko."
 
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
-#: ../usr/lib/live-installer/installer.py:462
-msgid "Installation finished"
-msgstr "Instalazioa bukatuta"
-
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid ""
 "Installation is now complete. Do you want to restart your computer to use "
 "the new system?"
@@ -749,119 +853,15 @@ msgstr ""
 "Instalazioa osatu da. Ordenagailua berrabiarazi nahi duzu sistema berria "
 "erabiltzen hasteko?"
 
-#: ../usr/lib/live-installer/installer.py:60
-#, fuzzy, python-format
-msgid "Formatting %(partition)s as %(format)s ..."
-msgstr "%(partition)s formateatu %(format)s bezala..."
+#: ../usr/lib/live-installer/main.py:31
+msgid "Unexpected error"
+msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
-#, python-format
-msgid "Mounting %(partition)s on %(mountpoint)s"
-msgstr "%(partition)s muntatzen %(mountpoint)s -(e)n"
-
-#: ../usr/lib/live-installer/installer.py:119
+#: ../usr/lib/live-installer/main.py:32
 msgid ""
-"ERROR: You must first manually mount your target filesystem(s) at /target to "
-"do a custom install!"
+"<b>The installer has failed with the following unexpected error. Please "
+"submit a bug report!</b>"
 msgstr ""
-"ERROREA: Zure helburuko fitxategi-sistema(k) eskuz muntatu behar dituzu /"
-"target-en instalazio pertsonalizatua egiteko!"
-
-#: ../usr/lib/live-installer/installer.py:127
-msgid ""
-"ERROR: Something is wrong with the installation medium! This is usually "
-"caused by burning tools which are not compatible with {} (YUMI or other "
-"multiboot tools). Please burn the ISO image to DVD/USB using a different "
-"tool."
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:164
-#, fuzzy
-msgid "Copying {}"
-msgstr "%s kopiatzen"
-
-#: ../usr/lib/live-installer/installer.py:182
-#, fuzzy
-msgid "Entering the system ..."
-msgstr "Sistema berrian sartzen.."
-
-#: ../usr/lib/live-installer/installer.py:217
-msgid "Removing live configuration (packages)"
-msgstr "Konfigurazio bizia kentzen (paketeak)"
-
-#: ../usr/lib/live-installer/installer.py:225
-#, fuzzy
-msgid "Adding new user to the system"
-msgstr "Erabiltzailea sistemara gehitzen"
-
-#: ../usr/lib/live-installer/installer.py:261
-#, fuzzy
-msgid "Writing filesystem mount information to /etc/fstab"
-msgstr "Fitxategi-sistemaren muntatze-informazioa idazten"
-
-#: ../usr/lib/live-installer/installer.py:282
-msgid "Setting hostname"
-msgstr "Ekipoaren izena prestatzen"
-
-#: ../usr/lib/live-installer/installer.py:301
-msgid "Setting locale"
-msgstr "Konfigurazio lokala ezartzen"
-
-#: ../usr/lib/live-installer/installer.py:318
-msgid "Localizing packages"
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:339
-#, fuzzy
-msgid "Configuring Plymouth"
-msgstr "Abioko kargatzailea konfiguratzen"
-
-#: ../usr/lib/live-installer/installer.py:348
-msgid "Install multimedia"
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:360
-#, fuzzy
-msgid "Configuring sensors"
-msgstr "Abioko kargatzailea konfiguratzen"
-
-#: ../usr/lib/live-installer/installer.py:366
-msgid "Removing VirtualBox"
-msgstr ""
-
-#: ../usr/lib/live-installer/installer.py:372
-msgid "Setting keyboard options"
-msgstr "Teklatuaren hautapenak ezartzen"
-
-#: ../usr/lib/live-installer/installer.py:411
-msgid "Installing bootloader"
-msgstr "Abioko kargatzailea instalatzen"
-
-#: ../usr/lib/live-installer/installer.py:420
-msgid ""
-"WARNING: The grub bootloader was not configured properly! You need to "
-"configure it manually."
-msgstr ""
-"OHARRA: GRUB abioko kargatzailea ez da konfiguratu behar bezala! Eskuz "
-"konfiguratu behar duzu."
-
-#: ../usr/lib/live-installer/installer.py:430
-#, fuzzy
-msgid "Configuring initramfs"
-msgstr "Abioko kargatzailea konfiguratzen"
-
-#: ../usr/lib/live-installer/installer.py:438
-msgid "Cleaning APT"
-msgstr "APT garbitzen"
-
-#: ../usr/lib/live-installer/installer.py:466
-msgid "Configuring bootloader"
-msgstr "Abioko kargatzailea konfiguratzen"
-
-#: ../usr/lib/live-installer/installer.py:475
-msgid "Checking bootloader"
-msgstr "Abioko kargatzailea egiaztatzen"
 
 #: ../usr/share/applications/live-installer.desktop.in.h:1
 #, fuzzy

@@ -194,14 +194,16 @@ class InstallerEngine:
 
         if (setup.gptonefi):
             # [XK] Make target dir more generic
-            if os.path.exists("/lib/live/mount/medium/EFI/BOOT/grubx64.efi"):
-                shell_exec("mkdir -p /target/boot/efi/EFI/%s" % self.distribution_id)
-                shell_exec("cp /lib/live/mount/medium/EFI/BOOT/grubx64.efi /target/boot/efi/EFI/%s/" % self.distribution_id)
-            shell_exec("mkdir -p /target/debs")
-            shell_exec("cp /lib/live/mount/medium/offline/grub-efi* /target/debs/")
-            shell_exec("cp /lib/live/mount/medium/offline/efibootmgr* /target/debs/")
-            chroot_exec("dpkg -i /debs/*")
-            shell_exec("rm -rf /target/debs")
+            #if os.path.exists("/lib/live/mount/medium/EFI/BOOT/grubx64.efi"):
+            #    shell_exec("mkdir -p /target/boot/efi/EFI/%s" % self.distribution_id)
+            #    shell_exec("cp /lib/live/mount/medium/EFI/BOOT/grubx64.efi /target/boot/efi/EFI/%s/" % self.distribution_id)
+            try:
+                shell_exec("mkdir -p /target/debs")
+                shell_exec("cp /lib/live/mount/medium/offline/* /target/debs/")
+                chroot_exec("dpkg -i /debs/*")
+                shell_exec("rm -rf /target/debs")
+            except:
+                chroot_exec("apt-get -f install --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes")
 
         # Detect cdrom device
         # TODO : properly detect cdrom device
