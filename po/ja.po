@@ -7,9 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SolydXK\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-21 15:47+0100\n"
-"PO-Revision-Date: 2014-11-08 19:12+0900\n"
-"POT-Creation-Date: 2014-11-12 09:00+0100\n"
+"POT-Creation-Date: 2014-12-28 11:00+0100\n"
 "PO-Revision-Date: 2014-11-15 14:30+0900\n"
 "Last-Translator: BALLOON a.k.a. Fu-sen. <fu-sen+solydxk@shigakeiichi.com>\n"
 "Language-Team: SolydXKjp <http://solydxk.jimdo.com/>\n"
@@ -18,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2014-09-11 21:48+0000\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #: ../usr/lib/live-installer/slideshow.py:26
 msgid "No slideshow template found."
@@ -128,18 +126,18 @@ msgstr "フォーマット:"
 msgid "Mount point:"
 msgstr "マウントポイント:"
 
-#: ../usr/lib/live-installer/installer.py:60
+#: ../usr/lib/live-installer/installer.py:61
 #, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "%(partition)s を %(format)s へフォーマット中..."
 
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
+#: ../usr/lib/live-installer/installer.py:84
+#: ../usr/lib/live-installer/installer.py:95
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "%(partition)s を %(mountpoint)s にマウントしています"
 
-#: ../usr/lib/live-installer/installer.py:119
+#: ../usr/lib/live-installer/installer.py:120
 msgid ""
 "ERROR: You must first manually mount your target filesystem(s) at /target to "
 "do a custom install!"
@@ -147,7 +145,7 @@ msgstr ""
 "エラー: まずカスタムインストールを行うため、目的のファイルシステム /target を"
 "手動でマウントしなければいけません！"
 
-#: ../usr/lib/live-installer/installer.py:127
+#: ../usr/lib/live-installer/installer.py:128
 msgid ""
 "ERROR: Something is wrong with the installation medium! This is usually "
 "caused by burning tools which are not compatible with {} (YUMI or other "
@@ -158,63 +156,63 @@ msgstr ""
 "き込まれたツールに起因します。(YUMI または他のマルチブートツール）異なるツー"
 "ルを用いて ISO イメージを DVD・USB へ書き込みしてください。"
 
-#: ../usr/lib/live-installer/installer.py:164
+#: ../usr/lib/live-installer/installer.py:165
 msgid "Copying {}"
 msgstr "{} をコピー中"
 
-#: ../usr/lib/live-installer/installer.py:182
+#: ../usr/lib/live-installer/installer.py:183
 msgid "Entering the system ..."
 msgstr "新システムへ入っています..."
 
-#: ../usr/lib/live-installer/installer.py:219
+#: ../usr/lib/live-installer/installer.py:224
 msgid "Removing live configuration (packages)"
 msgstr "ライブ設定 (パッケージ) を削除しています"
 
-#: ../usr/lib/live-installer/installer.py:227
+#: ../usr/lib/live-installer/installer.py:232
 msgid "Adding new user to the system"
 msgstr "システムに新規ユーザを追加中"
 
-#: ../usr/lib/live-installer/installer.py:263
+#: ../usr/lib/live-installer/installer.py:268
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "/etc/stab にファイルシステムのマウント情報を書込中"
 
-#: ../usr/lib/live-installer/installer.py:284
+#: ../usr/lib/live-installer/installer.py:289
 msgid "Setting hostname"
 msgstr "ホスト名を設定しています"
 
-#: ../usr/lib/live-installer/installer.py:303
+#: ../usr/lib/live-installer/installer.py:308
 msgid "Setting locale"
 msgstr "ロケールを設定しています"
 
-#: ../usr/lib/live-installer/installer.py:320
+#: ../usr/lib/live-installer/installer.py:325
 msgid "Localizing packages"
 msgstr "パッケージのローカライズを行っています"
 
-#: ../usr/lib/live-installer/installer.py:341
+#: ../usr/lib/live-installer/installer.py:346
 msgid "Configuring Plymouth"
 msgstr "Plymouth の設定中"
 
-#: ../usr/lib/live-installer/installer.py:350
+#: ../usr/lib/live-installer/installer.py:355
 msgid "Install multimedia"
 msgstr "マルチメディアのインストール"
 
-#: ../usr/lib/live-installer/installer.py:362
+#: ../usr/lib/live-installer/installer.py:367
 msgid "Configuring sensors"
 msgstr "sensors の設定中"
 
-#: ../usr/lib/live-installer/installer.py:368
+#: ../usr/lib/live-installer/installer.py:373
 msgid "Removing VirtualBox"
 msgstr "VirtualBox を削除"
 
-#: ../usr/lib/live-installer/installer.py:374
+#: ../usr/lib/live-installer/installer.py:379
 msgid "Setting keyboard options"
 msgstr "キーボードオプションを設定しています"
 
-#: ../usr/lib/live-installer/installer.py:413
+#: ../usr/lib/live-installer/installer.py:418
 msgid "Installing bootloader"
 msgstr "ブートローダーをインストールしています"
 
-#: ../usr/lib/live-installer/installer.py:422
+#: ../usr/lib/live-installer/installer.py:427
 msgid ""
 "WARNING: The grub bootloader was not configured properly! You need to "
 "configure it manually."
@@ -222,24 +220,24 @@ msgstr ""
 "警告: grub ブートローダーが正しく設定されていません! 手動で設定する必要があり"
 "ます。"
 
-#: ../usr/lib/live-installer/installer.py:432
+#: ../usr/lib/live-installer/installer.py:437
 msgid "Configuring initramfs"
 msgstr "initramfs の設定中"
 
-#: ../usr/lib/live-installer/installer.py:440
+#: ../usr/lib/live-installer/installer.py:445
 msgid "Cleaning APT"
 msgstr "APT を消去しています"
 
-#: ../usr/lib/live-installer/installer.py:464
+#: ../usr/lib/live-installer/installer.py:469
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid "Installation finished"
 msgstr "インストール完了"
 
-#: ../usr/lib/live-installer/installer.py:468
+#: ../usr/lib/live-installer/installer.py:473
 msgid "Configuring bootloader"
 msgstr "ブートローダーを設定しています"
 
-#: ../usr/lib/live-installer/installer.py:477
+#: ../usr/lib/live-installer/installer.py:482
 msgid "Checking bootloader"
 msgstr "ブートローダーを確認しています"
 
@@ -823,126 +821,15 @@ msgstr ""
 "インストールが完了しました。コンピュータを再起動して新たなシステムを使用しま"
 "すか？"
 
-<<<<<<< HEAD
 #: ../usr/lib/live-installer/main.py:31
 msgid "Unexpected error"
 msgstr "予想外のエラー"
-=======
-#: ../usr/lib/live-installer/installer.py:60
-#, python-format
-msgid "Formatting %(partition)s as %(format)s ..."
-msgstr "%(partition)s を %(format)s へフォーマット中..."
-
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
-#, python-format
-msgid "Mounting %(partition)s on %(mountpoint)s"
-msgstr "%(partition)s を %(mountpoint)s にマウントしています"
-
-#: ../usr/lib/live-installer/installer.py:119
-msgid ""
-"ERROR: You must first manually mount your target filesystem(s) at /target to "
-"do a custom install!"
-msgstr ""
-"エラー: まずカスタムインストールを行うため、目的のファイルシステム /target を"
-"手動でマウントしなければいけません！"
-
-#: ../usr/lib/live-installer/installer.py:127
-msgid ""
-"ERROR: Something is wrong with the installation medium! This is usually "
-"caused by burning tools which are not compatible with {} (YUMI or other "
-"multiboot tools). Please burn the ISO image to DVD/USB using a different "
-"tool."
-msgstr ""
-"エラー: 何かインストール媒体がよくありません！ これは通常 {} と互換性のない書"
-"き込まれたツールに起因します。(YUMI または他のマルチブートツール）異なるツー"
-"ルを用いて ISO イメージを DVD・USB へ書き込みしてください"
-
-#: ../usr/lib/live-installer/installer.py:164
-msgid "Copying {}"
-msgstr "{} をコピー中"
-
-#: ../usr/lib/live-installer/installer.py:182
-msgid "Entering the system ..."
-msgstr "新システムへ入っています..."
-
-#: ../usr/lib/live-installer/installer.py:217
-msgid "Removing live configuration (packages)"
-msgstr "ライブ設定 (パッケージ) を削除しています"
-
-#: ../usr/lib/live-installer/installer.py:225
-msgid "Adding new user to the system"
-msgstr "システムに新規ユーザを追加中"
-
-#: ../usr/lib/live-installer/installer.py:261
-msgid "Writing filesystem mount information to /etc/fstab"
-msgstr "/etc/stab にファイルシステムのマウント情報を書込中"
-
-#: ../usr/lib/live-installer/installer.py:282
-msgid "Setting hostname"
-msgstr "ホスト名を設定しています"
-
-#: ../usr/lib/live-installer/installer.py:301
-msgid "Setting locale"
-msgstr "ロケールを設定しています"
-
-#: ../usr/lib/live-installer/installer.py:318
-msgid "Localizing packages"
-msgstr "パッケージのローカライズを行っています"
-
-#: ../usr/lib/live-installer/installer.py:339
-msgid "Configuring Plymouth"
-msgstr "Plymouth の設定中"
-
-#: ../usr/lib/live-installer/installer.py:348
-msgid "Install multimedia"
-msgstr "マルチメディアのインストール"
-
-#: ../usr/lib/live-installer/installer.py:360
-msgid "Configuring sensors"
-msgstr "sensors の設定中"
-
-#: ../usr/lib/live-installer/installer.py:366
-msgid "Removing VirtualBox"
-msgstr "VirtualBox を削除"
-
-#: ../usr/lib/live-installer/installer.py:372
-msgid "Setting keyboard options"
-msgstr "キーボードオプションを設定しています"
-
-#: ../usr/lib/live-installer/installer.py:411
-msgid "Installing bootloader"
-msgstr "ブートローダーをインストールしています"
->>>>>>> 17565a364267580c0e3424d83b19b698c9adac71
 
 #: ../usr/lib/live-installer/main.py:32
 msgid ""
 "<b>The installer has failed with the following unexpected error. Please "
 "submit a bug report!</b>"
 msgstr ""
-<<<<<<< HEAD
-"<b>インストーラは下記の予想外なエラーで失敗しました。パグレポートを送信して下"
-"さい！</b>"
-=======
-"警告: grub ブートローダーが正しく設定されていません! 手動で設定する必要があり"
-"ます"
-
-#: ../usr/lib/live-installer/installer.py:430
-msgid "Configuring initramfs"
-msgstr "initramfs の設定中"
-
-#: ../usr/lib/live-installer/installer.py:438
-msgid "Cleaning APT"
-msgstr "APT を消去しています"
-
-#: ../usr/lib/live-installer/installer.py:466
-msgid "Configuring bootloader"
-msgstr "ブートローダーを設定しています"
-
-#: ../usr/lib/live-installer/installer.py:475
-msgid "Checking bootloader"
-msgstr "ブートローダーを確認しています"
->>>>>>> 17565a364267580c0e3424d83b19b698c9adac71
 
 #: ../usr/share/applications/live-installer.desktop.in.h:1
 msgid "Install"

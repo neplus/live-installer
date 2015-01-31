@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-21 15:47+0100\n"
+"POT-Creation-Date: 2014-12-28 11:00+0100\n"
 "PO-Revision-Date: 2012-04-28 08:42+0000\n"
 "Last-Translator: Godwin <godwincodes@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <zh_HK@li.org>\n"
@@ -130,24 +130,24 @@ msgstr "格式成:"
 msgid "Mount point:"
 msgstr "掛載點："
 
-#: ../usr/lib/live-installer/installer.py:60
+#: ../usr/lib/live-installer/installer.py:61
 #, fuzzy, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "正將 %(partition)s 格式化為 %(format)s"
 
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
+#: ../usr/lib/live-installer/installer.py:84
+#: ../usr/lib/live-installer/installer.py:95
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "正把 %(partition)s 掛載在 %(mountpoint)s 掛載點"
 
-#: ../usr/lib/live-installer/installer.py:119
+#: ../usr/lib/live-installer/installer.py:120
 msgid ""
 "ERROR: You must first manually mount your target filesystem(s) at /target to "
 "do a custom install!"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:127
+#: ../usr/lib/live-installer/installer.py:128
 msgid ""
 "ERROR: Something is wrong with the installation medium! This is usually "
 "caused by burning tools which are not compatible with {} (YUMI or other "
@@ -155,93 +155,93 @@ msgid ""
 "tool."
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:164
+#: ../usr/lib/live-installer/installer.py:165
 #, fuzzy
 msgid "Copying {}"
 msgstr "正在複製 %s"
 
-#: ../usr/lib/live-installer/installer.py:182
+#: ../usr/lib/live-installer/installer.py:183
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "正在進入新系統"
 
-#: ../usr/lib/live-installer/installer.py:219
+#: ../usr/lib/live-installer/installer.py:224
 msgid "Removing live configuration (packages)"
 msgstr "正在移除 live 系統配置(套件)"
 
-#: ../usr/lib/live-installer/installer.py:227
+#: ../usr/lib/live-installer/installer.py:232
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "正在加入使用者至系統"
 
-#: ../usr/lib/live-installer/installer.py:263
+#: ../usr/lib/live-installer/installer.py:268
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "正在寫入檔案系統掛載資料"
 
-#: ../usr/lib/live-installer/installer.py:284
+#: ../usr/lib/live-installer/installer.py:289
 msgid "Setting hostname"
 msgstr "正在設定主機名稱"
 
-#: ../usr/lib/live-installer/installer.py:303
+#: ../usr/lib/live-installer/installer.py:308
 msgid "Setting locale"
 msgstr "正在設定語系"
 
-#: ../usr/lib/live-installer/installer.py:320
+#: ../usr/lib/live-installer/installer.py:325
 msgid "Localizing packages"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:341
+#: ../usr/lib/live-installer/installer.py:346
 #, fuzzy
 msgid "Configuring Plymouth"
 msgstr "正在配置啟動程式"
 
-#: ../usr/lib/live-installer/installer.py:350
+#: ../usr/lib/live-installer/installer.py:355
 msgid "Install multimedia"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:362
+#: ../usr/lib/live-installer/installer.py:367
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "正在配置啟動程式"
 
-#: ../usr/lib/live-installer/installer.py:368
+#: ../usr/lib/live-installer/installer.py:373
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:374
+#: ../usr/lib/live-installer/installer.py:379
 msgid "Setting keyboard options"
 msgstr "正在設定鍵盤選項"
 
-#: ../usr/lib/live-installer/installer.py:413
+#: ../usr/lib/live-installer/installer.py:418
 msgid "Installing bootloader"
 msgstr "正在安裝 bootloader"
 
-#: ../usr/lib/live-installer/installer.py:422
+#: ../usr/lib/live-installer/installer.py:427
 msgid ""
 "WARNING: The grub bootloader was not configured properly! You need to "
 "configure it manually."
 msgstr "警告：grub 啟動程式配置不正確！你需要手動進行配置。"
 
-#: ../usr/lib/live-installer/installer.py:432
+#: ../usr/lib/live-installer/installer.py:437
 #, fuzzy
 msgid "Configuring initramfs"
 msgstr "正在配置啟動程式"
 
-#: ../usr/lib/live-installer/installer.py:440
+#: ../usr/lib/live-installer/installer.py:445
 msgid "Cleaning APT"
 msgstr "正在清潔APT"
 
-#: ../usr/lib/live-installer/installer.py:464
+#: ../usr/lib/live-installer/installer.py:469
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid "Installation finished"
 msgstr "安裝完成"
 
-#: ../usr/lib/live-installer/installer.py:468
+#: ../usr/lib/live-installer/installer.py:473
 msgid "Configuring bootloader"
 msgstr "正在配置啟動程式"
 
-#: ../usr/lib/live-installer/installer.py:477
+#: ../usr/lib/live-installer/installer.py:482
 msgid "Checking bootloader"
 msgstr "正在檢查啟動程式"
 

@@ -27,7 +27,7 @@ update:
 		--package-name=$(package) \
 		--package-version='' \
 		--from-code=UTF-8 \
-		`find .. -name '*.py'` && echo OK
+		`find .. -wholename ../debian -prune -o -name '*.py' | grep .py` && echo OK
 	# get strings from the desktop file
 	@ for LAUNCHER in `find .. -name '*.desktop'`; do \
 		sed -r \

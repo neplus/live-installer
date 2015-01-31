@@ -186,7 +186,7 @@ class PartitionSetup(gtk.TreeStore):
         def _get_attached_disks():
             disks = []
             exclude_devices = 'sr0 sr1 cdrom dvd'.split()
-            lsblk = getoutput('lsblk -dinro TYPE,NAME,RM,SIZE,MODEL | sort -k3,2')
+            lsblk = getoutput("lsblk -dinro TYPE,NAME,RM,SIZE,MODEL | sort -k3,2")
             for line in lsblk:
                 # Don't do a full parse until we know this line describes a disk.
                 type, device = line.split(" ", 1)
@@ -199,7 +199,7 @@ class PartitionSetup(gtk.TreeStore):
                         # convert size to manufacturer's size for show, e.g. in GB, not GiB!
                         print ">>> size = '{}'".format(size)
                         size = str(int(float(size[:-1]) * (1024/1000)**'BkMGTPEZY'.index(size[-1]))) + size[-1]
-                        description = '{} ({}B)'.format(model.strip(), size)
+                        description = '{} ({}B)'.format(model.replace('\\x20', ' ').strip(), size)
                         if int(removable):
                             description = _('Removable:') + ' ' + description
                         disks.append((device, description))

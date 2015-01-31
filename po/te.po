@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-21 15:47+0100\n"
+"POT-Creation-Date: 2014-12-28 11:00+0100\n"
 "PO-Revision-Date: 2011-11-11 02:32+0000\n"
 "Last-Translator: Praveen Illa <mail2ipn@gmail.com>\n"
 "Language-Team: Telugu <te@li.org>\n"
@@ -130,24 +130,24 @@ msgstr "ఇలా ఫార్మేటు చేయి:"
 msgid "Mount point:"
 msgstr "మౌంట్ స్థలం"
 
-#: ../usr/lib/live-installer/installer.py:60
+#: ../usr/lib/live-installer/installer.py:61
 #, fuzzy, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "%(partition)s లను %(format)s ఫార్మేటుచేస్తున్నది..."
 
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
+#: ../usr/lib/live-installer/installer.py:84
+#: ../usr/lib/live-installer/installer.py:95
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "%(partition)s లను %(mountpoint)s పై మౌంటుచేస్తున్నది"
 
-#: ../usr/lib/live-installer/installer.py:119
+#: ../usr/lib/live-installer/installer.py:120
 msgid ""
 "ERROR: You must first manually mount your target filesystem(s) at /target to "
 "do a custom install!"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:127
+#: ../usr/lib/live-installer/installer.py:128
 msgid ""
 "ERROR: Something is wrong with the installation medium! This is usually "
 "caused by burning tools which are not compatible with {} (YUMI or other "
@@ -155,93 +155,93 @@ msgid ""
 "tool."
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:164
+#: ../usr/lib/live-installer/installer.py:165
 #, fuzzy
 msgid "Copying {}"
 msgstr "%s నకలుచేస్తున్నది"
 
-#: ../usr/lib/live-installer/installer.py:182
+#: ../usr/lib/live-installer/installer.py:183
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "కొత్త వ్యవస్థలోకి ప్రవేశిస్తున్నది..."
 
-#: ../usr/lib/live-installer/installer.py:219
+#: ../usr/lib/live-installer/installer.py:224
 msgid "Removing live configuration (packages)"
 msgstr "ప్యాకేజిల  ప్రత్యక్ష కన్ఫిగరేషన్ తీసివేయబడుతోంది"
 
-#: ../usr/lib/live-installer/installer.py:227
+#: ../usr/lib/live-installer/installer.py:232
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "వ్యవస్థ లోకి వాడుకదారుని చేర్చబడుతోంది"
 
-#: ../usr/lib/live-installer/installer.py:263
+#: ../usr/lib/live-installer/installer.py:268
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "దస్త్ర వ్యవస్థ యొక్క మౌంట్ సమాచారం వ్రాయబడుతోంది"
 
-#: ../usr/lib/live-installer/installer.py:284
+#: ../usr/lib/live-installer/installer.py:289
 msgid "Setting hostname"
 msgstr "హోస్టుపేరు అమర్చబడుతోంది"
 
-#: ../usr/lib/live-installer/installer.py:303
+#: ../usr/lib/live-installer/installer.py:308
 msgid "Setting locale"
 msgstr "భాషను అమర్చుతున్నది"
 
-#: ../usr/lib/live-installer/installer.py:320
+#: ../usr/lib/live-installer/installer.py:325
 msgid "Localizing packages"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:341
+#: ../usr/lib/live-installer/installer.py:346
 #, fuzzy
 msgid "Configuring Plymouth"
 msgstr "బూట్‌లోడర్‌ని స్వరూపిస్తున్నది"
 
-#: ../usr/lib/live-installer/installer.py:350
+#: ../usr/lib/live-installer/installer.py:355
 msgid "Install multimedia"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:362
+#: ../usr/lib/live-installer/installer.py:367
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "బూట్‌లోడర్‌ని స్వరూపిస్తున్నది"
 
-#: ../usr/lib/live-installer/installer.py:368
+#: ../usr/lib/live-installer/installer.py:373
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:374
+#: ../usr/lib/live-installer/installer.py:379
 msgid "Setting keyboard options"
 msgstr "కీ బోర్డు ఐచ్ఛికాలను అమర్చుతున్నది"
 
-#: ../usr/lib/live-installer/installer.py:413
+#: ../usr/lib/live-installer/installer.py:418
 msgid "Installing bootloader"
 msgstr "బూట్ లోడర్ స్థాపించబడుతోంది"
 
-#: ../usr/lib/live-installer/installer.py:422
+#: ../usr/lib/live-installer/installer.py:427
 msgid ""
 "WARNING: The grub bootloader was not configured properly! You need to "
 "configure it manually."
 msgstr "హెచ్ఛరిక: grub బూట్‌లోడర్‌ సరిగా స్వరూపించబడలేదు! మీరు దానిని మానవీయంగా స్వరూపించాలి."
 
-#: ../usr/lib/live-installer/installer.py:432
+#: ../usr/lib/live-installer/installer.py:437
 #, fuzzy
 msgid "Configuring initramfs"
 msgstr "బూట్‌లోడర్‌ని స్వరూపిస్తున్నది"
 
-#: ../usr/lib/live-installer/installer.py:440
+#: ../usr/lib/live-installer/installer.py:445
 msgid "Cleaning APT"
 msgstr "APTని శుభ్రపరుస్తున్నది"
 
-#: ../usr/lib/live-installer/installer.py:464
+#: ../usr/lib/live-installer/installer.py:469
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid "Installation finished"
 msgstr "స్థాపన ప్రక్రియ పూర్తిచేయబడింది"
 
-#: ../usr/lib/live-installer/installer.py:468
+#: ../usr/lib/live-installer/installer.py:473
 msgid "Configuring bootloader"
 msgstr "బూట్‌లోడర్‌ని స్వరూపిస్తున్నది"
 
-#: ../usr/lib/live-installer/installer.py:477
+#: ../usr/lib/live-installer/installer.py:482
 msgid "Checking bootloader"
 msgstr "బూట్‌లోడర్‌ని తనిఖీ చేస్తున్నది"
 

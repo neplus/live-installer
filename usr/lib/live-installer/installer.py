@@ -12,6 +12,7 @@ from localize import Localize
 
 CONFIG_FILE = '/etc/live-installer/live-installer.conf'
 
+
 class InstallerEngine:
     ''' This is central to the live installer '''
 
@@ -197,12 +198,16 @@ class InstallerEngine:
             #if os.path.exists("/lib/live/mount/medium/EFI/BOOT/grubx64.efi"):
             #    shell_exec("mkdir -p /target/boot/efi/EFI/%s" % self.distribution_id)
             #    shell_exec("cp /lib/live/mount/medium/EFI/BOOT/grubx64.efi /target/boot/efi/EFI/%s/" % self.distribution_id)
-            try:
-                shell_exec("mkdir -p /target/debs")
-                shell_exec("cp /lib/live/mount/medium/offline/* /target/debs/")
-                chroot_exec("dpkg -i /debs/*")
-                shell_exec("rm -rf /target/debs")
-            except:
+            shell_exec("mkdir -p /target/debs")
+            shell_exec("cp /lib/live/mount/medium/offline/* /target/debs/")
+            ret = chroot_exec("dpkg -i /debs/*")
+            shell_exec("rm -rf /target/debs")
+            if int(ret) != 0:
+                if hasInternetConnection():
+                    chroot_exec("apt-get remove --purge --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes grub-efi")
+                # TODO: Errors were reported after installing grub-efi and leaving grub-pc
+                # (although it should have been removed in the previous process)
+                chroot_exec("apt-get remove --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes grub-pc")
                 chroot_exec("apt-get -f install --assume-yes -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold --force-yes")
 
         # Detect cdrom device
@@ -327,7 +332,7 @@ class InstallerEngine:
                     shell_exec("cp %s /target/debs/" % l10n)
                 chroot_exec("dpkg -i /debs/*")
                 shell_exec("rm -rf /target/debs")
-            if hasInternetConnection:
+            if hasInternetConnection():
                 # [XK] Localize when not LMDE
                 loc = Localize(setup.language, our_total, our_current)
                 loc.set_progress_hook(self.update_progress)
@@ -345,11 +350,11 @@ class InstallerEngine:
         # [XK] Install multimedia
         our_current += 1
         if setup.multimedia_enable:
-            if hasInternetConnection:
+            if hasInternetConnection():
                 print " --> Install multimedia"
                 self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Install multimedia"))
                 packages = "libdvdcss2"
-                if isAmd64:
+                if isAmd64():
                     packages += " w64codecs"
                 else:
                     packages += " w32codecs"

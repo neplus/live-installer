@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-21 15:47+0100\n"
+"POT-Creation-Date: 2014-12-28 11:00+0100\n"
 "PO-Revision-Date: 2014-07-20 14:47+0000\n"
 "Last-Translator: Algimantas Margevičius <algimantas@margevicius.lt>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -134,18 +134,18 @@ msgstr "Sužymėti kaip:"
 msgid "Mount point:"
 msgstr "Prijungimo vieta:"
 
-#: ../usr/lib/live-installer/installer.py:60
+#: ../usr/lib/live-installer/installer.py:61
 #, fuzzy, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "%(partition)s ženklinama kaip %(format)s..."
 
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
+#: ../usr/lib/live-installer/installer.py:84
+#: ../usr/lib/live-installer/installer.py:95
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "Prijungiamas %(partition)s skirsnis prie %(mountpoint)s vietos"
 
-#: ../usr/lib/live-installer/installer.py:119
+#: ../usr/lib/live-installer/installer.py:120
 msgid ""
 "ERROR: You must first manually mount your target filesystem(s) at /target to "
 "do a custom install!"
@@ -153,7 +153,7 @@ msgstr ""
 "KLAIDA: Pirmiausia jūs turite savarankiškai prijungti paskirties failų "
 "sistemą (-as) prie /target pasirinktiniam diegimui atlikti!"
 
-#: ../usr/lib/live-installer/installer.py:127
+#: ../usr/lib/live-installer/installer.py:128
 msgid ""
 "ERROR: Something is wrong with the installation medium! This is usually "
 "caused by burning tools which are not compatible with {} (YUMI or other "
@@ -161,69 +161,69 @@ msgid ""
 "tool."
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:164
+#: ../usr/lib/live-installer/installer.py:165
 #, fuzzy
 msgid "Copying {}"
 msgstr "Kopijuojama %s"
 
-#: ../usr/lib/live-installer/installer.py:182
+#: ../usr/lib/live-installer/installer.py:183
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "Įeinama į naująją sistemą.."
 
-#: ../usr/lib/live-installer/installer.py:219
+#: ../usr/lib/live-installer/installer.py:224
 msgid "Removing live configuration (packages)"
 msgstr "Šalinama bandomoji konfigūracija (paketai)"
 
-#: ../usr/lib/live-installer/installer.py:227
+#: ../usr/lib/live-installer/installer.py:232
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "Sistemoje kuriamas naudotojas"
 
-#: ../usr/lib/live-installer/installer.py:263
+#: ../usr/lib/live-installer/installer.py:268
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "Rašoma failų sistemos prijungimo informacija"
 
-#: ../usr/lib/live-installer/installer.py:284
+#: ../usr/lib/live-installer/installer.py:289
 msgid "Setting hostname"
 msgstr "Nustatomas kompiuterio vardas"
 
-#: ../usr/lib/live-installer/installer.py:303
+#: ../usr/lib/live-installer/installer.py:308
 msgid "Setting locale"
 msgstr "Nustatoma lokalizacija"
 
-#: ../usr/lib/live-installer/installer.py:320
+#: ../usr/lib/live-installer/installer.py:325
 msgid "Localizing packages"
 msgstr "Lokalizuojami paketai"
 
-#: ../usr/lib/live-installer/installer.py:341
+#: ../usr/lib/live-installer/installer.py:346
 #, fuzzy
 msgid "Configuring Plymouth"
 msgstr "Konfigūruojamas sistemos įkėliklis"
 
-#: ../usr/lib/live-installer/installer.py:350
+#: ../usr/lib/live-installer/installer.py:355
 msgid "Install multimedia"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:362
+#: ../usr/lib/live-installer/installer.py:367
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "Konfigūruojamas sistemos įkėliklis"
 
-#: ../usr/lib/live-installer/installer.py:368
+#: ../usr/lib/live-installer/installer.py:373
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:374
+#: ../usr/lib/live-installer/installer.py:379
 msgid "Setting keyboard options"
 msgstr "Nustatomos klaviatūros parinktys"
 
-#: ../usr/lib/live-installer/installer.py:413
+#: ../usr/lib/live-installer/installer.py:418
 msgid "Installing bootloader"
 msgstr "Diegiamas sistemos įkėliklis"
 
-#: ../usr/lib/live-installer/installer.py:422
+#: ../usr/lib/live-installer/installer.py:427
 msgid ""
 "WARNING: The grub bootloader was not configured properly! You need to "
 "configure it manually."
@@ -231,25 +231,25 @@ msgstr ""
 "DĖMESIO! Grub sistemos įkėliklis nebuvo tinkamai sukonfigūruotas! Būtina jį "
 "sukonfigūruoti rankiniu būdu."
 
-#: ../usr/lib/live-installer/installer.py:432
+#: ../usr/lib/live-installer/installer.py:437
 #, fuzzy
 msgid "Configuring initramfs"
 msgstr "Konfigūruojamas sistemos įkėliklis"
 
-#: ../usr/lib/live-installer/installer.py:440
+#: ../usr/lib/live-installer/installer.py:445
 msgid "Cleaning APT"
 msgstr "Valomas APT"
 
-#: ../usr/lib/live-installer/installer.py:464
+#: ../usr/lib/live-installer/installer.py:469
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid "Installation finished"
 msgstr "Diegimas baigtas"
 
-#: ../usr/lib/live-installer/installer.py:468
+#: ../usr/lib/live-installer/installer.py:473
 msgid "Configuring bootloader"
 msgstr "Konfigūruojamas sistemos įkėliklis"
 
-#: ../usr/lib/live-installer/installer.py:477
+#: ../usr/lib/live-installer/installer.py:482
 msgid "Checking bootloader"
 msgstr "Tikrinamas sistemos įkėliklis"
 

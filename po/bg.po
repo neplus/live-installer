@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-21 15:47+0100\n"
+"POT-Creation-Date: 2014-12-28 11:00+0100\n"
 "PO-Revision-Date: 2014-06-06 19:01+0000\n"
 "Last-Translator: spacy01 <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -133,18 +133,18 @@ msgstr "Форматирай като:"
 msgid "Mount point:"
 msgstr "Точка на монтиране:"
 
-#: ../usr/lib/live-installer/installer.py:60
+#: ../usr/lib/live-installer/installer.py:61
 #, fuzzy, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "Форматирай %(partition)s като %(format)s..."
 
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
+#: ../usr/lib/live-installer/installer.py:84
+#: ../usr/lib/live-installer/installer.py:95
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "Монтиране на %(partition)s в %(mountpoint)s"
 
-#: ../usr/lib/live-installer/installer.py:119
+#: ../usr/lib/live-installer/installer.py:120
 msgid ""
 "ERROR: You must first manually mount your target filesystem(s) at /target to "
 "do a custom install!"
@@ -152,7 +152,7 @@ msgstr ""
 "ГРЕШКА: Първо трябва ръчно да монтирате вашата целева файлова(и) система(и) "
 "в /цел за потребителска инсталация!"
 
-#: ../usr/lib/live-installer/installer.py:127
+#: ../usr/lib/live-installer/installer.py:128
 msgid ""
 "ERROR: Something is wrong with the installation medium! This is usually "
 "caused by burning tools which are not compatible with {} (YUMI or other "
@@ -160,69 +160,69 @@ msgid ""
 "tool."
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:164
+#: ../usr/lib/live-installer/installer.py:165
 #, fuzzy
 msgid "Copying {}"
 msgstr "Копиране на %s"
 
-#: ../usr/lib/live-installer/installer.py:182
+#: ../usr/lib/live-installer/installer.py:183
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "Влизане в новата система..."
 
-#: ../usr/lib/live-installer/installer.py:219
+#: ../usr/lib/live-installer/installer.py:224
 msgid "Removing live configuration (packages)"
 msgstr "Премахване на Live конфигурацията (пакети)"
 
-#: ../usr/lib/live-installer/installer.py:227
+#: ../usr/lib/live-installer/installer.py:232
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "Добавяне на потребител към системата"
 
-#: ../usr/lib/live-installer/installer.py:263
+#: ../usr/lib/live-installer/installer.py:268
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "Записване на информацията за монтиране на файловата система"
 
-#: ../usr/lib/live-installer/installer.py:284
+#: ../usr/lib/live-installer/installer.py:289
 msgid "Setting hostname"
 msgstr "Настройване на системното име"
 
-#: ../usr/lib/live-installer/installer.py:303
+#: ../usr/lib/live-installer/installer.py:308
 msgid "Setting locale"
 msgstr "Настройване на локал"
 
-#: ../usr/lib/live-installer/installer.py:320
+#: ../usr/lib/live-installer/installer.py:325
 msgid "Localizing packages"
 msgstr "Локализация на пакети"
 
-#: ../usr/lib/live-installer/installer.py:341
+#: ../usr/lib/live-installer/installer.py:346
 #, fuzzy
 msgid "Configuring Plymouth"
 msgstr "Конфигуриране на програмата за начално зареждане"
 
-#: ../usr/lib/live-installer/installer.py:350
+#: ../usr/lib/live-installer/installer.py:355
 msgid "Install multimedia"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:362
+#: ../usr/lib/live-installer/installer.py:367
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "Конфигуриране на програмата за начално зареждане"
 
-#: ../usr/lib/live-installer/installer.py:368
+#: ../usr/lib/live-installer/installer.py:373
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:374
+#: ../usr/lib/live-installer/installer.py:379
 msgid "Setting keyboard options"
 msgstr "Настройване на клавиатурата"
 
-#: ../usr/lib/live-installer/installer.py:413
+#: ../usr/lib/live-installer/installer.py:418
 msgid "Installing bootloader"
 msgstr "Инсталиране на програмата за начално стартиране"
 
-#: ../usr/lib/live-installer/installer.py:422
+#: ../usr/lib/live-installer/installer.py:427
 msgid ""
 "WARNING: The grub bootloader was not configured properly! You need to "
 "configure it manually."
@@ -230,25 +230,25 @@ msgstr ""
 "ВНИМАНИЕ: Grub не е конфигуриран правилно! Вие трябва да го конфигурирате "
 "ръчно."
 
-#: ../usr/lib/live-installer/installer.py:432
+#: ../usr/lib/live-installer/installer.py:437
 #, fuzzy
 msgid "Configuring initramfs"
 msgstr "Конфигуриране на програмата за начално зареждане"
 
-#: ../usr/lib/live-installer/installer.py:440
+#: ../usr/lib/live-installer/installer.py:445
 msgid "Cleaning APT"
 msgstr "Почистване на APT"
 
-#: ../usr/lib/live-installer/installer.py:464
+#: ../usr/lib/live-installer/installer.py:469
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid "Installation finished"
 msgstr "Инсталирането завърши"
 
-#: ../usr/lib/live-installer/installer.py:468
+#: ../usr/lib/live-installer/installer.py:473
 msgid "Configuring bootloader"
 msgstr "Конфигуриране на програмата за начално зареждане"
 
-#: ../usr/lib/live-installer/installer.py:477
+#: ../usr/lib/live-installer/installer.py:482
 msgid "Checking bootloader"
 msgstr "Проверка на програмата за начално зареждане"
 

@@ -1,3 +1,10 @@
+live-installer (2014.12.28) debian; urgency=low
+
+  * Create/remove /etc/fstab.d when live
+  * Remove \x20 from disk description
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sun, 28 Dec 2014 11:00:00 +0100
+
 live-installer (2014.11.21) debian; urgency=low
 
   * Exclude live boot device from partition list

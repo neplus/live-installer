@@ -27,6 +27,12 @@ case "$1" in
 	  echo "> Live user password changed to solydxk ($SOLYDXKPWD in $USRSETUP)"
 	fi
 	
+	# This seems to be needed by the live packages
+	FSDIR='/etc/fstab.d'
+	if [ ! -d $FSDIR ]; then
+	  mkdir $FSDIR
+	fi
+	
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

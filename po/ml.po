@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-21 15:47+0100\n"
+"POT-Creation-Date: 2014-12-28 11:00+0100\n"
 "PO-Revision-Date: 2012-09-28 02:58+0000\n"
 "Last-Translator: praveenp <Unknown>\n"
 "Language-Team: Malayalam <ml@li.org>\n"
@@ -130,24 +130,24 @@ msgstr "ഇങ്ങനെ ഫോർമാറ്റ് ചെയ്യുക"
 msgid "Mount point:"
 msgstr "മൗണ്ട് പോയിന്റ്:"
 
-#: ../usr/lib/live-installer/installer.py:60
+#: ../usr/lib/live-installer/installer.py:61
 #, fuzzy, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "%(partition)s  %(format)s ആയി ഫോർമാറ്റ് ചെയ്യുന്നു..."
 
-#: ../usr/lib/live-installer/installer.py:83
-#: ../usr/lib/live-installer/installer.py:94
+#: ../usr/lib/live-installer/installer.py:84
+#: ../usr/lib/live-installer/installer.py:95
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "%(partition)s  %(mountpoint)s-ൽ മൗണ്ട് ചെയ്യുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:119
+#: ../usr/lib/live-installer/installer.py:120
 msgid ""
 "ERROR: You must first manually mount your target filesystem(s) at /target to "
 "do a custom install!"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:127
+#: ../usr/lib/live-installer/installer.py:128
 msgid ""
 "ERROR: Something is wrong with the installation medium! This is usually "
 "caused by burning tools which are not compatible with {} (YUMI or other "
@@ -155,69 +155,69 @@ msgid ""
 "tool."
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:164
+#: ../usr/lib/live-installer/installer.py:165
 #, fuzzy
 msgid "Copying {}"
 msgstr "\"%s\" പകർത്തുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:182
+#: ../usr/lib/live-installer/installer.py:183
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "പുതിയ വ്യൂഹത്തിലേയ്ക്ക് പ്രവേശിക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:219
+#: ../usr/lib/live-installer/installer.py:224
 msgid "Removing live configuration (packages)"
 msgstr "തത്സമയ ക്രമീകരണങ്ങൾ ഒഴിവാക്കുന്നു (പാക്കേജുകൾ)"
 
-#: ../usr/lib/live-installer/installer.py:227
+#: ../usr/lib/live-installer/installer.py:232
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "ഉപയോക്താവിനെ സിസ്റ്റത്തിലേയ്ക്ക് ചേർക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:263
+#: ../usr/lib/live-installer/installer.py:268
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "ഫയൽസിസ്റ്റം മൗണ്ട് വിവരങ്ങൾ എഴുതിവെയ്ക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:284
+#: ../usr/lib/live-installer/installer.py:289
 msgid "Setting hostname"
 msgstr "ഹോസ്റ്റ്പേര് സജ്ജീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:303
+#: ../usr/lib/live-installer/installer.py:308
 msgid "Setting locale"
 msgstr "പ്രാദേശികവിവരങ്ങൾ സജ്ജീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:320
+#: ../usr/lib/live-installer/installer.py:325
 msgid "Localizing packages"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:341
+#: ../usr/lib/live-installer/installer.py:346
 #, fuzzy
 msgid "Configuring Plymouth"
 msgstr "ബൂട്ട്ലോഡർ ക്രമീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:350
+#: ../usr/lib/live-installer/installer.py:355
 msgid "Install multimedia"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:362
+#: ../usr/lib/live-installer/installer.py:367
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "ബൂട്ട്ലോഡർ ക്രമീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:368
+#: ../usr/lib/live-installer/installer.py:373
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:374
+#: ../usr/lib/live-installer/installer.py:379
 msgid "Setting keyboard options"
 msgstr "കീബോഡ് ഐച്ഛികങ്ങൾ സജ്ജീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:413
+#: ../usr/lib/live-installer/installer.py:418
 msgid "Installing bootloader"
 msgstr "ബൂട്ട്ലോഡര്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:422
+#: ../usr/lib/live-installer/installer.py:427
 msgid ""
 "WARNING: The grub bootloader was not configured properly! You need to "
 "configure it manually."
@@ -225,25 +225,25 @@ msgstr ""
 "മുന്നറിയിപ്പ്: ഗ്രബ് ബൂട്ട്ലോഡർ ശരിയായ വിധത്തിലല്ല ക്രമീകരിച്ചിരിക്കുന്നത്! താങ്കളത് സ്വയം "
 "ക്രമീകരിക്കേണ്ടതുണ്ട്."
 
-#: ../usr/lib/live-installer/installer.py:432
+#: ../usr/lib/live-installer/installer.py:437
 #, fuzzy
 msgid "Configuring initramfs"
 msgstr "ബൂട്ട്ലോഡർ ക്രമീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:440
+#: ../usr/lib/live-installer/installer.py:445
 msgid "Cleaning APT"
 msgstr "എ.പി.റ്റി. ശുദ്ധമാക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:464
+#: ../usr/lib/live-installer/installer.py:469
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid "Installation finished"
 msgstr "ഇൻസ്റ്റലേഷൻ പുർണ്ണമായി"
 
-#: ../usr/lib/live-installer/installer.py:468
+#: ../usr/lib/live-installer/installer.py:473
 msgid "Configuring bootloader"
 msgstr "ബൂട്ട്ലോഡർ ക്രമീകരിക്കുന്നു"
 
-#: ../usr/lib/live-installer/installer.py:477
+#: ../usr/lib/live-installer/installer.py:482
 msgid "Checking bootloader"
 msgstr "ബൂട്ട്ലോഡർ പരിശോധിക്കുന്നു"
 
