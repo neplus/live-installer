@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-28 11:00+0100\n"
+"POT-Creation-Date: 2015-02-08 08:58+0100\n"
 "PO-Revision-Date: 2014-09-03 21:39+0000\n"
 "Last-Translator: Asier Iturralde Sarasola <Unknown>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -54,7 +54,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:347
+#: ../usr/lib/live-installer/partitioning.py:355
 msgid "Unknown"
 msgstr ""
 
@@ -74,12 +74,12 @@ msgstr "/home tokira esleitu"
 msgid "Assign to /boot/efi"
 msgstr "Esleitu /boot/efi-ri"
 
-#: ../usr/lib/live-installer/partitioning.py:204
+#: ../usr/lib/live-installer/partitioning.py:205
 #, fuzzy
 msgid "Removable:"
 msgstr "Gailu aldagarria:"
 
-#: ../usr/lib/live-installer/partitioning.py:217
+#: ../usr/lib/live-installer/partitioning.py:225
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:838
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:851
@@ -90,7 +90,7 @@ msgstr "Gailu aldagarria:"
 msgid "Installation Tool"
 msgstr "Instalazio tresna"
 
-#: ../usr/lib/live-installer/partitioning.py:218
+#: ../usr/lib/live-installer/partitioning.py:226
 #, fuzzy, python-brace-format
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
@@ -101,34 +101,34 @@ msgstr ""
 "sorta bat sortzea nahi duzu? Oharra: Honek diskoko datu guztiak ezabatuko "
 "ditu."
 
-#: ../usr/lib/live-installer/partitioning.py:342
+#: ../usr/lib/live-installer/partitioning.py:350
 #, fuzzy
 msgid "Logical partition"
 msgstr "Editatu partizioa"
 
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:351
 #, fuzzy
 msgid "Extended partition"
 msgstr "Editatu partizioa"
 
-#: ../usr/lib/live-installer/partitioning.py:344
+#: ../usr/lib/live-installer/partitioning.py:352
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "Leku librea"
 
-#: ../usr/lib/live-installer/partitioning.py:434
+#: ../usr/lib/live-installer/partitioning.py:442
 msgid "Edit partition"
 msgstr "Editatu partizioa"
 
-#: ../usr/lib/live-installer/partitioning.py:435
+#: ../usr/lib/live-installer/partitioning.py:443
 msgid "Device:"
 msgstr "Gailua:"
 
-#: ../usr/lib/live-installer/partitioning.py:437
+#: ../usr/lib/live-installer/partitioning.py:445
 msgid "Format as:"
 msgstr "Formateatu honela:"
 
-#: ../usr/lib/live-installer/partitioning.py:438
+#: ../usr/lib/live-installer/partitioning.py:446
 msgid "Mount point:"
 msgstr "Muntatze-puntua:"
 

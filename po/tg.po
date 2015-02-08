@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-28 11:00+0100\n"
+"POT-Creation-Date: 2015-02-08 08:58+0100\n"
 "PO-Revision-Date: 2014-02-06 22:35+0000\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <tg@li.org>\n"
@@ -55,7 +55,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:347
+#: ../usr/lib/live-installer/partitioning.py:355
 msgid "Unknown"
 msgstr ""
 
@@ -75,11 +75,11 @@ msgstr "Таъин кардан ба /home"
 msgid "Assign to /boot/efi"
 msgstr "Таъин кардан ба /boot/efi"
 
-#: ../usr/lib/live-installer/partitioning.py:204
+#: ../usr/lib/live-installer/partitioning.py:205
 msgid "Removable:"
 msgstr ""
 
-#: ../usr/lib/live-installer/partitioning.py:217
+#: ../usr/lib/live-installer/partitioning.py:225
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:838
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:851
@@ -90,7 +90,7 @@ msgstr ""
 msgid "Installation Tool"
 msgstr "Абзори насбкунӣ"
 
-#: ../usr/lib/live-installer/partitioning.py:218
+#: ../usr/lib/live-installer/partitioning.py:226
 #, fuzzy, python-brace-format
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
@@ -101,34 +101,34 @@ msgstr ""
 "насбкунанда маҷмӯи қисмҳои дискро барои шумо эҷод кунад? Тавзеҳ: Ин амал "
 "ҳамаи иттилооти мавҷудбударо дар диски шумо бебозгашт тоза мекунад."
 
-#: ../usr/lib/live-installer/partitioning.py:342
+#: ../usr/lib/live-installer/partitioning.py:350
 #, fuzzy
 msgid "Logical partition"
 msgstr "Таҳрири қисми диск"
 
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:351
 #, fuzzy
 msgid "Extended partition"
 msgstr "Таҳрири қисми диск"
 
-#: ../usr/lib/live-installer/partitioning.py:344
+#: ../usr/lib/live-installer/partitioning.py:352
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "Фазои озод"
 
-#: ../usr/lib/live-installer/partitioning.py:434
+#: ../usr/lib/live-installer/partitioning.py:442
 msgid "Edit partition"
 msgstr "Таҳрири қисми диск"
 
-#: ../usr/lib/live-installer/partitioning.py:435
+#: ../usr/lib/live-installer/partitioning.py:443
 msgid "Device:"
 msgstr "Дастгоҳ:"
 
-#: ../usr/lib/live-installer/partitioning.py:437
+#: ../usr/lib/live-installer/partitioning.py:445
 msgid "Format as:"
 msgstr "Формат кардан ҳамчун:"
 
-#: ../usr/lib/live-installer/partitioning.py:438
+#: ../usr/lib/live-installer/partitioning.py:446
 msgid "Mount point:"
 msgstr "Нуқтаи васл:"
 

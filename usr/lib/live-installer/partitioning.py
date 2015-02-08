@@ -197,8 +197,9 @@ class PartitionSetup(gtk.TreeStore):
                     boot_partition = getoutput("mount | grep -v loop | egrep 'medium|findiso' | awk '{print $1}'")
                     if device not in boot_partition:
                         # convert size to manufacturer's size for show, e.g. in GB, not GiB!
+                        size = size.upper()
                         print ">>> size = '{}'".format(size)
-                        size = str(int(float(size[:-1]) * (1024/1000)**'BkMGTPEZY'.index(size[-1]))) + size[-1]
+                        size = str(int(float(size[:-1]) * (1024/1000)**'BKMGTPEZY'.index(size[-1]))) + size[-1]
                         description = '{} ({}B)'.format(model.replace('\\x20', ' ').strip(), size)
                         if int(removable):
                             description = _('Removable:') + ' ' + description
@@ -210,8 +211,15 @@ class PartitionSetup(gtk.TreeStore):
         self.disks = _get_attached_disks()
         print 'Disks: ', self.disks
         for disk_path, disk_description in self.disks:
-            disk_device = parted.getDevice(disk_path)
-            try: disk = parted.Disk(disk_device)
+            try:
+                # VMWare returns non-existing /dev/fd0
+                disk_device = parted.getDevice(disk_path)
+            except:
+                # Try next disk
+                continue
+
+            try:
+                disk = parted.Disk(disk_device)
             except Exception:
                 from frontend.gtk_interface import QuestionDialog
                 dialog = QuestionDialog(_("Installation Tool"),

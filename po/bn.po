@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-28 11:00+0100\n"
+"POT-Creation-Date: 2015-02-08 08:58+0100\n"
 "PO-Revision-Date: 2013-05-01 06:38+0000\n"
 "Last-Translator: Iftekhar Mohammad <Unknown>\n"
 "Language-Team: Bengali <bn@li.org>\n"
@@ -54,7 +54,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:347
+#: ../usr/lib/live-installer/partitioning.py:355
 msgid "Unknown"
 msgstr ""
 
@@ -74,11 +74,11 @@ msgstr "/home – এ এসাইন করা"
 msgid "Assign to /boot/efi"
 msgstr ""
 
-#: ../usr/lib/live-installer/partitioning.py:204
+#: ../usr/lib/live-installer/partitioning.py:205
 msgid "Removable:"
 msgstr ""
 
-#: ../usr/lib/live-installer/partitioning.py:217
+#: ../usr/lib/live-installer/partitioning.py:225
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:838
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:841
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:851
@@ -89,7 +89,7 @@ msgstr ""
 msgid "Installation Tool"
 msgstr "ইন্সটলেশন টুল"
 
-#: ../usr/lib/live-installer/partitioning.py:218
+#: ../usr/lib/live-installer/partitioning.py:226
 #, fuzzy, python-brace-format
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
@@ -100,34 +100,34 @@ msgstr ""
 "জন্য কিছু পার্টিশন তৈরি করুক ? দ্রষ্টব্যঃ এই প্রক্রিয়াটিতে আপনার হার্ড ড্রাইভটিতে "
 "উপস্থিত সকল উপাত্ত মুছে যাবে।"
 
-#: ../usr/lib/live-installer/partitioning.py:342
+#: ../usr/lib/live-installer/partitioning.py:350
 #, fuzzy
 msgid "Logical partition"
 msgstr "পার্টিশন সম্পাদনা করুন"
 
-#: ../usr/lib/live-installer/partitioning.py:343
+#: ../usr/lib/live-installer/partitioning.py:351
 #, fuzzy
 msgid "Extended partition"
 msgstr "পার্টিশন সম্পাদনা করুন"
 
-#: ../usr/lib/live-installer/partitioning.py:344
+#: ../usr/lib/live-installer/partitioning.py:352
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 msgid "Free space"
 msgstr "ফাঁকা জায়গা"
 
-#: ../usr/lib/live-installer/partitioning.py:434
+#: ../usr/lib/live-installer/partitioning.py:442
 msgid "Edit partition"
 msgstr "পার্টিশন সম্পাদনা করুন"
 
-#: ../usr/lib/live-installer/partitioning.py:435
+#: ../usr/lib/live-installer/partitioning.py:443
 msgid "Device:"
 msgstr "ডিভাইসঃ"
 
-#: ../usr/lib/live-installer/partitioning.py:437
+#: ../usr/lib/live-installer/partitioning.py:445
 msgid "Format as:"
 msgstr "ফরম্যাট করুনঃ"
 
-#: ../usr/lib/live-installer/partitioning.py:438
+#: ../usr/lib/live-installer/partitioning.py:446
 msgid "Mount point:"
 msgstr "মাউন্ট পয়েন্টঃ"
 

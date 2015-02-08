@@ -1,3 +1,10 @@
+live-installer (2015.02.08) debian; urgency=low
+
+  * Resolve crash on getting partition size with wrong character case
+  * Resolve crash in VMWare retuning non-existing /dev/fd0
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Sun, 08 Feb 2015 09:00:00 +0100
+
 live-installer (2014.12.28) debian; urgency=low
 
   * Create/remove /etc/fstab.d when live

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-slideshow\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-11-12 10:37+0100\n"
+"POT-Creation-Date: 2015-02-03 16:07+0100\n"
 "PO-Revision-Date: 2014-01-10 11:26+0000\n"
 "Last-Translator: Иван Старчевић <ivanstar61@gmail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
@@ -123,7 +123,7 @@ msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:8
-msgid "A wide variaty of software can be installed with a click of the mouse."
+msgid "A wide variety of software can be installed with a click of the mouse."
 msgstr ""
 
 #. type: Content of: <div><div><ul><li>

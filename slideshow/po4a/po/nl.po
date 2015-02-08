@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: live-installer-slideshow\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-11-12 10:37+0100\n"
+"POT-Creation-Date: 2015-02-03 16:07+0100\n"
 "PO-Revision-Date: 2014-10-24 14:48+0100\n"
 "Last-Translator: Arjen Balfoort <arjenbalfoort@solydxk.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -116,7 +116,10 @@ msgstr ""
 
 #. type: Content of: <div><div><ul><li>
 #: en/30_desktop-ready.html:8
-msgid "A wide variaty of software can be installed with a click of the mouse."
+#, fuzzy
+#| msgid ""
+#| "A wide variaty of software can be installed with a click of the mouse."
+msgid "A wide variety of software can be installed with a click of the mouse."
 msgstr ""
 "Een brede verscheidenheid aan software kan worden geïnstalleerd met een klik "
 "van de muis."
