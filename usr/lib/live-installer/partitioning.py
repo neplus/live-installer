@@ -198,7 +198,6 @@ class PartitionSetup(gtk.TreeStore):
                     if device not in boot_partition:
                         # convert size to manufacturer's size for show, e.g. in GB, not GiB!
                         size = size.upper()
-                        print ">>> size = '{}'".format(size)
                         size = str(int(float(size[:-1]) * (1024/1000)**'BKMGTPEZY'.index(size[-1]))) + size[-1]
                         description = '{} ({}B)'.format(model.replace('\\x20', ' ').strip(), size)
                         if int(removable):

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-08 08:58+0100\n"
+"POT-Creation-Date: 2015-02-09 11:27+0100\n"
 "PO-Revision-Date: 2014-08-07 20:57+0000\n"
 "Last-Translator: mzs.112000 <mzs.112000@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -55,7 +55,7 @@ msgid "Localizing Thunderbird"
 msgstr ""
 
 #: ../usr/lib/live-installer/partitioning.py:114
-#: ../usr/lib/live-installer/partitioning.py:355
+#: ../usr/lib/live-installer/partitioning.py:354
 msgid "Unknown"
 msgstr ""
 
@@ -75,23 +75,23 @@ msgstr "Caktoja /home"
 msgid "Assign to /boot/efi"
 msgstr "Cakto për /boot/efi"
 
-#: ../usr/lib/live-installer/partitioning.py:205
+#: ../usr/lib/live-installer/partitioning.py:204
 #, fuzzy
 msgid "Removable:"
 msgstr "Pajisje Removable:"
 
-#: ../usr/lib/live-installer/partitioning.py:225
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:838
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:841
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:851
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:854
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:859
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:863
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:867
+#: ../usr/lib/live-installer/partitioning.py:224
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:840
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:843
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:853
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:856
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:861
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:865
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:869
 msgid "Installation Tool"
 msgstr "Mjeti i Instalimit"
 
-#: ../usr/lib/live-installer/partitioning.py:226
+#: ../usr/lib/live-installer/partitioning.py:225
 #, fuzzy, python-brace-format
 msgid ""
 "No partition table was found on the hard drive: {disk_description}. Do you "
@@ -102,49 +102,49 @@ msgstr ""
 "të krijojë një grup particionesh për ju? Shënim: Kjo do të fshijë çdo të "
 "dhënë që ndodhet në disk."
 
-#: ../usr/lib/live-installer/partitioning.py:350
+#: ../usr/lib/live-installer/partitioning.py:349
 #, fuzzy
 msgid "Logical partition"
 msgstr "Modifiko particionin"
 
-#: ../usr/lib/live-installer/partitioning.py:351
+#: ../usr/lib/live-installer/partitioning.py:350
 #, fuzzy
 msgid "Extended partition"
 msgstr "Modifiko particionin"
 
-#: ../usr/lib/live-installer/partitioning.py:352
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:436
+#: ../usr/lib/live-installer/partitioning.py:351
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:438
 msgid "Free space"
 msgstr "Hapësira e lirë"
 
-#: ../usr/lib/live-installer/partitioning.py:442
+#: ../usr/lib/live-installer/partitioning.py:441
 msgid "Edit partition"
 msgstr "Modifiko particionin"
 
-#: ../usr/lib/live-installer/partitioning.py:443
+#: ../usr/lib/live-installer/partitioning.py:442
 msgid "Device:"
 msgstr "Pajisja:"
 
-#: ../usr/lib/live-installer/partitioning.py:445
+#: ../usr/lib/live-installer/partitioning.py:444
 msgid "Format as:"
 msgstr "Formatoje si:"
 
-#: ../usr/lib/live-installer/partitioning.py:446
+#: ../usr/lib/live-installer/partitioning.py:445
 msgid "Mount point:"
 msgstr "Pika e montimit:"
 
-#: ../usr/lib/live-installer/installer.py:61
+#: ../usr/lib/live-installer/installer.py:62
 #, fuzzy, python-format
 msgid "Formatting %(partition)s as %(format)s ..."
 msgstr "Duke formatuar %(partition)s si %(format)s..."
 
-#: ../usr/lib/live-installer/installer.py:84
-#: ../usr/lib/live-installer/installer.py:95
+#: ../usr/lib/live-installer/installer.py:85
+#: ../usr/lib/live-installer/installer.py:96
 #, python-format
 msgid "Mounting %(partition)s on %(mountpoint)s"
 msgstr "Duke montuar %(partition)s në %(mountpoint)s"
 
-#: ../usr/lib/live-installer/installer.py:120
+#: ../usr/lib/live-installer/installer.py:121
 msgid ""
 "ERROR: You must first manually mount your target filesystem(s) at /target to "
 "do a custom install!"
@@ -152,7 +152,7 @@ msgstr ""
 "GABIM: Ju duhet së pari me dorë malin filesystem tuaj të synuar (s) në /"
 "objektivin për të bërë një porosi të instaluar!"
 
-#: ../usr/lib/live-installer/installer.py:128
+#: ../usr/lib/live-installer/installer.py:129
 msgid ""
 "ERROR: Something is wrong with the installation medium! This is usually "
 "caused by burning tools which are not compatible with {} (YUMI or other "
@@ -160,69 +160,69 @@ msgid ""
 "tool."
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:165
+#: ../usr/lib/live-installer/installer.py:166
 #, fuzzy
 msgid "Copying {}"
 msgstr "Duke kopjuar %s"
 
-#: ../usr/lib/live-installer/installer.py:183
+#: ../usr/lib/live-installer/installer.py:190
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "Duke hyrë në sistemin e ri..."
 
-#: ../usr/lib/live-installer/installer.py:224
+#: ../usr/lib/live-installer/installer.py:231
 msgid "Removing live configuration (packages)"
 msgstr "Duke hequr konfigurimin live (paketat)"
 
-#: ../usr/lib/live-installer/installer.py:232
+#: ../usr/lib/live-installer/installer.py:239
 #, fuzzy
 msgid "Adding new user to the system"
 msgstr "Duke i shtuar përdoruesin sistemit"
 
-#: ../usr/lib/live-installer/installer.py:268
+#: ../usr/lib/live-installer/installer.py:275
 #, fuzzy
 msgid "Writing filesystem mount information to /etc/fstab"
 msgstr "Duke shkruajtur informacionin për montimin e sistemit të skedarëve"
 
-#: ../usr/lib/live-installer/installer.py:289
+#: ../usr/lib/live-installer/installer.py:296
 msgid "Setting hostname"
 msgstr "Duke vendosur emrin e mbartësit"
 
-#: ../usr/lib/live-installer/installer.py:308
+#: ../usr/lib/live-installer/installer.py:315
 msgid "Setting locale"
 msgstr "Duke vendosur lokalet"
 
-#: ../usr/lib/live-installer/installer.py:325
+#: ../usr/lib/live-installer/installer.py:332
 msgid "Localizing packages"
 msgstr "paketa lokalizimin"
 
-#: ../usr/lib/live-installer/installer.py:346
+#: ../usr/lib/live-installer/installer.py:353
 #, fuzzy
 msgid "Configuring Plymouth"
 msgstr "Duke konfiguruar ngarkuesin e sistemit"
 
-#: ../usr/lib/live-installer/installer.py:355
+#: ../usr/lib/live-installer/installer.py:367
 msgid "Install multimedia"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:367
+#: ../usr/lib/live-installer/installer.py:379
 #, fuzzy
 msgid "Configuring sensors"
 msgstr "Duke konfiguruar ngarkuesin e sistemit"
 
-#: ../usr/lib/live-installer/installer.py:373
+#: ../usr/lib/live-installer/installer.py:385
 msgid "Removing VirtualBox"
 msgstr ""
 
-#: ../usr/lib/live-installer/installer.py:379
+#: ../usr/lib/live-installer/installer.py:391
 msgid "Setting keyboard options"
 msgstr "Duke vendosur opsionet e tastierës"
 
-#: ../usr/lib/live-installer/installer.py:418
+#: ../usr/lib/live-installer/installer.py:430
 msgid "Installing bootloader"
 msgstr "Duke instaluar ngarkuesin e boot"
 
-#: ../usr/lib/live-installer/installer.py:427
+#: ../usr/lib/live-installer/installer.py:439
 msgid ""
 "WARNING: The grub bootloader was not configured properly! You need to "
 "configure it manually."
@@ -230,173 +230,173 @@ msgstr ""
 "KUJDES: Ngarkuesi i sistemit grub nuk u konfigurua siç duhet!. Ju duhet ta "
 "konfiguroni atë në mënyrë manuale."
 
-#: ../usr/lib/live-installer/installer.py:437
+#: ../usr/lib/live-installer/installer.py:449
 #, fuzzy
 msgid "Configuring initramfs"
 msgstr "Duke konfiguruar ngarkuesin e sistemit"
 
-#: ../usr/lib/live-installer/installer.py:445
+#: ../usr/lib/live-installer/installer.py:457
 msgid "Cleaning APT"
 msgstr "Duke pastruar APT"
 
-#: ../usr/lib/live-installer/installer.py:469
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
+#: ../usr/lib/live-installer/installer.py:481
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:1022
 msgid "Installation finished"
 msgstr "Instalimi përfundoi"
 
-#: ../usr/lib/live-installer/installer.py:473
+#: ../usr/lib/live-installer/installer.py:485
 msgid "Configuring bootloader"
 msgstr "Duke konfiguruar ngarkuesin e sistemit"
 
-#: ../usr/lib/live-installer/installer.py:482
+#: ../usr/lib/live-installer/installer.py:494
 msgid "Checking bootloader"
 msgstr "Duke kontrolluar ngarkuesin e sistemit"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:91
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:331
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:93
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:333
 msgid "Language"
 msgstr "Gjuha"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:94
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:96
 msgid "Country"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:171
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:439
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:173
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:441
 msgid "Layout"
 msgstr "Dalja"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:177
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:440
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:179
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:442
 msgid "Variant"
 msgstr "Varianti"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:186
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:441
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:188
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:443
 msgid "Overview"
 msgstr "Parapamje"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:253
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:255
 msgid "Images"
 msgstr "Imazhet"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:315
 #: ../usr/lib/live-installer/frontend/gtk_interface.py:317
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:319
 #, fuzzy
 msgid "{} Installer"
 msgstr "%s Instaluesi"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:332
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:334
 msgid "Timezone"
 msgstr "Zona orare"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:333
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:335
 msgid "Keyboard layout"
 msgstr "Skema e tastierës"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:334
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:336
 msgid "User info"
 msgstr "Informacion i Përdoruesit"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:335
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:337
 msgid "Partitioning"
 msgstr "Particionimi"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:336
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:338
 #, fuzzy
 msgid "Please make sure you wish to manage partitions manually"
 msgstr "Ju lutem sigurohuni që ju dëshironi për të menaxhuar me dorë ndarëse"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:337
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:339
 msgid "Advanced options"
 msgstr "Opsione të avancuara"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:338
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:340
 msgid "Summary"
 msgstr "Përmbledhje"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:339
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:341
 #, fuzzy
 msgid "Installing {}..."
 msgstr "Instalimi i Linux Mint ..."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:340
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:342
 #, fuzzy
 msgid "Installation is paused: please finish the custom installation"
 msgstr "Instalimi është ndaluar: Ju lutem përfundoni instalimin porosi"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:343
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:345
 #, fuzzy
 msgid "Calculating file indexes ..."
 msgstr "Duke llogaritur indeksuesit e skedarëve..."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:348
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:350
 #, fuzzy
 msgid "Click this button to take a new picture of yourself with the webcam."
 msgstr "Klikoni këtë buton për të marrë një pamje të re për veten me webcam"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:351
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:353
 #, fuzzy
 msgid "The installer did not detect any webcams."
 msgstr "Installer nuk ka zbuluar ndonjë Webcam"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:354
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:356
 msgid "Your full name"
 msgstr "Emri juaj i plotë"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:355
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:357
 #, fuzzy
 msgid "This will be shown in the About Me application."
 msgstr "Ky do të shfaqet në programin Rreth Meje"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:356
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:358
 msgid "Your username"
 msgstr "Emri juaj i përdoruesit"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:357
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:359
 #, fuzzy
 msgid "This is the name you will use to log in to your computer."
 msgstr "Ky është emri që ju do të përdorni për të hyni në kompjuterin tuaj"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:358
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:360
 msgid "Your password"
 msgstr "Fjalëkalimi juaj"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:359
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:361
 #, fuzzy
 msgid "Please enter your password twice to ensure it is correct."
 msgstr ""
 "Ju lutemi ta vendosni fjalëkalimin tuaj dy herë për të qenë të sigurtë që "
 "është i saktë"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:360
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:362
 msgid "Hostname"
 msgstr "Emri i mbartësit"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:361
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:363
 #, fuzzy
 msgid "This hostname will be the computer's name on the network."
 msgstr "Emri i mbartësit do të jetë emri i kompjuterit tuaj në rrjet"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:362
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:364
 msgid "Automatic login"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:363
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:365
 msgid ""
 "If enabled, the login screen is skipped when the system starts, and you are "
 "signed into your desktop session automatically."
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:364
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:366
 msgid "Log in automatically on system boot"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:367
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:369
 msgid "Your picture"
 msgstr "Fotografia juaj"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:368
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:370
 msgid ""
 "This picture represents your user account. It is used in the login screen "
 "and a few other places."
@@ -404,103 +404,91 @@ msgstr ""
 "This picture represents your user account. It is used in the login screen "
 "and a few other places."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:369
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:371
 msgid "Take a photo"
 msgstr "Nxirr një foto"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:371
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:373
 msgid "Select a picture"
 msgstr "Përzgjidh një foto"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:372
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:374
 #, fuzzy
 msgid "Click this button to choose a picture from the hard disk."
 msgstr "Klikoni këtë buton për të zgjedhur një fotografi për llogarinë tuaj"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:375
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:377
 msgid "Selected timezone:"
 msgstr "Timezone e zgjedhur:"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:376
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:378
 #, fuzzy
 msgid "Select timezone"
 msgstr "Timezone e zgjedhur:"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:379
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:381
 msgid "Refresh"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:380
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:382
 msgid "_Expert mode"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:381
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:383
 #, fuzzy
 msgid "_Edit partitions"
 msgstr "Modifikoni particionet"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:384
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:386
 msgid "Bootloader"
 msgstr "Mbartësi i nisjes"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:385
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:387
 msgid "Install GRUB"
 msgstr "Instalo GRUB"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:386
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:388
 #, fuzzy
 msgid "GRUB is a bootloader used to load the Linux kernel."
 msgstr "GRUB është një nisës që përdoret për të ngarkuar kernelin e Linux"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:392
-msgid "Plymouth"
-msgstr ""
-
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:393
-msgid "Enable Plymouth"
-msgstr ""
-
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:394
-msgid "Plymouth is a bootsplash for Linux"
-msgstr ""
-
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:400
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:402
 msgid "Multimedia"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:401
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:955
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:403
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:957
 msgid "Install additional multimedia software"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:402
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:404
 msgid ""
 "Note: the use of this software might be prohibited by law in your country"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:405
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:407
 msgid "Quit"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:406
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:408
 msgid "Back"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:407
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:749
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:409
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:751
 msgid "Forward"
 msgstr "Përpara"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:410
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:412
 #, fuzzy
 msgid "Use this box to test your keyboard layout."
 msgstr "Përdorni këtë kuti për të testuar daljen e tastierës suaj"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:411
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:413
 msgid "Model"
 msgstr "Modeli"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:414
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:416
 msgid ""
 "You have selected to manage your partitions manually, this feature is for "
 "ADVANCED USERS ONLY."
@@ -508,19 +496,19 @@ msgstr ""
 "Ju keni zgjedhur për të menaxhuar ndarëse tuaj me dorë, ky tipar është për "
 "Advanced përdoruesit vetëm."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:415
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:417
 msgid "Before continuing, please mount your target filesystem(s) at /target."
 msgstr ""
 "Para se të vazhdoni, ju lutem malin filesystem tuaj të synuar (s) në / "
 "target."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:416
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:418
 msgid ""
 "Do NOT mount virtual devices such as /dev, /proc, /sys, etc on /target/."
 msgstr ""
 "A NUK mali pajisje virtuale të tilla si /dev, /proc, /sys, etj në /target/."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:417
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:419
 #, fuzzy
 msgid ""
 "During the install, you will be given time to chroot into /target and "
@@ -530,11 +518,11 @@ msgstr ""
 "instaluar ndonjë pacakges që do të jenë të nevojshme për të boot sistemin "
 "tuaj të re."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:418
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:420
 msgid "During the install, you will be required to write your own /etc/fstab."
 msgstr "Gjatë instaluar, ju do të kërkohet për të shkruar tuaj /etc/fstab."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:419
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:421
 #, fuzzy
 msgid ""
 "If you aren't sure what any of this means, please go back and deselect "
@@ -543,14 +531,14 @@ msgstr ""
 "Nëse ju nuk jeni të sigurt se çfarë ndonjë nga kjo do të thotë, ju lutem "
 "shkoni mbrapa dhe deselect menaxhimit manual ndarje."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:422
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:424
 #, fuzzy
 msgid "Please do the following and then click Forward to finish installation:"
 msgstr ""
 "Ju lutemi të bëjë të mëposhtme dhe pastaj klikoni Forward për të përfunduar "
 "Instalimi:"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:423
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:425
 msgid ""
 "Create /target/etc/fstab for the filesystems as they will be mounted in your "
 "new system, matching those currently mounted at /target (without using the /"
@@ -560,7 +548,7 @@ msgstr ""
 "sistemin tuaj të ri, të ngjashëm me ato që aktualisht montuar në / objektiv "
 "(pa përdorur / prefiksin synuar në vetë shtigje mali"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:424
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:426
 msgid ""
 "Install any packages that may be needed for first boot (mdadm, cryptsetup, "
 "dmraid, etc) by calling \"sudo chroot /target\" followed by the relevant apt-"
@@ -570,7 +558,7 @@ msgstr ""
 "cryptsetup, dmraid, etj) duke e quajtur \"sudo chroot /objektivin\" e "
 "ndjekur nga instalimet përkatëse apt-get / dhunti."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:425
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:427
 msgid ""
 "Note that in order for update-initramfs to work properly in some cases (such "
 "as dm-crypt), you may need to have drives currently mounted using the same "
@@ -581,7 +569,7 @@ msgstr ""
 "montuar duke përdorur të njëjtin emër bllok pajisje si ato të shfaqen në /"
 "target/etc/fstab."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:426
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:428
 msgid ""
 "Double-check that your /target/etc/fstab is correct, matches what your new "
 "system will have at first boot, and matches what is currently mounted at /"
@@ -591,100 +579,100 @@ msgstr ""
 "atë që sistemi juaj i ri do të ketë në bagazhin e parë, dhe të përputhet me "
 "atë që është i montuar aktualisht në /objektiv."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:430
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:432
 msgid "Device"
 msgstr "Pajisja"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:431
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:433
 msgid "Type"
 msgstr "Lloji"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:432
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:434
 msgid "Operating system"
 msgstr "Sistemi operativ"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:433
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:435
 msgid "Mount point"
 msgstr "Pika e montimit"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:434
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:436
 #, fuzzy
 msgid "Format as"
 msgstr "Formatoje si:"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:435
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:437
 msgid "Size"
 msgstr "Përmasa"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:462
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:464
 msgid "Quit?"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:462
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:464
 msgid "Are you sure you want to quit the installer?"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:610
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:612
 msgid ""
 "Cannot download and install additional locale packages: no internet "
 "connection\n"
 "Configuration will still be set to your selected language."
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:612
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:614
 msgid "No internet connection"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:792
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:794
 #, fuzzy
 msgid "Please provide your full name."
 msgstr "Ju lutemi të jepni emrin tuaj të plotë"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:795
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:797
 #, fuzzy
 msgid "Please provide a username."
 msgstr "Ju lutemi të jepni një emër përdoruesi"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:798
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:800
 #, fuzzy
 msgid "Please provide a password for your user account."
 msgstr "Ju lutemi të jepni një fjalëkalim për llogarinë tuaj të përdoruesit"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:801
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:803
 #, fuzzy
 msgid "Your passwords do not match."
 msgstr "Fjalëkalimet tuaja nuk përputhen"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:804
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:806
 #, fuzzy
 msgid "Please provide a hostname."
 msgstr "Ju lutemi të jepni një emër mbartësi"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:809
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:811
 #, fuzzy
 msgid "Your username must be lower case."
 msgstr "Emri juaj i përdoruesit duhet të jetë me gërma të vogla"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:813
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:815
 #, fuzzy
 msgid "Your username may not contain whitespace characters."
 msgstr "Emri juaj i përdoruesit nuk mund të mbajë hapësirë të lirë"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:818
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:820
 #, fuzzy
 msgid "The hostname must be lower case."
 msgstr "Emri i mbartësit duhet të jetë me gërma të vogla"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:822
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:824
 #, fuzzy
 msgid "The hostname may not contain whitespace characters."
 msgstr "Emri i mbartësit nuk duhet të përmbajë hapësirë"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:825
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:827
 msgid "Error"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:838
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:840
 #, fuzzy
 msgid ""
 "Please indicate a filesystem to format the root (/) partition with before "
@@ -693,12 +681,12 @@ msgstr ""
 "Ju lutemi të tregoni sistemin e skedarëve me të cilin do të formatohet "
 "particioni rrënjë (/) para se të vazhdojmë"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:841
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:843
 #, fuzzy
 msgid "<b>Please select a root (/) partition.</b>"
 msgstr "<b>Ju lutem, përzgjidhni një ndarje root</b>"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:841
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:843
 #, fuzzy
 msgid ""
 "A root partition is needed to install {} on.\n"
@@ -714,25 +702,25 @@ msgstr ""
 " - Format Recommended: ext4\n"
 " "
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:851
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:853
 msgid "The EFI partition is not bootable. Please edit the partition flags."
 msgstr "Ndarje EFI nuk është bootable. Ju lutemi editoni flamujt ndarje."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:854
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:856
 msgid "The EFI partition is too small. It must be at least 100MB."
 msgstr "Ndarje EFI është shumë e vogël. Ajo duhet të jetë të paktën 100MB."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:859
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:863
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:861
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:865
 msgid "The EFI partition must be formatted as vfat."
 msgstr "Ndarje EFI duhet të jetë i formatuar si VFAT."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:867
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:869
 #, fuzzy
 msgid "<b>Please select an EFI partition.</b>"
 msgstr "<b>Ju lutem, përzgjidhni një ndarje EFI</b>"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:867
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:869
 msgid ""
 "An EFI system partition is needed with the following requirements:\n"
 "\n"
@@ -756,112 +744,102 @@ msgstr ""
 "ndarjen e parë e diskut si ndarjen e sistemit EFI.\n"
 " "
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:888
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:890
 msgid "Apply"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:927
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:929
 msgid "Localization"
 msgstr "Lokalizimi"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:928
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:930
 msgid "Language: "
 msgstr "Gjuha: "
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:929
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:931
 msgid "Timezone: "
 msgstr "Zona Kohore: "
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:930
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:932
 msgid "Keyboard layout: "
 msgstr "Dalja e tastierës: "
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:933
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:935
 msgid "User settings"
 msgstr "Parametrat e përdoruesve"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:934
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:936
 msgid "Real name: "
 msgstr "Emri i vërtetë: "
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:935
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:937
 msgid "Username: "
 msgstr "Emri i përdruesit: "
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:936
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:938
 msgid "Automatic login: "
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:936
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:938
 msgid "enabled"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:936
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:938
 msgid "disabled"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:937
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:939
 msgid "System settings"
 msgstr "Parametrat e sistemit"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:938
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:940
 msgid "Hostname: "
 msgstr "Emri i mbartësit: "
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:939
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:941
 msgid "Filesystem operations"
 msgstr "Veprimet e sistemit të skedarëve"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:940
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:942
 #, fuzzy
 msgid "Install bootloader on {}"
 msgstr "Instalo ngarkuesin e nisjes në %s"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:940
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:942
 msgid "Do not install bootloader"
 msgstr "Mos e instalo ngarkuesin e nisjes"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:943
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:945
 msgid "Use already-mounted /target."
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:947
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:949
 #, fuzzy
 msgid "Format {} as {}"
 msgstr "Formatoje si:"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:950
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:952
 #, fuzzy
 msgid "Mount {} as {}"
 msgstr "Formatoje si:"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:954
-#, fuzzy
-msgid "Install Plymouth"
-msgstr "Instalo"
-
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:954
-#, fuzzy
-msgid "Do not install Plymouth"
-msgstr "Mos e instalo ngarkuesin e nisjes"
-
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:955
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:957
 msgid "Do not install additional multimedia software"
 msgstr ""
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:986
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:990
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:1010
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:1018
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:988
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:992
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:1012
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
 msgid "Installation error"
 msgstr "Gabim instalimi"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:999
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:1001
 #, fuzzy
 msgid "Installation paused"
 msgstr "Instalimi ndaluar"
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:999
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:1001
 #, fuzzy
 msgid ""
 "Installation is now paused. Please read the instructions on the page "
@@ -870,7 +848,7 @@ msgstr ""
 "Instalimi është e ndaluar tani. Ju lutemi lexoni udhëzimet e shfaqura në "
 "faqe me kujdes dhe klikoni Forward për të përfunduar instalimin."
 
-#: ../usr/lib/live-installer/frontend/gtk_interface.py:1020
+#: ../usr/lib/live-installer/frontend/gtk_interface.py:1022
 msgid ""
 "Installation is now complete. Do you want to restart your computer to use "
 "the new system?"
@@ -878,11 +856,11 @@ msgstr ""
 "Instalimi tani është kompletuar. A doni të rinisni kompjuterin tuaj për të "
 "përdorur sistemin e ri?"
 
-#: ../usr/lib/live-installer/main.py:31
+#: ../usr/lib/live-installer/main.py:33
 msgid "Unexpected error"
 msgstr ""
 
-#: ../usr/lib/live-installer/main.py:32
+#: ../usr/lib/live-installer/main.py:34
 msgid ""
 "<b>The installer has failed with the following unexpected error. Please "
 "submit a bug report!</b>"
@@ -902,6 +880,14 @@ msgstr "%s Instaluesi"
 #, fuzzy
 msgid "Install the operating system"
 msgstr "Sistemi operativ"
+
+#, fuzzy
+#~ msgid "Install Plymouth"
+#~ msgstr "Instalo"
+
+#, fuzzy
+#~ msgid "Do not install Plymouth"
+#~ msgstr "Mos e instalo ngarkuesin e nisjes"
 
 #, fuzzy
 #~ msgid "Install SolydXK"

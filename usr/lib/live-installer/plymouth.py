@@ -20,19 +20,14 @@ manufacturerDrivers = [
 # Handles plymouth saving
 class PlymouthSave():
     def __init__(self):
-        #self.uvesafbPath = '/target/etc/modprobe.d/uvesafb.conf'
         self.modulesPath = '/target/etc/initramfs-tools/modules'
         self.boot = '/target/etc/default/grub'
-        #self.module = self.getUsedDriver()
         self.setThemePath = '/usr/sbin/plymouth-set-default-theme'
         self.theme = ''
         for themeDir in glob(os.path.join('/usr/share/plymouth/themes', '*-logo')):
             self.theme = os.path.basename(themeDir)
             break
         self.resolution = '1024x768'
-
-        # Test
-        #self.module = 'vesa'
 
     # Save given theme and resolution
     def save(self, enable=True):
@@ -41,18 +36,9 @@ class PlymouthSave():
         try:
             if os.path.isfile(self.modulesPath) and os.path.isfile(self.boot):
 
-                if enable:
-                    # Edit grub
-                    cmd = 'sed -i -e \'/GRUB_CMDLINE_LINUX_DEFAULT=/ c GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"\' %s' % self.boot
-                    os.system(cmd)
-
-                    cmd = 'sed -i -e \'/GRUB_GFXMODE=/ c GRUB_GFXMODE=%s\' %s' % (self.resolution, self.boot)
-                    os.system(cmd)
-
-                else:
-                    # Edit grub
-                    cmd = 'sed -i -e \'/GRUB_CMDLINE_LINUX_DEFAULT=/ c GRUB_CMDLINE_LINUX_DEFAULT="quiet"\' %s' % self.boot
-                    os.system(cmd)
+                # Set resolution
+                cmd = 'sed -i -e \'/GRUB_GFXMODE=/ c GRUB_GFXMODE=%s\' %s' % (self.resolution, self.boot)
+                os.system(cmd)
 
                 # Read grub for debugging purposes
                 f = open(self.boot, 'r')
@@ -63,6 +49,7 @@ class PlymouthSave():
                 # Set the theme
                 if enable:
                     chroot_exec('%s %s' % (self.setThemePath, self.theme))
+
                 chroot_exec('update-grub')
 
             else:

@@ -1,10 +1,12 @@
 #!/usr/bin/python -OO
 
 import sys
+import pygtk; pygtk.require("2.0")
+import gtk
 sys.path.insert(1, '/usr/lib/live-installer')
-
 from frontend.gtk_interface import InstallerWindow
 from utils import getoutput
+
 
 def uncaught_excepthook(*args):
     sys.__excepthook__(*args)
@@ -13,7 +15,7 @@ def uncaught_excepthook(*args):
         from types import BuiltinFunctionType, ClassType, ModuleType, TypeType
         tb = sys.last_traceback
         while tb.tb_next: tb = tb.tb_next
-        print('\nDumping locals() ...')
+        print(('\nDumping locals() ...'))
         pprint({k:v for k,v in tb.tb_frame.f_locals.items()
                     if not k.startswith('_') and
                        not isinstance(v, (BuiltinFunctionType,
@@ -23,20 +25,18 @@ def uncaught_excepthook(*args):
                 import ipdb as pdb  # try to import the IPython debugger
             except ImportError:
                 import pdb as pdb
-            print '\nStarting interactive debug prompt ...'
+            print(('\nStarting interactive debug prompt ...'))
             pdb.pm()
     else:
         import traceback
         from dialogs import ErrorDialog
-        ErrorDialog(_('Unexpected error'),
+        MessageDialog(_('Unexpected error'),
                     _('<b>The installer has failed with the following unexpected error. Please submit a bug report!</b>'),
-                    '<tt>' + '\n'.join(traceback.format_exception(*args)) + '</tt>')
+                    '<tt>' + '\n'.join(traceback.format_exception(*args)) + '</tt>', Gtk.MessageType.WARNING).show()
     sys.exit(1)
 
 sys.excepthook = uncaught_excepthook
 
-import pygtk; pygtk.require("2.0")
-import gtk
 
 # main entry
 if __name__ == "__main__":

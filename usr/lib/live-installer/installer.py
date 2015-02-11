@@ -5,7 +5,7 @@ import time
 import sys
 
 # [XK]
-from utils import hasInternetConnection, runningInVirtualBox, isAmd64
+from utils import hasInternetConnection, runningInVirtualBox, isAmd64, getBootCommandParameters
 from plymouth import PlymouthSave
 from localize import Localize
 
@@ -31,6 +31,7 @@ class InstallerEngine:
         config = get_config_dict('/etc/os-release')
         self.distribution_id =  config.get('ID', 'distro')
         # Set other configuration
+        self.boot_parms = getBootCommandParameters()
         config = get_config_dict(CONFIG_FILE)
         self.live_user = config.get('live_user', 'user')
         self.media = config.get('live_media_source', '/lib/live/mount/medium/live/filesystem.squashfs')
@@ -168,6 +169,12 @@ class InstallerEngine:
         if rsync_return_code > 0:
             print "ERROR: rsync exited with returncode: " + str(rsync_return_code)
             sys.exit()
+
+        # [XK] Save current boot parameters
+        if os.path.exists("/target/etc/default/grub") and self.boot_parms != '':
+            cmd = "sed -i -e 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT=\"{}\"/' /target/etc/default/grub".format(self.boot_parms)
+            print cmd
+            shell_exec(cmd)
 
         # [XK] Restore /root if it was preserved
         if os.path.isdir("/tmp/root"):
@@ -345,7 +352,12 @@ class InstallerEngine:
             print " --> Configuring Plymouth"
             self.update_progress(pulse=True, total=our_total, current=our_current, message=_("Configuring Plymouth"))
             plymouth = PlymouthSave()
-            plymouth.save(setup.plymouth_enable)
+            plymouth_save = False
+            for p in self.boot_parms.split(" "):
+                if p == "splash":
+                    plymouth_save = True
+                    break
+            plymouth.save(plymouth_save)
 
         # [XK] Install multimedia
         our_current += 1
@@ -525,7 +537,7 @@ class Setup(object):
     password2 = None
     real_name = None
     grub_device = None
-    plymouth_enable = None
+    #plymouth_enable = None
     multimedia_enable = None
     disks = []
     target_disk = None
@@ -557,7 +569,7 @@ class Setup(object):
             print "grub_device: %s " % self.grub_device
 
             # [XK] Print Plymouth and multimedia settings
-            print "plymouth enable: %s " % self.plymouth_enable
+            #print "plymouth enable: %s " % self.plymouth_enable
             print "multimedia install: %s " % self.multimedia_enable
 
             print "skip_mount: %s" % self.skip_mount

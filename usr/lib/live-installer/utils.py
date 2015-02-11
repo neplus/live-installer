@@ -86,3 +86,19 @@ def isAmd64():
     if machine == "x86_64":
         return True
     return False
+
+def getBootCommandParameters():
+    parms = []
+    not_allowed = ['live', 'ram', 'single', 'ignore', 'config', 'components', 'memtest']
+    cmd = "cat /proc/cmdline"
+    ret = getoutput(cmd).split(" ")
+    for line in ret:
+        if len(line) > 2:
+            add = True
+            for s in not_allowed:
+                if s in line:
+                    add = False
+                    break
+            if add:
+                parms.append(line)
+    return " ".join(parms)

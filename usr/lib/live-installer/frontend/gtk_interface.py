@@ -33,11 +33,13 @@ gtk.gdk.threads_enter()
 LOADING_ANIMATION = '/usr/share/live-installer/loading.gif'
 CONFIG_FILE = '/etc/live-installer/live-installer.conf'
 
+
 class WizardPage:
 
     def __init__(self, help_text, icon):
         self.help_text = help_text
         self.icon = icon
+
 
 class InstallerWindow:
     # Cancelable timeout for keyboard preview generation, which is
@@ -147,9 +149,9 @@ class InstallerWindow:
         grub_box.set_sensitive(True)
 
         # [XK] link the Plymouth checkbutton
-        plymouth_check = self.wTree.get_widget("checkbutton_plymouth")
-        plymouth_check.connect("clicked", self.assign_plymouth_enable)
-        plymouth_check.set_active(True)
+        #plymouth_check = self.wTree.get_widget("checkbutton_plymouth")
+        #plymouth_check.connect("clicked", self.assign_plymouth_enable)
+        #plymouth_check.set_active(True)
 
         # [XK] link the multimedia checkbutton
         multimedia_check = self.wTree.get_widget("checkbutton_multimedia")
@@ -226,7 +228,7 @@ class InstallerWindow:
         self.partitions_browser.set_transparent(True)
         self.wTree.get_widget("scrolled_partitions").add(self.partitions_browser)
 
-        self.window.show_all()
+        self.window.show()
 
         # fix text wrap
         self.fix_text_wrap()
@@ -386,12 +388,12 @@ class InstallerWindow:
         self.wTree.get_widget("label_grub_help").set_label(_("GRUB is a bootloader used to load the Linux kernel."))
 
         # [XK] Plymouth
-        if not os.path.exists('/bin/plymouth'):
-            self.wTree.get_widget("frame_plymouth").set_visible(False)
-        else:
-            self.wTree.get_widget("label_plymouth").set_markup("<b>%s</b>" % _("Plymouth"))
-            self.wTree.get_widget("checkbutton_plymouth").set_label(_("Enable Plymouth"))
-            self.wTree.get_widget("label_plymouth_help").set_label(_("Plymouth is a bootsplash for Linux"))
+        #if not os.path.exists('/bin/plymouth'):
+            #self.wTree.get_widget("frame_plymouth").set_visible(False)
+        #else:
+            #self.wTree.get_widget("label_plymouth").set_markup("<b>%s</b>" % _("Plymouth"))
+            #self.wTree.get_widget("checkbutton_plymouth").set_label(_("Enable Plymouth"))
+            #self.wTree.get_widget("label_plymouth_help").set_label(_("Plymouth is a bootsplash for Linux"))
 
         # [XK] Multimedia
         if not 'solyd' in self.distribution_id:
@@ -620,24 +622,24 @@ class InstallerWindow:
         grub_box.set_sensitive(checkbox.get_active())
         if checkbox.get_active():
             self.assign_grub_device(grub_box)
-            self.wTree.get_widget("checkbutton_plymouth").set_active(True)
-            self.wTree.get_widget("checkbutton_plymouth").set_sensitive(True)
-            self.wTree.get_widget("label_plymouth").set_sensitive(True)
-            self.wTree.get_widget("label_plymouth_help").set_sensitive(True)
-            self.setup.plymouth_enable = True
+            #self.wTree.get_widget("checkbutton_plymouth").set_active(True)
+            #self.wTree.get_widget("checkbutton_plymouth").set_sensitive(True)
+            #self.wTree.get_widget("label_plymouth").set_sensitive(True)
+            #self.wTree.get_widget("label_plymouth_help").set_sensitive(True)
+            #self.setup.plymouth_enable = True
         else:
             self.setup.grub_device = None
-            self.wTree.get_widget("checkbutton_plymouth").set_active(False)
-            self.wTree.get_widget("checkbutton_plymouth").set_sensitive(False)
-            self.wTree.get_widget("label_plymouth").set_sensitive(False)
-            self.wTree.get_widget("label_plymouth_help").set_sensitive(False)
-            self.setup.plymouth_enable = False
+            #self.wTree.get_widget("checkbutton_plymouth").set_active(False)
+            #self.wTree.get_widget("checkbutton_plymouth").set_sensitive(False)
+            #self.wTree.get_widget("label_plymouth").set_sensitive(False)
+            #self.wTree.get_widget("label_plymouth_help").set_sensitive(False)
+            #self.setup.plymouth_enable = False
         self.setup.print_setup()
 
     # [XK] Handling Plymouth
-    def assign_plymouth_enable(self, checkbox, data=None):
-        self.setup.plymouth_enable = checkbox.get_active()
-        self.setup.print_setup()
+    #def assign_plymouth_enable(self, checkbox, data=None):
+        #self.setup.plymouth_enable = checkbox.get_active()
+        #self.setup.print_setup()
 
     # [XK] Legal: handling multimedia packages
     def assign_on_internet_connection(self):
@@ -950,8 +952,8 @@ class InstallerWindow:
                 model.append(top, (bold(_("Mount {} as {}").format(p.partition.path, p.mount_as)),))
 
         # [XK] Show Plymouth and multimedia settings
-        if os.path.exists('/bin/plymouth'):
-            model.append(top, (bold(_("Install Plymouth")) if self.setup.plymouth_enable else _("Do not install Plymouth"),))
+        #if os.path.exists('/bin/plymouth'):
+            #model.append(top, (bold(_("Install Plymouth")) if self.setup.plymouth_enable else _("Do not install Plymouth"),))
         model.append(top, (bold(_("Install additional multimedia software")) if self.setup.multimedia_enable else _("Do not install additional multimedia software"),))
 
 
