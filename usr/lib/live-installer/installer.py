@@ -170,12 +170,6 @@ class InstallerEngine:
             print "ERROR: rsync exited with returncode: " + str(rsync_return_code)
             sys.exit()
 
-        # [XK] Save current boot parameters
-        if os.path.exists("/target/etc/default/grub") and self.boot_parms != '':
-            cmd = "sed -i -e 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT=\"{}\"/' /target/etc/default/grub".format(self.boot_parms)
-            print cmd
-            shell_exec(cmd)
-
         # [XK] Restore /root if it was preserved
         if os.path.isdir("/tmp/root"):
             if os.path.isdir("/target/root"):
@@ -206,8 +200,8 @@ class InstallerEngine:
             #    shell_exec("mkdir -p /target/boot/efi/EFI/%s" % self.distribution_id)
             #    shell_exec("cp /lib/live/mount/medium/EFI/BOOT/grubx64.efi /target/boot/efi/EFI/%s/" % self.distribution_id)
             shell_exec("mkdir -p /target/debs")
-            shell_exec("cp /lib/live/mount/medium/offline/* /target/debs/")
-            ret = chroot_exec("dpkg -i /debs/*")
+            shell_exec("cp /lib/live/mount/medium/offline/*efi*.deb /target/debs/")
+            ret = chroot_exec("dpkg --force-confdef --force-confnew --force-depends --force-overwrite -i /debs/*.deb")
             shell_exec("rm -rf /target/debs")
             if int(ret) != 0:
                 if hasInternetConnection():
@@ -224,6 +218,12 @@ class InstallerEngine:
         # if (int(os.system("mount /dev/sr0 /target/media/cdrom"))):
         #     print " --> Failed to mount CDROM. Install will fail"
         # chroot_exec("apt-cdrom -o Acquire::cdrom::AutoDetect=false -m add")
+
+        # [XK] Save current boot parameters
+        if os.path.exists("/target/etc/default/grub") and self.boot_parms != '':
+            cmd = "sed -i -e 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT=\"{}\"/' /target/etc/default/grub".format(self.boot_parms)
+            print cmd
+            shell_exec(cmd)
 
         # remove live-packages (or w/e)
         print " --> Removing live packages"

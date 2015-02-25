@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-09 11:27+0100\n"
+"POT-Creation-Date: 2015-02-19 23:06+0100\n"
 "PO-Revision-Date: 2013-12-04 00:35+0000\n"
 "Last-Translator: Mazhar Hayat Khan <raomazhark@gmail.com>\n"
 "Language-Team: Urdu <ur@li.org>\n"
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Copying {}"
 msgstr "نقل کر رہا ہے %s"
 
-#: ../usr/lib/live-installer/installer.py:190
+#: ../usr/lib/live-installer/installer.py:184
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "آپ کے نۓ نظام میں داخل ہو رہا ہے"

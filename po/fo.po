@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-09 11:27+0100\n"
+"POT-Creation-Date: 2015-02-19 23:06+0100\n"
 "PO-Revision-Date: 2011-08-20 10:11+0000\n"
 "Last-Translator: Gunleif Joensen <Unknown>\n"
 "Language-Team: Faroese <fo@li.org>\n"
@@ -158,7 +158,7 @@ msgstr ""
 msgid "Copying {}"
 msgstr "Avriti %s"
 
-#: ../usr/lib/live-installer/installer.py:190
+#: ../usr/lib/live-installer/installer.py:184
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "Byrji nýtt kervi.."

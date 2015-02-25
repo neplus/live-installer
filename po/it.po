@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-09 11:27+0100\n"
+"POT-Creation-Date: 2015-02-19 23:06+0100\n"
 "PO-Revision-Date: 2014-06-03 12:45+0000\n"
 "Last-Translator: lang-it <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -165,7 +165,7 @@ msgstr ""
 msgid "Copying {}"
 msgstr "Copia di %s in corso"
 
-#: ../usr/lib/live-installer/installer.py:190
+#: ../usr/lib/live-installer/installer.py:184
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "Ingresso nel nuovo sistema..."

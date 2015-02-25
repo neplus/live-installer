@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-09 11:27+0100\n"
+"POT-Creation-Date: 2015-02-19 23:06+0100\n"
 "PO-Revision-Date: 2013-11-23 05:52+0000\n"
 "Last-Translator: Hyunsu Ko <kohs9959@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
@@ -160,7 +160,7 @@ msgstr ""
 msgid "Copying {}"
 msgstr "베끼고 있습니다 - %s"
 
-#: ../usr/lib/live-installer/installer.py:190
+#: ../usr/lib/live-installer/installer.py:184
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "새로운 시스템에 접속중..."

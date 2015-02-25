@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-09 11:27+0100\n"
+"POT-Creation-Date: 2015-02-19 23:06+0100\n"
 "PO-Revision-Date: 2014-10-30 13:06+0100\n"
 "Last-Translator: Arjen Balfoort <arjenbalfoort@solydxk.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -161,7 +161,7 @@ msgstr ""
 msgid "Copying {}"
 msgstr "Bezig met kopiëren van {}"
 
-#: ../usr/lib/live-installer/installer.py:190
+#: ../usr/lib/live-installer/installer.py:184
 msgid "Entering the system ..."
 msgstr "Nieuwe systeem aan het binnengaan..."
 

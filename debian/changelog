@@ -1,3 +1,9 @@
+live-installer (2015.02.19) debian; urgency=low
+
+  * Updated Catalan translations
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 19 Feb 2015 23:00:00 +0100
+
 live-installer (2015.02.10) debian; urgency=low
 
   * Resolve crash on getting partition size with wrong character case

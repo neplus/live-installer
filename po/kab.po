@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-09 11:27+0100\n"
+"POT-Creation-Date: 2015-02-19 23:06+0100\n"
 "PO-Revision-Date: 2011-05-09 11:11+0000\n"
 "Last-Translator: SADEG Omar <omarrix286@gmail.com>\n"
 "Language-Team: Kabyle <kab@li.org>\n"
@@ -153,7 +153,7 @@ msgstr ""
 msgid "Copying {}"
 msgstr "Ulsar γer %s"
 
-#: ../usr/lib/live-installer/installer.py:190
+#: ../usr/lib/live-installer/installer.py:184
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "Uduf γer anagraw amaynut.."

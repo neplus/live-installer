@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: linuxmint\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-09 11:27+0100\n"
+"POT-Creation-Date: 2015-02-19 23:06+0100\n"
 "PO-Revision-Date: 2014-03-22 18:53+0000\n"
 "Last-Translator: Vinaitheerthan Venkatesh Thennarasan <hsetaknev@gmail.com>\n"
 "Language-Team: Tamil <ta@li.org>\n"
@@ -153,7 +153,7 @@ msgstr ""
 msgid "Copying {}"
 msgstr "%s நகல் எடுக்கப்படுகிறது"
 
-#: ../usr/lib/live-installer/installer.py:190
+#: ../usr/lib/live-installer/installer.py:184
 #, fuzzy
 msgid "Entering the system ..."
 msgstr "புதிய அமைப்பில் நுழைகிறது.."

@@ -1,13 +1,16 @@
 [Desktop Entry]
 Name=Install
+Name[ca]=Instal·la 
 Name[es]=Instalar
 Name[ja]=インストール
 Name[nl]=Installeren
 GenericName=Live Installer
+GenericName[ca]=Instal·lador autònom 
 GenericName[es]=Instalador Live
 GenericName[ja]=ライブインストーラ
 GenericName[nl]=Installatieprogramma
 Comment=Install the operating system
+Comment[ca]=Instal·la el Sistema Operatiu 
 Comment[es]=Instalar el sistema operativo
 Comment[ja]=オペレーティングシステムのインストール
 Comment[nl]=Installeer het besturingssysteem
